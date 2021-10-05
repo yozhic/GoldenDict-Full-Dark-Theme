@@ -240,6 +240,14 @@ code::selection
   color: #3399FF !important;
   cursor: help;
 }
+/* color index_lang in examples */
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_b,
+.dsl_ex .dsl_lang .dsl_i
+{
+  color: royalblue !important;
+}
 
 /* ====================================================== */
 /*                    SCROLL BARS                         */
