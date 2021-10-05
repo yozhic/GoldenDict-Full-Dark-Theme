@@ -50,7 +50,7 @@ html::after {
   background-attachment: fixed;
 }
 body {
-  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-family: "Segoe UI", "Arial Unicode MS", "Noto Sans", sans-serif;
   font-size:  10.8pt;
   margin: 5px 10px;
 }
