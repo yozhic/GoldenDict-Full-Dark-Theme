@@ -8,12 +8,14 @@ _See screenshots below._
 
 Copy `Dark` and `Dark-Deep` folders to the `styles` folder in the `GoldenDict` configuration folder.  
 
-If `GoldenDict` is installed by default, the `styles` folder is located at the:  
+If `GoldenDict` is installed by default, the `styles` folder is located at the:
+
 ```
 c:\Users\<user>\Application Data\GoldenDict\styles\
 ```
 
-For a portable installation, the `styles` folder is located here:  
+For a portable installation, the `styles` folder is located here:
+
 ```
 GoldenDict\portable\styles\
 ```

@@ -1,29 +1,10 @@
 /* ======= This file is encoded UTF-8 without BOM ======= */
 /*             based on Display style: Lingvo             */
+/* ====================================================== */
 
-/* remove ads on the Welcome! page */
-
-body > h3 {
-  visibility: hidden;
-  background-color: transparent;
-}
-body > p  {
-  visibility: hidden;
-  background-color: transparent;
-}
-body {
-  background: transparent;
-}
-.gdnotfound,
-.gdstemmedsuggestion_head,
-.gdstemmedsuggestion_body {
-  color: #C7CBD3;
-}
-.gdstemmedsuggestion_body > a {
-  color: #0080FF;
-}
-
-/* ================ BASICS ===================== */
+/* ====================================================== */
+/*                     ARTICLE WINDOW                     */
+/* ====================================================== */
 
 html {
   width:  100%;
@@ -40,8 +21,7 @@ html::after {
   position: absolute;
   z-index: -1;
 
-  /* here we change the background image and adjust its opacity */
-
+  /* change the background image and adjust its opacity */
   background-image: url('file:./styles/Dark/dark-av-background-openbook.svg');
   opacity: .08;
   background-size: 60%;
@@ -55,7 +35,110 @@ body {
   margin: 5px 10px;
 }
 
-/* ================ ARTICLES ===================== */
+/* ====================================================== */
+/*                    ARTICLE GENERALS                    */
+/* ====================================================== */
+
+a
+{
+  text-decoration: none;
+  color: #379BFF;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+::selection
+{
+  background: #0080FF;
+  color:      #FFFFFF;
+}
+/* don't remember what this rule was for */
+code::selection
+{
+  background: #333333;
+}
+
+/* ====================================================== */
+/*                          DSL                           */
+/* ====================================================== */
+
+.dsl_headwords
+{
+  font-family: "Segoe UI", "Noto Sans";
+  font-weight: bold;
+}
+.dsl_b
+{
+  font-family: "Segoe UI", "Noto Sans";
+  font-weight: bold;
+}
+.dsl_t
+{
+  font-family: "Noto Serif Semibold", Cambria;
+}
+.dsl_stress                { color: red; }
+.dsl_stress_without_accent { display:inline; }
+.dsl_stress_with_accent    { display:none; }
+.dsl_s_wav img             { display:none; }
+.dsl_s_wav a
+{
+  display: inline-block;
+  width:  24px;
+  height: 24px;
+  background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
+  vertical-align: text-bottom;
+}
+.dsl_opt,
+.dsl_opt .dsl_ex,
+.dsl_opt .dsl_ex :not(a),
+.dsl_opt .dsl_ex font[color],
+.dsl_opt .dsl_trn,
+.dsl_ex,
+.dsl_ex .dsl_opt,
+.dsl_ex .dsl_opt :not(a),
+.dsl_ex .dsl_trn
+{
+  color: #9B9B9B;
+}
+.dsl_p,
+.dsl_p :not(a),
+.dsl_article font[color=c_default_color]
+{
+  color: #FF7B3C !important;
+  cursor: help;
+}
+.dsl_com
+{
+  color: #C7CBD3;
+}
+/* lighten dark colors */
+font[color=blue]          { color: #8882FF !important; }
+font[color=mediumblue]    { color: #8882FF !important; }
+font[color=darkblue]      { color: #8882FF !important; }
+font[color=darkslateblue] { color: #8882FF !important; }
+font[color=midnightblue]  { color: #8882FF !important; }
+font[color=navy]          { color: #8882FF !important; }
+font[color=darkmagenta]   { color: #FF22FF !important; }
+font[color=purple]        { color: #FF22FF !important; }
+font[color=indigo]        { color: #B959FF !important; }
+font[color=darkred]       { color: #D20000 !important; }
+font[color=maroon]        { color: #D20000 !important; }
+font[color=darkslategray] { color: #768390 !important; }
+font[color=dimgray]       { color: #A7A7A7 !important; }
+font[color=green]         { color: #32CD32 !important; }
+font[color=darkgreen]     { color: #32CD32 !important; }
+font[color=forestgreen]   { color: #32CD32 !important; }
+font[color=seagreen]      { color: #00FF7F !important; }
+font[color=mediumseagreen]{ color: #00FF7F !important; }
+font[color=olive]         { color: #F0E68C !important; }
+font[color=darkolivegreen]{ color: #ADFF2F !important; }
+font[color=olivedrab]     { color: #ADFF2F !important; }
+
+
+/* ====================================================== */
+/*                      ARTICLE BOXES                     */
+/* ====================================================== */
 
 .gdarticle
 {
@@ -184,102 +267,31 @@ body {
   margin-top: 1.5em;
 }
 
-/* ================ FORMATTING ===================== */
+/* ====================================================== */
+/*                      WELCOME PAGE                      */
+/* ====================================================== */
 
-a
-{
-  text-decoration: none;
-  color: #379BFF;
-}
-a:hover
-{
-  text-decoration: underline;
-}
-::selection
-{
-  background: #0080FF;
-  color:      #FFFFFF;
-}
-/* I don't remember what this rule was for */
-code::selection
-{
-  background: #333333;
-}
-
-/* ================ DSL ===================== */
-
-.dsl_headwords
-{
-  font-family: "Segoe UI", "Noto Sans";
-  font-weight: bold;
-}
-.dsl_b
-{
-  font-family: "Segoe UI", "Noto Sans";
-  font-weight: bold;
-}
-.dsl_t
-{
-  font-family: "Noto Serif Semibold", Cambria;
-}
-.dsl_stress                { color: red; }
-.dsl_stress_without_accent { display:inline; }
-.dsl_stress_with_accent    { display:none; }
-.dsl_s_wav img             { display:none; }
-.dsl_s_wav a
-{
-  display: inline-block;
-  width:  24px;
-  height: 24px;
-  background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
-  vertical-align: text-bottom;
-}
-.dsl_opt,
-.dsl_opt .dsl_ex,
-.dsl_opt .dsl_ex :not(a),
-.dsl_opt .dsl_ex font[color],
-.dsl_opt .dsl_trn,
-.dsl_ex,
-.dsl_ex .dsl_opt,
-.dsl_ex .dsl_opt :not(a),
-.dsl_ex .dsl_trn
-{
-  color: #9B9B9B;
-}
-.dsl_p,
-.dsl_p :not(a),
-.dsl_article font[color=c_default_color]
-{
-  color: #FF7B3C !important;
-  cursor: help;
-}
-.dsl_com
-{
+.gdnotfound,
+.gdstemmedsuggestion_head,
+.gdstemmedsuggestion_body {
   color: #C7CBD3;
 }
-/* lighten dark colors */
-font[color=blue]          { color: #8882FF !important; }
-font[color=mediumblue]    { color: #8882FF !important; }
-font[color=darkblue]      { color: #8882FF !important; }
-font[color=darkslateblue] { color: #8882FF !important; }
-font[color=midnightblue]  { color: #8882FF !important; }
-font[color=navy]          { color: #8882FF !important; }
-font[color=darkmagenta]   { color: #FF22FF !important; }
-font[color=purple]        { color: #FF22FF !important; }
-font[color=indigo]        { color: #B959FF !important; }
-font[color=darkred]       { color: #D20000 !important; }
-font[color=maroon]        { color: #D20000 !important; }
-font[color=darkslategray] { color: #768390 !important; }
-font[color=dimgray]       { color: #A7A7A7 !important; }
-font[color=green]         { color: #32CD32 !important; }
-font[color=darkgreen]     { color: #32CD32 !important; }
-font[color=forestgreen]   { color: #32CD32 !important; }
-font[color=seagreen]      { color: #00FF7F !important; }
-font[color=mediumseagreen]{ color: #00FF7F !important; }
-font[color=olive]         { color: #F0E68C !important; }
-font[color=darkolivegreen]{ color: #ADFF2F !important; }
-font[color=olivedrab]     { color: #ADFF2F !important; }
+.gdstemmedsuggestion_body > a {
+  color: #0080FF;
+}
 
+/* remove ads */
+body > h3 {
+  visibility: hidden;
+  background-color: transparent;
+}
+body > p  {
+  visibility: hidden;
+  background-color: transparent;
+}
+body {
+  background: transparent;
+}
 
 /* ====================================================== */
 /*                    SCROLL BARS                         */

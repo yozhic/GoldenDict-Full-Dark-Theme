@@ -1,29 +1,10 @@
 /* ======= This file is encoded UTF-8 without BOM ======= */
 /*             based on Display style: Lingvo             */
+/* ====================================================== */
 
-/* remove ads on the Welcome! page */
-
-body > h3 {
-  visibility: hidden;
-  background-color: transparent;
-}
-body > p  {
-  visibility: hidden;
-  background-color: transparent;
-}
-body {
-  background: transparent;
-}
-.gdnotfound,
-.gdstemmedsuggestion_head,
-.gdstemmedsuggestion_body {
-  color: #C7CBD3;
-}
-.gdstemmedsuggestion_body > a {
-  color: #0080FF;
-}
-
-/* ================ BASICS ===================== */
+/* ====================================================== */
+/*                     ARTICLE WINDOW                     */
+/* ====================================================== */
 
 html {
   width:  100%;
@@ -40,8 +21,7 @@ html::after {
   position: absolute;
   z-index: -1;
 
-  /* here we change the background image and adjust its opacity */
-
+  /* change the background image and adjust its opacity */
   background-image: url('file:./styles/Dark/dark-av-background-openbook.svg');
   opacity: .08;
   background-size: 60%;
@@ -55,7 +35,82 @@ body {
   margin: 5px 10px;
 }
 
-/* ================ ARTICLES ===================== */
+/* ====================================================== */
+/*                    ARTICLE GENERALS                    */
+/* ====================================================== */
+
+a
+{
+  text-decoration: none;
+  color: darkblue;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+::selection
+{
+  background: #0080FF;
+  color:      #FFFFFF;
+}
+/* don't remember what this rule was for */
+code::selection
+{
+  background: #333333;
+}
+
+/* ====================================================== */
+/*                          DSL                           */
+/* ====================================================== */
+
+.dsl_t
+{
+  font-family: "Noto Serif Medium", Cambria;
+  font-weight: normal;
+}
+.dsl_stress                { color: red; }
+.dsl_stress_without_accent { display:inline; }
+.dsl_stress_with_accent    { display:none; }
+.dsl_s_wav img             { display:none; }
+.dsl_s_wav a
+{
+  display: inline-block;
+  width:  24px;
+  height: 24px;
+  background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
+  vertical-align: text-bottom;
+}
+.dsl_opt,
+.dsl_opt .dsl_ex,
+.dsl_opt .dsl_ex :not(a),
+.dsl_opt .dsl_ex font[color],
+.dsl_opt .dsl_trn,
+.dsl_ex,
+.dsl_ex .dsl_opt,
+.dsl_ex .dsl_opt :not(a),
+.dsl_ex .dsl_trn
+{
+  color: gray;
+}
+.dsl_p,
+.dsl_p :not(a),
+.dsl_article font[color=c_default_color]
+{
+  color: #3399FF !important;
+  cursor: help;
+}
+/* color index_lang in examples */
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_b,
+.dsl_ex .dsl_lang .dsl_i
+{
+  color: royalblue !important;
+}
+
+/* ====================================================== */
+/*                      ARTICLE BOXES                     */
+/* ====================================================== */
 
 .gdarticle
 {
@@ -180,73 +235,30 @@ body {
   margin-top: 1.5em;
 }
 
-/* ================ FORMATTING ===================== */
+/* ====================================================== */
+/*                      WELCOME PAGE                      */
+/* ====================================================== */
 
-a
-{
-  text-decoration: none;
-  color: darkblue;
+.gdnotfound,
+.gdstemmedsuggestion_head,
+.gdstemmedsuggestion_body {
+  color: #C7CBD3;
 }
-a:hover
-{
-  text-decoration: underline;
-}
-::selection
-{
-  background: #0080FF;
-  color:      #FFFFFF;
-}
-/* I don't remember what this rule was for */
-code::selection
-{
-  background: #333333;
+.gdstemmedsuggestion_body > a {
+  color: #0080FF;
 }
 
-/* ====================== DSL =========================== */
-
-.dsl_t
-{
-  font-family: "Noto Serif Medium", Cambria;
-  font-weight: normal;
+/* remove ads */
+body > h3 {
+  visibility: hidden;
+  background-color: transparent;
 }
-.dsl_stress                { color: red; }
-.dsl_stress_without_accent { display:inline; }
-.dsl_stress_with_accent    { display:none; }
-.dsl_s_wav img             { display:none; }
-.dsl_s_wav a
-{
-  display: inline-block;
-  width:  24px;
-  height: 24px;
-  background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
-  vertical-align: text-bottom;
+body > p  {
+  visibility: hidden;
+  background-color: transparent;
 }
-.dsl_opt,
-.dsl_opt .dsl_ex,
-.dsl_opt .dsl_ex :not(a),
-.dsl_opt .dsl_ex font[color],
-.dsl_opt .dsl_trn,
-.dsl_ex,
-.dsl_ex .dsl_opt,
-.dsl_ex .dsl_opt :not(a),
-.dsl_ex .dsl_trn
-{
-  color: gray;
-}
-.dsl_p,
-.dsl_p :not(a),
-.dsl_article font[color=c_default_color]
-{
-  color: #3399FF !important;
-  cursor: help;
-}
-/* color index_lang in examples */
-.dsl_ex .dsl_lang,
-.dsl_ex .dsl_lang .dsl_u,
-.dsl_ex .dsl_lang .dsl_b,
-.dsl_ex .dsl_lang .dsl_i
-{
-  color: royalblue !important;
+body {
+  background: transparent;
 }
 
 /* ====================================================== */
