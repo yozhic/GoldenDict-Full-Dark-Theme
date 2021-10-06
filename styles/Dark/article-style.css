@@ -102,10 +102,10 @@ code::selection
 /* color index_lang in examples */
 .dsl_ex .dsl_lang,
 .dsl_ex .dsl_lang .dsl_u,
-.dsl_ex .dsl_lang .dsl_b,
-.dsl_ex .dsl_lang .dsl_i
+.dsl_ex .dsl_lang .dsl_trs
 {
-  color: royalblue !important;
+  /*color: royalblue !important;*/
+  color: dimgray !important;
 }
 
 /* ====================================================== */
