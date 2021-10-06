@@ -90,7 +90,7 @@ code::selection
 .dsl_ex .dsl_opt :not(a),
 .dsl_ex .dsl_trn
 {
-  color: gray;
+  color: lightslategray;
 }
 .dsl_p,
 .dsl_p :not(a),
