@@ -1,23 +1,23 @@
 # Full dark theme for the GoldenDict interface on Windows
 
-Tested on GoldenDict 1.5.0-RC2-422 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
+Tested on GoldenDict 1.5.0-RC2-491 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
 _See screenshots below._  
 
 
 ## Installation
 
-Copy `Dark` and `Dark-Deep` folders to the `styles` folder in the `GoldenDict` configuration folder.  
+Copy `styles` and `fonts` folders to the `GoldenDict` configuration folder.  
 
-If `GoldenDict` is installed by default, the `styles` folder is located at the:
-
-```
-c:\Users\<user>\Application Data\GoldenDict\styles\
-```
-
-For a portable installation, the `styles` folder is located here:
+If `GoldenDict` is installed by default, the `GoldenDict` configuration folder is located at the:
 
 ```
-GoldenDict\portable\styles\
+c:\Users\<user>\AppData\Roaming\GoldenDict\
+```
+
+For a portable installation, the `GoldenDict` configuration folder is located here:
+
+```
+GoldenDict\portable\
 ```
 
 To make the new icons work, you need to move the `icons` folder to the `GoldenDict` program folder: `c:\Program Files\GoldenDict\icons\`, for example.  
