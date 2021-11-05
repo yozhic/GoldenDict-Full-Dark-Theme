@@ -6,23 +6,23 @@ _See screenshots below._
 
 ## Installation
 
-Copy `styles` and `fonts` folders to the `GoldenDict` configuration folder.  
+1. Move `styles` and `fonts` folders to the `GD Configuration Folder`.  
 
-If `GoldenDict` is installed by default, the `GoldenDict` configuration folder is located at the:
+   If `GoldenDict` is installed by default, the `GD Configuration Folder` is located at the:
 
-```
-c:\Users\<user>\AppData\Roaming\GoldenDict\
-```
+   ```
+   c:\Users\<user>\AppData\Roaming\GoldenDict\
+   ```
 
-For a portable installation, the `GoldenDict` configuration folder is located here:
+   For a portable installation, the `GD Configuration Folder` is located here:
 
-```
-GoldenDict\portable\
-```
+   ```
+   GoldenDict\portable\
+   ```
 
-To make the new icons work, you need to move the `icons` folder to the `GoldenDict` program folder: `c:\Program Files\GoldenDict\icons\`, for example.  
+2. Move the `icons` folder to the `GoldenDict` program folder: `c:\Program Files\GoldenDict\`.  
 
-To return to the original icons, you need to remove the appropriate rules in `qt-style.css` - see comments inside.  
+   To return to the original GD icons, you need to remove the appropriate rules in `qt-style.css` - see comments inside.  
 
 
 ## Main window background image
