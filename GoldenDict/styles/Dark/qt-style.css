@@ -55,6 +55,10 @@
 }
 
 /* ==================== GLOBAL SCOPE ==================== */
+QWidget
+{
+  background: #2B3339;
+}
 QLabel,
 QMessageBox,
 QInputDialog,
