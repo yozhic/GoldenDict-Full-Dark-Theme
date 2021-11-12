@@ -93,4 +93,4 @@ _`Preferences...` window_
 ## Credits
 
 Thanks to [KDAB](https://github.com/KDAB) for [GammaRay](https://github.com/KDAB/GammaRay) ❤️  
-Thanks to [robertknight](https://github.com/robertknight) for his [Qt-Inspector](https://github.com/robertknight/Qt-Inspector)  
+Thanks to [robertknight](https://github.com/robertknight) for [Qt-Inspector](https://github.com/robertknight/Qt-Inspector)  
