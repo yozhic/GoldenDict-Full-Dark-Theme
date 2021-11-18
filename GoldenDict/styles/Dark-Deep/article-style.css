@@ -107,6 +107,13 @@ code::selection
 {
   color: #9B9B9B;
 }
+/* color index_lang in examples */
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_trs
+{
+  color: #888FA0 !important;
+}
 .dsl_p,
 .dsl_p :not(a),
 .dsl_article font[color=c_default_color]
