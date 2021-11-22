@@ -2,6 +2,7 @@
 
 Tested on GoldenDict 1.5.0-RC2-491 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
 _See screenshots below._  
+_For README in Russian see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md)._
 
 
 ## Installation
