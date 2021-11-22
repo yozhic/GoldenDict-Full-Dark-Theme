@@ -27,9 +27,9 @@ _See screenshots below._
 
 ## Main window background image
 
-The Main Window background image can be replaced or its transparency can be adjusted. See the comments in the `Basics` section of the `article-style.css` file.  
+The Main Window background image can be replaced or its transparency can be adjusted. See the comments in the `ARTICLE WINDOW` section of the `article-style.css` file.  
 
-You can also replace the pattern file for collapsed articles. See the corresponding comment in the `Articles` section of the `article-style.css` file.  
+You can also replace the pattern file for collapsed articles. See the corresponding comment in the `ARTICLE BOXES` section of the `article-style.css` file.  
 
 
 ## Color palette
