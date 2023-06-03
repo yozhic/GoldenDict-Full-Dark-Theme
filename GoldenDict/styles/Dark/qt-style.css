@@ -1177,6 +1177,10 @@ MainWindow #centralWidget QToolButton[toolTip="Open Tabs List"]
 {
   qproperty-icon: url(icons/dark-tabs-button.svg);
 }
+MainWindow #centralWidget QToolButton::menu-indicator
+{
+  background: transparent;
+}
 
 /* =============== Pop-up Navigation Panel ============== */
 /* ================ in Full-text Search ================= */
