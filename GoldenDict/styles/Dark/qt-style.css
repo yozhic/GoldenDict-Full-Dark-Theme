@@ -774,9 +774,7 @@ MainWindow #dictionaryBar::handle:vertical
   background: #2B3339 url('icons/dark-tb-handle.png');
   background-position: top left;
   height:                   7px;
-  margin-left:              1px;
-  margin-right:             1px;
-  margin-bottom:            3px;
+  margin:       0px 1px 3px 1px;
 }
 /* inactive dictionary button */
 MainWindow #dictionaryBar QToolButton
@@ -1353,9 +1351,19 @@ ScanPopup #dictionaryBar
   border:  1px solid #000000;
   padding:               5px;
 }
-ScanPopup #dictionaryBar::handle
+ScanPopup #dictionaryBar::handle:horizontal
 {
   background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  width:                    7px;
+  margin:       1px 4px 2px 0px;
+}
+ScanPopup #dictionaryBar::handle:vertical
+{
+  background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  height:                   7px;
+  margin:       0px 2px 4px 1px;
 }
 /* inactive dictionary button */
 ScanPopup #dictionaryBar QToolButton
