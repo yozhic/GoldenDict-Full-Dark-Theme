@@ -24,11 +24,11 @@
 
 @font-face {
     font-family: NotoSans;
-    src: url('file:./fonts/NotoSans-Regular.ttf');
+    src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: NotoSansMono;
-    src: url('file:./fonts/NotoSansMono-Regular.ttf');
+    src: local('Noto Sans Mono') url('file:./fonts/NotoSansMono-Regular.ttf') format('truetype');
 }
 
 
@@ -39,7 +39,7 @@
 }
 #Initializing QLabel
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color: #C7CBD3;
 }
 #Initializing #progressBar
@@ -75,7 +75,7 @@ QRadioButton,
 QSpinBox,
 QToolButton
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
   background: #2B3339;
 }
@@ -194,19 +194,17 @@ QRadioButton::indicator:unchecked:disabled:hover
 /* list views */
 QListView::item:selected:active
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
   color:       #FFFFFF;
   background:  #4E5B65;
 }
 QListView::item:selected:!active
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
   color:       #C7CBD3;
   background:  #4E5B65;
 }
 QListView::item:hover
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:       #FFFFFF;
   background:  #0080FF;
 }
@@ -341,7 +339,7 @@ QGroupBox::title
 /* menu lists */
 QMenu
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #2B3339;
@@ -356,7 +354,7 @@ QMenu::item:selected
 /* tooltips */
 QToolTip
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:             #C7CBD3;
   background:        #2B3339;
   border:  1px solid #4E5B65;
@@ -526,7 +524,7 @@ QScrollBar::add-line:pressed
 MainStatusBar #text,
 MainStatusBar #icon
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:       #C7CBD3;
   background:  #2B3339;
 }
@@ -654,7 +652,7 @@ MainWindow::separator:hover
 /* menu line */
 MainWindow #menubar
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
   background: #2B3339;
 }
@@ -751,7 +749,7 @@ MainWindow #dictionaryBar #qt_toolbar_ext_button:checked:pressed
 MainWindow #searchPane GroupComboBox
 {
   /* font in Groups list & line */
-  font-family: NotoSansMono, "Noto Sans Mono", Consolas;
+  font-family: NotoSansMono, Consolas;
   font-size:   9.1pt;
 }
 MainWindow #searchPane GroupComboBox QComboBoxListView
@@ -787,7 +785,7 @@ MainWindow #historyPane   #historyList,
 MainWindow #favoritesPane #favoritesTree,
 MainWindow #dictsPane     #dictsList
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: NotoSans, "Segoe UI", sans-serif;
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
@@ -883,7 +881,7 @@ MainWindow #navToolbar GroupComboBox
 {
   /* font in Groups list & line */
   /*font-size:   10.5pt;*/
-  font-family: NotoSansMono, "Noto Sans Mono", Consolas;
+  font-family: NotoSansMono, Consolas;
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
@@ -1045,7 +1043,7 @@ ScanPopup #groupList
 {
   /* font in Groups list & line */
   /*font-size:   10.5pt;*/
-  font-family: NotoSansMono, "Noto Sans Mono", Consolas;
+  font-family: NotoSansMono, Consolas;
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
@@ -1102,10 +1100,10 @@ ScanPopup #translateLine[noResults="true"]
 /* "Look up in" field's drop-down list */
 ScanPopup CompletionList
 {
+  /*font-size:   10.5pt;*/
+  font-family: NotoSans, "Segoe UI", sans-serif;
   color:       #C7CBD3;
   background:  #2B3339;
-  /*font-size:   10.5pt;*/
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
 }
 ScanPopup CompletionList::item:selected
 {
@@ -1339,7 +1337,7 @@ Preferences
 }
 Preferences QLineEdit
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
   background: #232B30;
 }
@@ -1372,7 +1370,7 @@ EditDictionaries QLineEdit,
 EditDictionaries DictListWidget,
 EditDictionaries QPlainTextEdit
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
   background: #232B30;
 }
