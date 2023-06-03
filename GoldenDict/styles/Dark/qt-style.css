@@ -812,13 +812,11 @@ MainWindow #dictionaryBar QToolButton:checked:pressed
   background:       #000000;
   border: 1px solid #000000;
 }
-/* toolbar foldout button */
+/* toolbar show-more button */
 MainWindow #dictionaryBar #qt_toolbar_ext_button
 {
   background:       #3D464E;
   border: 1px solid #4E5B65;
-  min-width:            4px;
-  min-height:           4px;
 }
 MainWindow #dictionaryBar #qt_toolbar_ext_button:checked,
 MainWindow #dictionaryBar #qt_toolbar_ext_button:hover
@@ -1405,7 +1403,7 @@ ScanPopup QToolButton:pressed
   background:       #000000;
   border: 1px solid #000000;
 }
-/* toolbar foldout button */
+/* toolbar show-more button */
 ScanPopup #dictionaryBar #qt_toolbar_ext_button
 {
   background:       #4E5B65;
