@@ -59,6 +59,8 @@
 /* ==================== GLOBAL SCOPE ==================== */
 /* ====================================================== */
 
+QDialog,
+QSplitter,
 QWidget
 {
   background: #2B3339;
@@ -1564,22 +1566,32 @@ QPrintPreviewDialog QToolBar QToolBarSeparator
 /*  other  windows it was called from. Also, it has no objectName (ID) in the */
 /*  current version of GoldenDict, so I refer to classes.                     */
 
-QDialog,
-QSplitter
+QDialog[modal="false"] QTextBrowser
 {
-  background: #2B3339;
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  border: 1px solid #4E5B65;
+  background:       #D3D6DC;
+  padding-left:        20px;
 }
-QTreeView
+QHelpContentWidget,
+QHelpIndexWidget
 {
-  color:      #C7CBD3;
-  background: #232B30;
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #232B30;
+  border-radius:        4px;
+  margin:               6px;
+  padding:              6px;
 }
-QTreeView::item:hover
+QDialog[modal="false"] QListView::item,
+QDialog[modal="false"] QTreeView::item
 {
-  background:   #2B3339;
-  padding-left:     1px;
+  padding-top:    1px;
+  padding-bottom: 1px;
 }
-QTextBrowser
+QDialog[modal="false"] QListView:focus,
+QDialog[modal="false"] QTreeView:focus
 {
-  background: #D3D6DC;
+  border: 1px solid #232B30;
 }
