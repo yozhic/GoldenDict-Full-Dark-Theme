@@ -1468,6 +1468,10 @@ About QPushButton
   min-width: 90px;
   height:    24px;
 }
+About #credits
+{
+  border: 1px solid #4E5B65;
+}
 
 /* =============== PREFERENCES... WINDOW ================ */
 Preferences
