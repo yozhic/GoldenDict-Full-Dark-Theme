@@ -868,7 +868,7 @@ MainWindow #dictsPane     #dictsPaneTitleBar QLabel
   /* font in panes */
   font-size: 9.1pt;
 }
-MainWindow #searchPane #translateLine
+MainWindow #searchPane    #translateLine
 {
   /* font in "Look up in" line */
   font-size: 9.1pt;
@@ -884,7 +884,11 @@ MainWindow #dictsPane     #dictsList
   background:       #2B3339;
   border: 1px solid #4E5B65;
 }
-MainWindow #searchPane    #translateLine:focus,
+MainWindow #searchPane    #translateLine:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
 MainWindow #searchPane    #wordList:focus,
 MainWindow #historyPane   #historyList:focus,
 MainWindow #favoritesPane #favoritesTree:focus,
