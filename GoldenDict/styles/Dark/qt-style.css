@@ -71,7 +71,6 @@ QGroupBox::title,
 QInputDialog,
 QLabel,
 QLineEdit,
-QListView,
 QMessageBox,
 QPlainTextEdit,
 QPushButton,
@@ -80,6 +79,13 @@ QSpinBox,
 QToolButton
 {
   font-family: "Segoe UI", NotoSans, sans-serif;
+  color:      #C7CBD3;
+  background: #2B3339;
+}
+QListView,
+QTreeView
+{
+  font-family: NotoSans, "Segoe UI", sans-serif;
   color:      #C7CBD3;
   background: #2B3339;
 }
@@ -196,25 +202,97 @@ QRadioButton::indicator:unchecked:disabled:hover
 }
 
 /* list views */
-QListView::item:selected:active
+QListView
 {
-  color:       #FFFFFF;
-  background:  #4E5B65;
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #4E5B65;
 }
-QListView::item:selected:!active
+QListView::item
 {
-  color:       #C7CBD3;
-  background:  #4E5B65;
+  color:      #C7CBD3;
+  background: #232B30;
 }
 QListView::item:hover
 {
-  font-family: "Segoe UI", NotoSans, sans-serif;
-  color:       #FFFFFF;
-  background:  #0080FF;
+  color:        #C7CBD3;
+  background:   #2B3339;
+  padding-left: 1px;
 }
-QListView:focus
+QListView::item:selected,
+QListView::item:selected:active
 {
-  border: 1px solid #0080FF;
+  color:            #FFFFFF;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
+}
+QListView::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+}
+QListView::item:selected:!active:hover
+{
+  padding-left: 1px;
+}
+
+/* treeview lists */
+QTreeView
+{
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #4E5B65;
+}
+QTreeView::item
+{
+  color:      #C7CBD3;
+  background: #232B30;
+}
+QTreeView::item:hover
+{
+  color:        #C7CBD3;
+  background:   #2B3339;
+  padding-left: 1px;
+}
+QTreeView::item:selected,
+QTreeView::item:selected:active
+{
+  color:            #FFFFFF;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
+}
+QTreeView::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+}
+QTreeView::item:selected:!active:hover
+{
+  padding-left: 1px;
+}
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings
+{
+  image: url(:/icons/expand_article.png);
+}
+QTreeView::branch:has-children:!has-siblings:closed:hover,
+QTreeView::branch:closed:has-children:has-siblings:hover
+{
+  image: url(:/icons/expand_article_hovered.png);
+}
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings
+{
+  image: url(:/icons/collapse_article.png);
+}
+QTreeView::branch:open:has-children:!has-siblings:hover,
+QTreeView::branch:open:has-children:has-siblings:hover
+{
+  image: url(:/icons/collapse_article_hovered.png);
 }
 
 /* drop-down lists */
