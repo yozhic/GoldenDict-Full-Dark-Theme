@@ -682,6 +682,10 @@ MainStatusBar #icon
 {
   /*font-size: 10.5pt;*/
 }
+#searchFrame #searchText:focus
+{
+  background:       #232B30;
+}
 #searchFrame #searchText[noResults="true"]
 {
   background:       #A40000;
