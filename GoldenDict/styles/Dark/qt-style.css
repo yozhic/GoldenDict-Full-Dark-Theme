@@ -1077,6 +1077,19 @@ MainWindow #navToolbar #translateLine
   border: 1px solid #4E5B65;
   border-radius:        0px;
 }
+MainWindow #navToolbar #translateLine:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+MainWindow #navToolbar #translateLine IconButton[toolTip="Drop-down"]
+{
+  qproperty-pixmap: url(icons/dark-drop-down.svg);
+}
+MainWindow #navToolbar #translateLine IconButton
+{
+  qproperty-pixmap: url(icons/dark-search.svg);
+}
 MainWindow #navToolbar #translateLine[noResults="true"]
 {
   background:       #A40000;
@@ -1086,10 +1099,34 @@ MainWindow #navToolbar #translateLine[noResults="true"]
 MainWindow #navToolbar CompletionList
 {
   /*font-size: 10.5pt;*/
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
+}
+MainWindow #navToolbar CompletionList::item
+{
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
+}
+MainWindow #navToolbar CompletionList::item:hover
+{
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+  padding-left: 1px;
+}
+MainWindow #navToolbar CompletionList::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
 }
 MainWindow #navToolbar CompletionList::item:selected:hover
 {
+  color:            #FFFFFF;
+  background:       #006AD5;
   border: 1px solid #0080FF;
 }
 
