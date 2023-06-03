@@ -1364,7 +1364,7 @@ ScanPopup #dictionaryBar QToolButton
   background:       #2B3339;
   border: 1px solid #2B3339;
   padding:          2px 0px;
-  margin:           1px 0px;
+  margin:   0px 0px 1px 1px;
 }
 /* active dictionary button */
 ScanPopup #dictionaryBar QToolButton:checked
@@ -1373,7 +1373,7 @@ ScanPopup #dictionaryBar QToolButton:checked
   background:       #3D464E;
   border: 1px solid #000000;
   padding:          2px 0px;
-  margin:           1px 0px;
+  margin:   0px 0px 1px 1px;
 }
 /* inactive dictionary button hovered */
 ScanPopup #dictionaryBar QToolButton:hover
@@ -1386,9 +1386,9 @@ ScanPopup #dictionaryBar QToolButton:checked:hover
   border: 1px solid #0080FF;
 }
 /* dictionary button pressed */
-ScanPopup QToolButton:pressed,
 ScanPopup #dictionaryBar QToolButton:pressed,
-ScanPopup #dictionaryBar QToolButton:checked:pressed
+ScanPopup #dictionaryBar QToolButton:checked:pressed,
+ScanPopup QToolButton:pressed
 {
   background:       #000000;
   border: 1px solid #000000;
