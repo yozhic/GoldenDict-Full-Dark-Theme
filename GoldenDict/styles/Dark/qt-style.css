@@ -762,9 +762,21 @@ MainWindow #dictionaryBar
   padding:             0.2em;
 }
 /* capture area of Dictionary Toolbar */
-MainWindow #dictionaryBar::handle
+MainWindow #dictionaryBar::handle:horizontal
 {
   background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  width:                    7px;
+  margin-right:             2px;
+}
+MainWindow #dictionaryBar::handle:vertical
+{
+  background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  height:                   7px;
+  margin-left:              1px;
+  margin-right:             1px;
+  margin-bottom:            3px;
 }
 /* inactive dictionary button */
 MainWindow #dictionaryBar QToolButton
@@ -772,7 +784,7 @@ MainWindow #dictionaryBar QToolButton
   color:             #C7CBD3;
   background:        #2B3339;
   border:  1px solid #2B3339;
-  padding:               2px;
+  padding:   2px 1px 2px 2px;
   margin:            1px 2px;
 }
 /* active dictionary button */
@@ -781,7 +793,7 @@ MainWindow #dictionaryBar QToolButton:checked
   color:             #C7CBD3;
   background:        #3D464E;
   border:  1px solid #000000;
-  padding:               2px;
+  padding:   2px 1px 2px 2px;
   margin:            1px 2px;
 }
 /* inactive dictionary button hovered */
