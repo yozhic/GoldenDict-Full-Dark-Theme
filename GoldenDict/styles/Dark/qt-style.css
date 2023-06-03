@@ -1663,6 +1663,14 @@ EditDictionaries DictGroupsWidget QLabel#label_3
 {
   qproperty-pixmap: none;
 }
+EditDictionaries IconButton[toolTip="Quick Search"]
+{
+  qproperty-pixmap: url(icons/dark-quick-search.svg);
+}
+EditDictionaries IconButton[toolTip="Clear Search"]
+{
+  qproperty-pixmap: url(icons/dark-clear-search.svg);
+}
 
 /* ================ PRINT PREVIEW WINDOW ================ */
 QPrintPreviewDialog QToolBar
