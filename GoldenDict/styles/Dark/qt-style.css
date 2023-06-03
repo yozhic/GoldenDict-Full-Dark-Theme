@@ -1664,6 +1664,14 @@ QPrintPreviewDialog QToolBar QToolBarSeparator
 {
   background:       #4E5B65;
 }
+QPrintPreviewDialog QToolBar QLineEdit
+{
+  background:       #232B30;
+}
+QPrintPreviewDialog QGraphicsView
+{
+  border: 1px solid #2B3339;
+}
 
 /* =============================== HELP WINDOW ============================== */
 /*  I  didn't  want  to  color this window, but it inherits the styles of the */
