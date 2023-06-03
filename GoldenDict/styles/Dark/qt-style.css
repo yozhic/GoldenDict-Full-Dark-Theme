@@ -335,8 +335,8 @@ QComboBox QComboBoxListView
 {
   color:                      #C7CBD3;
   background:                 #2B3339;
-  selection-background-color: #0080FF;
   selection-color:            #FFFFFF;
+  selection-background-color: #006AD5;
 }
 QComboBox QComboBoxListView:focus
 {
@@ -443,14 +443,14 @@ QToolTip
 QLineEdit:active,
 QPlainTextEdit:active
 {
-  selection-background-color: #0080FF;
   selection-color:            #FFFFFF;
+  selection-background-color: #006AD5;
 }
 QLineEdit:!active,
 QPlainTextEdit:!active
 {
-  selection-background-color: #4E5B65;
   selection-color:            #C7CBD3;
+  selection-background-color: #4E5B65;
 }
 
 /* scroll bars */
