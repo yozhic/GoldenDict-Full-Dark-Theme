@@ -1281,6 +1281,19 @@ ScanPopup #translateLine
   border: 1px solid #4E5B65;
   border-radius:        0px;
 }
+ScanPopup #translateLine:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+ScanPopup #translateLine IconButton[toolTip="Drop-down"]
+{
+  qproperty-pixmap: url(icons/dark-drop-down.svg);
+}
+ScanPopup #translateLine IconButton
+{
+  qproperty-pixmap: url(icons/dark-search.svg);
+}
 ScanPopup #translateLine[noResults="true"]
 {
   background:       #A40000;
@@ -1291,21 +1304,34 @@ ScanPopup CompletionList
 {
   /*font-size:   10.5pt;*/
   font-family: NotoSans, "Segoe UI", sans-serif;
-  color:       #C7CBD3;
-  background:  #2B3339;
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #4E5B65;
+  min-width:          220px;
 }
-ScanPopup CompletionList::item:selected
+ScanPopup CompletionList::item
 {
-  color:      #C7CBD3;
-  background: #4E5B65;
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
 }
 ScanPopup CompletionList::item:hover
 {
-  color:      #FFFFFF;
-  background: #0080FF;
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+  padding-left:         1px;
+}
+ScanPopup CompletionList::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
 }
 ScanPopup CompletionList::item:selected:hover
 {
+  color:            #FFFFFF;
+  background:       #006AD5;
   border: 1px solid #0080FF;
 }
 ScanPopup QToolButton
