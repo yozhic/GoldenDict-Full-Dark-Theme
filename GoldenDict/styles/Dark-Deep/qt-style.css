@@ -1,38 +1,36 @@
-/* ======= This file is encoded UTF-8 without BOM ======= */
-/*                   GD DARK DEEP THEME                   */
-/* ====================================================== */
+/* ================= This file is encoded UTF-8 without BOM ================= */
+/*                               GD DARK THEME                                */
+/* ========================================================================== */
 
-/* ====================================================== */
-/*                        Attention:                      */
-/* All icon files used should be placed                   */
-/* in the GoldenDict program folder, for example:         */
-/* c:\Program Files\GoldenDict\icons\dark-tb-handle.png   */
-/*                                                        */
-/*                    Color palette                       */
-/* #2B3339 – main background                              */
-/* #232B30 – darker background in tables and some input   */
-/*           fields (in the Dictionaries... preferences)  */
-/* #4E5B65 – frame lines;                                 */
-/*           unfocused elements highlighting              */
-/* #C7CBD3 – text                                         */
-/* #0080FF – (brigth blue) accents & focused selections   */
-/* #000000 – text on brigth blue background               */
-/* #A40000 – (rubin)                                      */
-/*           highlighting in the search field in case of  */
-/*           a negative result; accent on close buttons   */
-/*                                                        */
-/* #353F46                                                */
-/* #D3D6DC                                                */
-/* #FFFFFF                                                */
-/* ====================================================== */
+/* ========================================================================== */
+/*                   ============= ATTENTION =============                    */
+/* All icon files used should be placed in the GoldenDict program folder,     */
+/* for example: c:\Program Files\GoldenDict\icons\dark-tb-handle.png          */
+/*                                                                            */
+/*                   =========== COLOR PALETTE ===========                    */
+/* #2B3339 – main background                                                  */
+/* #232B30 – darker background in tables and some input fields                */
+/* #4E5B65 – frame lines; unfocused elements highlighting                     */
+/* #C7CBD3 – text                                                             */
+/* #8E9CA8 – dimmed text                                                      */
+/* #0080FF – (brigth blue) accents & hovers                                   */
+/* #FFFFFF – text on brigth blue background                                   */
+/* #006AD5 – (dimmed blue) list selections                                    */
+/* #A40000 – (rubin)                                                          */
+/*           highlighting in the search field in case of a negative result;   */
+/*           accent on close buttons                                          */
+/* #D3D6DC - articles background                                              */
+/* #000000 - pressed elements; some borders                                   */
+/* #353F46 - tables headers                                                   */
+/* ========================================================================== */
 
 @font-face {
     font-family: NotoSans;
-    src: url('file:./fonts/NotoSans-Regular.ttf');
+    src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: NotoSansMono;
-    src: url('file:./fonts/NotoSansMono-Regular.ttf');
+    src: local('Noto Sans Mono') url('file:./fonts/NotoSansMono-Regular.ttf') format('truetype');
 }
 
 
@@ -43,7 +41,7 @@
 }
 #Initializing QLabel
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color: #C7CBD3;
 }
 #Initializing #progressBar
@@ -53,45 +51,56 @@
 }
 #Initializing #progressBar::chunk
 {
-  background-color: #0080FF;
-  margin: 1px;
+  background: #0080FF;
+  margin:         1px;
 }
 
+/* ====================================================== */
 /* ==================== GLOBAL SCOPE ==================== */
+/* ====================================================== */
+
+QDialog,
+QSplitter,
 QWidget
 {
   background: #2B3339;
 }
-QLabel,
-QMessageBox,
-QInputDialog,
-QPlainTextEdit,
-QLineEdit,
-QPushButton,
-QToolButton,
-QRadioButton,
 QCheckBox,
 QComboBox,
-QSpinBox,
 QGroupBox::title,
-QListView
-{
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background: #2B3339;
-  color:      #C7CBD3;
-}
-QPlainTextEdit,
+QInputDialog,
+QLabel,
 QLineEdit,
+QMessageBox,
+QPlainTextEdit,
 QPushButton,
-QComboBox,
+QRadioButton,
 QSpinBox,
+QToolButton
+{
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  color:      #C7CBD3;
+  background: #2B3339;
+}
+QListView,
+QTreeView
+{
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  color:      #C7CBD3;
+  background: #2B3339;
+}
+QComboBox,
 QGroupBox,
-QListView
+QLineEdit,
+QListView,
+QPlainTextEdit,
+QPushButton,
+QSpinBox
 {
   border: 1px solid #4E5B65;
 }
-QPlainTextEdit:focus,
 QLineEdit:focus,
+QPlainTextEdit:focus,
 QPushButton:focus,
 QSpinBox:focus
 {
@@ -102,8 +111,8 @@ QSpinBox:focus
 /* buttons */
 QPushButton:hover
 {
-  background:       #0080FF;
   color:            #FFFFFF;
+  background:       #0080FF;
   border: 1px solid #0080FF;
 }
 QPushButton:pressed
@@ -165,12 +174,12 @@ QRadioButton::indicator:checked:hover
   /*background:       #0080FF;*/
   /*margin: 2px;*/
 }
-QCheckBox::indicator:unchecked:pressed,
 QCheckBox::indicator:checked:pressed,
-QGroupBox::indicator:unchecked:pressed,
+QCheckBox::indicator:unchecked:pressed,
 QGroupBox::indicator:checked:pressed,
-QRadioButton::indicator:unchecked:pressed,
-QRadioButton::indicator:checked:pressed
+QGroupBox::indicator:unchecked:pressed,
+QRadioButton::indicator:checked:pressed,
+QRadioButton::indicator:unchecked:pressed
 {
   background:       #000000;
   border: 1px solid #000000;
@@ -192,28 +201,98 @@ QRadioButton::indicator:unchecked:disabled:hover
   border: 1px solid #4E5B65;
 }
 
-/* list fields */
-QListView::item:selected:active
+/* list views */
+QListView
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background:  #4E5B65;
-  color:       #FFFFFF;
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #4E5B65;
 }
-QListView::item:selected:!active
+QListView::item
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background:  #4E5B65;
-  color:       #C7CBD3;
+  color:      #C7CBD3;
+  background: #232B30;
 }
 QListView::item:hover
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background:  #0080FF;
-  color:       #FFFFFF;
+  color:        #C7CBD3;
+  background:   #2B3339;
+  padding-left: 1px;
 }
-QListView:focus
+QListView::item:selected,
+QListView::item:selected:active
 {
-  border: 1px solid #0080FF;
+  color:            #FFFFFF;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
+}
+QListView::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+}
+QListView::item:selected:!active:hover
+{
+  padding-left: 1px;
+}
+
+/* treeview lists */
+QTreeView
+{
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #4E5B65;
+}
+QTreeView::item
+{
+  color:      #C7CBD3;
+  background: #232B30;
+}
+QTreeView::item:hover
+{
+  color:        #C7CBD3;
+  background:   #2B3339;
+  padding-left: 1px;
+}
+QTreeView::item:selected,
+QTreeView::item:selected:active
+{
+  color:            #FFFFFF;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
+}
+QTreeView::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+}
+QTreeView::item:selected:!active:hover
+{
+  padding-left: 1px;
+}
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings
+{
+  image: url(:/icons/expand_article.png);
+}
+QTreeView::branch:has-children:!has-siblings:closed:hover,
+QTreeView::branch:closed:has-children:has-siblings:hover
+{
+  image: url(:/icons/expand_article_hovered.png);
+}
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings
+{
+  image: url(:/icons/collapse_article.png);
+}
+QTreeView::branch:open:has-children:!has-siblings:hover,
+QTreeView::branch:open:has-children:has-siblings:hover
+{
+  image: url(:/icons/collapse_article_hovered.png);
 }
 
 /* drop-down lists */
@@ -254,74 +333,70 @@ QComboBox::down-arrow:on
 }
 QComboBox QComboBoxListView
 {
-  background:                 #2B3339;
   color:                      #C7CBD3;
-  selection-background-color: #0080FF;
+  background:                 #2B3339;
   selection-color:            #FFFFFF;
+  selection-background-color: #006AD5;
 }
 QComboBox QComboBoxListView:focus
 {
   border:     1px solid #4E5B65;
 }
 
-/* tab panels */
+/* tab bars */
 QTabWidget::pane
 {
   border: 1px solid #4E5B65;
   background:       #2B3339;
-  top: -1px;
+  top:                 -1px;
 }
 QTabBar::tab
 {
-  background:       #2B3339;
-  color:            #C7CBD3;
-  border: 1px solid #4E5B65;
-  padding: 4px 7px;
+  color:             #C7CBD3;
+  background:        #2B3339;
+  border:  1px solid #4E5B65;
+  padding:          4px 12px;
 }
 QTabBar::tab:!selected
 {
-  margin-top: 2px;
+  margin-top:     2px;
+  color:      #8E9CA8;
 }
 QTabBar::tab:!selected:hover
 {
+  color:      #8E9CA8;
   background: #232B30;
+}
+QTabBar::tab:selected
+{
+  border-top:     2px solid #0080FF;
+  border-bottom:  1px solid #2B3339;
+  margin-left:    -1px;
+  margin-right:   -1px;
+  border-top-left-radius:  4px;
+  border-top-right-radius: 4px;
+}
+QTabBar::tab:first:selected {
+    margin-left:  0px;
+}
+QTabBar::tab:last:selected {
+    margin-right: 0px;
 }
 QTabBar::tab:pressed
 {
   background: #232B30;
-  margin-top: 3px;
-}
-QTabBar::tab:selected
-{
-  border-top:    2px solid #0080FF;
-  border-bottom: 1px solid #2B3339;
+  margin-top:     3px;
+  border-top-left-radius:  0px;
+  border-top-right-radius: 0px;
 }
 QTabBar::tab:only-one
 {
-  border-top: 1px solid #4E5B65;
-  margin-top: 2px;
-}
-
-/* treeview lists */
-QTreeView::branch:has-children:!has-siblings:closed,
-QTreeView::branch:closed:has-children:has-siblings
-{
-  image: url(:/icons/expand_article.png);
-}
-QTreeView::branch:has-children:!has-siblings:closed:hover,
-QTreeView::branch:closed:has-children:has-siblings:hover
-{
-  image: url(:/icons/expand_article_hovered.png);
-}
-QTreeView::branch:open:has-children:!has-siblings,
-QTreeView::branch:open:has-children:has-siblings
-{
-  image: url(:/icons/collapse_article.png);
-}
-QTreeView::branch:open:has-children:!has-siblings:hover,
-QTreeView::branch:open:has-children:has-siblings:hover
-{
-  image: url(:/icons/collapse_article_hovered.png);
+  border-top:   1px solid #4E5B65;
+  margin-top:   2px;
+  margin-left:  0px;
+  margin-right: 0px;
+  border-top-left-radius:  2px;
+  border-top-right-radius: 2px;
 }
 
 /* groupings */
@@ -333,50 +408,49 @@ QGroupBox
 }
 QGroupBox::title
 {
-  subcontrol-origin:   margin;
+  subcontrol-origin:     margin;
   subcontrol-position: top left;
-  left:         10px;
-  padding-left: 2px;
+  left:                    10px;
+  padding-left:             2px;
 }
 
-/* pop-up menus */
+/* menu lists */
 QMenu
 {
-  /* drop-down menu lists */
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background:       #2B3339;
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #2B3339;
 }
+/* menu item hovered */
 QMenu::item:selected
 {
-  /* menu item hovered */
-  background: #0080FF;
   color:      #FFFFFF;
+  background: #0080FF;
 }
 
 /* tooltips */
 QToolTip
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background:        #2B3339;
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:             #C7CBD3;
+  background:        #2B3339;
   border:  1px solid #4E5B65;
-  padding: 3px;
+  padding:               3px;
 }
 
 /* edit fields */
 QLineEdit:active,
 QPlainTextEdit:active
 {
-  selection-background-color: #0080FF;
   selection-color:            #FFFFFF;
+  selection-background-color: #006AD5;
 }
 QLineEdit:!active,
 QPlainTextEdit:!active
 {
-  selection-background-color: #4E5B65;
   selection-color:            #C7CBD3;
+  selection-background-color: #4E5B65;
 }
 
 /* scroll bars */
@@ -389,21 +463,21 @@ QScrollBar:horizontal
 {
   border-top:    1px solid #000000;
   border-bottom: 1px solid #000000;
-  height: 18px;
+  height:   18px;
   margin: 0 21px;
 }
 QScrollBar:vertical
 {
   border-right: 1px solid #000000;
   border-left:  1px solid #000000;
-  width:  18px;
+  width:    18px;
   margin: 21px 0;
 }
 QScrollBar::handle:horizontal,
 QScrollBar::handle:vertical
 {
   background: #4E5B65;
-  border: none;
+  border:        none;
 }
 QScrollBar::handle:horizontal
 {
@@ -427,14 +501,14 @@ QScrollBar::sub-line:vertical
 }
 QScrollBar::sub-line:horizontal
 {
-  border-right: none;
-  width: 20px;
+  border-right:        none;
+  width:               20px;
   subcontrol-position: left;
 }
 QScrollBar::sub-line:vertical
 {
-  border-bottom: none;
-  height: 20px;
+  border-bottom:      none;
+  height:             20px;
   subcontrol-position: top;
 }
 QScrollBar::add-line:horizontal,
@@ -446,14 +520,14 @@ QScrollBar::add-line:vertical
 }
 QScrollBar::add-line:horizontal
 {
-  border-left: none;
-  width: 20px;
+  border-left:          none;
+  width:                20px;
   subcontrol-position: right;
 }
 QScrollBar::add-line:vertical
 {
-  border-top: none;
-  height: 20px;
+  border-top:            none;
+  height:                20px;
   subcontrol-position: bottom;
 }
 QScrollBar::up-arrow:vertical,
@@ -483,8 +557,8 @@ QScrollBar::down-arrow:vertical:hover
 QScrollBar::left-arrow:horizontal,
 QScrollBar::right-arrow:horizontal
 {
-  width:  4px;
-  height: 4px;
+  width:          4px;
+  height:         4px;
   background: #4E5B65;
  }
 QScrollBar::left-arrow:horizontal,
@@ -528,7 +602,7 @@ QScrollBar::add-line:pressed
 MainStatusBar #text,
 MainStatusBar #icon
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:       #C7CBD3;
   background:  #2B3339;
 }
@@ -555,7 +629,7 @@ MainStatusBar #icon
 }
 
 /* ================= POP-UP SEARCH BAR ================== */
-/* ========== in centralWidget & in ScanPopup =========== */
+/* ============= centralWidget & ScanPopup ============== */
 #searchFrame
 {
   border:     none;
@@ -567,29 +641,29 @@ MainStatusBar #icon
 #searchFrame #highlightAllButton
 {
   qproperty-icon: none;
-  height:        18px;
-  padding-left:   5px;
-  padding-right:  5px;
+  height:         18px;
+  padding-left:    5px;
+  padding-right:   5px;
 }
 #searchFrame #searchPrevious
 {
-  min-width:     50px;
+  min-width:      50px;
 }
 #searchFrame #searchNext
 {
-  min-width:     30px;
+  min-width:      30px;
 }
 #searchFrame #highlightAllButton
 {
-  min-width:     70px;
+  min-width:      70px;
 }
 #searchFrame #searchPrevious:hover,
 #searchFrame #searchNext:hover,
 #searchFrame #highlightAllButton:hover,
 #searchFrame #highlightAllButton:checked
 {
-  background:       #0080FF;
   color:            #FFFFFF;
+  background:       #0080FF;
   border: 1px solid #0080FF;
 }
 #searchFrame #searchPrevious:pressed,
@@ -603,10 +677,14 @@ MainStatusBar #icon
 {
   margin-right: 5px;
 }
+/* "Look up in" field */
 #searchFrame #searchText
 {
-  /* font in the "Look up in" line */
   /*font-size: 10.5pt;*/
+}
+#searchFrame #searchText:focus
+{
+  background:       #232B30;
 }
 #searchFrame #searchText[noResults="true"]
 {
@@ -614,7 +692,7 @@ MainStatusBar #icon
   border: 1px solid #000000;
 }
 /* "Close Panel" icon */
-/* Delete the remaining three rules if you want to return the original icon */
+/* remove 3 following rules to return original icon */
 #searchFrame #searchCloseButton
 {
   qproperty-icon: url(icons/dark-close-button.svg);
@@ -630,19 +708,22 @@ MainStatusBar #icon
   border: 1px solid #000000;
 }
 
+/* ====================================================== */
 /* ==================== LOCAL SCOPE ===================== */
-/* ==================== MAIN WINDOW ===================== */
+/* ====================================================== */
+
+/* ==================== Main Window ===================== */
 MainWindow
 {
-/* affects the color of the thin frame around the panels and some areas of the panels */
+  /* affects color of the thin frame around some elements of panels */
   background: #2B3339;
 }
+/* panels separator */
 MainWindow::separator
 {
-  /* panels separator */
   background: #2B3339;
-  width:      0.5em;
-  height:     0.5em;
+  width:        0.5em;
+  height:       0.5em;
 }
 MainWindow::separator:hover
 {
@@ -650,27 +731,26 @@ MainWindow::separator:hover
 }
 
 /* ======================== Menu ======================== */
+/* menu line */
 MainWindow #menubar
 {
-  /* menu line */
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background: #2B3339;
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
+  background: #2B3339;
 }
+/* menu item */
 MainWindow #menubar::item
 {
-  /* menu item */
   background:       #2B3339;
   border: 1px solid #2B3339;
   padding:      0.4em 0.6em;
 }
+/* menu item hovered/pressed */
 MainWindow #menubar::item:selected,
 MainWindow #menubar::item:pressed
 {
-  /* menu item hovered */
-  /* menu item pushed */
-  background:       #0080FF;
   color:            #FFFFFF;
+  background:       #0080FF;
   border: 1px solid #0080FF;
 }
 
@@ -679,56 +759,64 @@ MainWindow #dictionaryBar
 {
   background:        #2B3339;
   border:  1px solid #000000;
-  padding: 0.2em;
+  padding:             0.2em;
 }
-MainWindow #dictionaryBar::handle
+/* capture area of Dictionary Toolbar */
+MainWindow #dictionaryBar::handle:horizontal
 {
-  /* capture area of the Dictionary Toolbar */
   background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  width:                    7px;
+  margin-right:             2px;
 }
+MainWindow #dictionaryBar::handle:vertical
+{
+  background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  height:                   7px;
+  margin:       0px 1px 3px 1px;
+}
+/* inactive dictionary button */
 MainWindow #dictionaryBar QToolButton
 {
-  /* inactive dictionary button */
-  background:        #2B3339;
   color:             #C7CBD3;
+  background:        #2B3339;
   border:  1px solid #2B3339;
-  padding: 2px;
-  margin:  1px 2px;
+  padding:   2px 1px 2px 2px;
+  margin:            1px 2px;
 }
+/* active dictionary button */
 MainWindow #dictionaryBar QToolButton:checked
 {
-  /* active dictionary button */
-  background:        #3D464E;
   color:             #C7CBD3;
+  background:        #3D464E;
   border:  1px solid #000000;
-  padding: 2px;
-  margin:  1px 2px;
+  padding:   2px 1px 2px 2px;
+  margin:            1px 2px;
 }
+/* inactive dictionary button hovered */
 MainWindow #dictionaryBar QToolButton:hover
 {
-  /* inactive dictionary button hovered */
   border: 1px solid #4E5B65;
 }
+/* active dictionary button hovered */
 MainWindow #dictionaryBar QToolButton:checked:hover
 {
-  /* active dictionary button hovered */
   border: 1px solid #0080FF;
 }
+/* dictionary button pressed */
 MainWindow #dictionaryBar QToolButton:pressed,
 MainWindow #dictionaryBar QToolButton:checked:pressed
 {
-  /* dictionary button pushed */
-  background:       #000000;
   color:            #C7CBD3;
+  background:       #000000;
   border: 1px solid #000000;
 }
+/* toolbar show-more button */
 MainWindow #dictionaryBar #qt_toolbar_ext_button
 {
-  /* toolbar foldout button */
   background:       #3D464E;
   border: 1px solid #4E5B65;
-  min-width:  4px;
-  min-height: 4px;
 }
 MainWindow #dictionaryBar #qt_toolbar_ext_button:checked,
 MainWindow #dictionaryBar #qt_toolbar_ext_button:hover
@@ -743,11 +831,15 @@ MainWindow #dictionaryBar #qt_toolbar_ext_button:checked:pressed
   border: 1px solid #000000;
 }
 
-/* ========= Drop-down list of Dictionaries Groups ========= */
+/* ======================= PANES ======================== */
+/* ====== Search, History, Dictionaries, Favorites ====== */
+/* ================= "Look up in" line ================== */
+
+/* drop-down list of Dictionaries Groups */
 MainWindow #searchPane GroupComboBox
 {
-  /* font in group list line and in group list itself */
-  font-family: NotoSansMono, "Noto Sans Mono", Consolas;
+  /* font in Groups list & line */
+  font-family: NotoSansMono, Consolas;
   font-size:   9.1pt;
 }
 MainWindow #searchPane GroupComboBox QComboBoxListView
@@ -759,13 +851,9 @@ MainWindow #searchPane GroupComboBox QComboBoxListView
   min-width:    230px;
   min-height:   500px;
 }
-
-/* ====================== Panels: ======================= */
-/* ===== Look up, History, Dictionaries, Favorites ====== */
-/* ================== "Look up in" line ================= */
 MainWindow #searchPane QLabel
 {
-  /* font in panels headers */
+  /* font in panes headers */
   font-size: 9.1pt;
 }
 MainWindow #historyPane   #historyPaneTitleBar #historyLabel,
@@ -773,10 +861,10 @@ MainWindow #historyPane   #historyPaneTitleBar #historyCountLabel,
 MainWindow #favoritesPane #favoritesPaneTitleBar #favoritesLabel,
 MainWindow #dictsPane     #dictsPaneTitleBar QLabel
 {
-  /* font in panels */
+  /* font in panes */
   font-size: 9.1pt;
 }
-MainWindow #searchPane #translateLine
+MainWindow #searchPane    #translateLine
 {
   /* font in "Look up in" line */
   font-size: 9.1pt;
@@ -787,12 +875,16 @@ MainWindow #historyPane   #historyList,
 MainWindow #favoritesPane #favoritesTree,
 MainWindow #dictsPane     #dictsList
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background:       #2B3339;
+  font-family: NotoSans, "Segoe UI", sans-serif;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
 }
-MainWindow #searchPane    #translateLine:focus,
+MainWindow #searchPane    #translateLine:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
 MainWindow #searchPane    #wordList:focus,
 MainWindow #historyPane   #historyList:focus,
 MainWindow #favoritesPane #favoritesTree:focus,
@@ -800,32 +892,42 @@ MainWindow #dictsPane     #dictsList:focus
 {
   border: 1px solid #0080FF;
 }
+MainWindow #searchPane    #wordList::item,
+MainWindow #historyPane   #historyList::item,
+MainWindow #favoritesPane #favoritesTree::item,
+MainWindow #dictsPane     #dictsList::item
+{
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
+}
 MainWindow #searchPane    #wordList::item:hover,
 MainWindow #historyPane   #historyList::item:hover,
 MainWindow #favoritesPane #favoritesTree::item:hover,
 MainWindow #dictsPane     #dictsList::item:hover
 {
-  background:   #232B30;
-  color:        #C7CBD3;
-  padding-left: 1px;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #232B30;
+  padding-left:         1px;
 }
 MainWindow #searchPane    #wordList::item:selected,
 MainWindow #historyPane   #historyList::item:selected,
 MainWindow #favoritesPane #favoritesTree::item:selected,
 MainWindow #dictsPane     #dictsList::item:selected
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background: #4E5B65;
-  color:      #C7CBD3;
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
 }
 MainWindow #searchPane    #wordList::item:focus,
 MainWindow #historyPane   #historyList::item:focus,
 MainWindow #favoritesPane #favoritesTree::item:focus,
 MainWindow #dictsPane     #dictsList::item:focus
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background: #0080FF;
-  color:      #FFFFFF;
+  color:            #FFFFFF;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
 }
 MainWindow #searchPane #translateLine[noResults="true"]
 {
@@ -833,12 +935,48 @@ MainWindow #searchPane #translateLine[noResults="true"]
   border: 1px solid #000000;
 }
 
+/* ===================== Panes Tabs ===================== */
+MainWindow > QTabBar {
+  qproperty-drawBase: 0;
+}
+MainWindow > QTabBar::tab
+{
+  padding: 4px 16px;
+  margin-bottom: 2px;
+  margin-top: -1px;
+}
+MainWindow > QTabBar::tab:selected
+{
+  border-bottom: 1px solid #0080FF;
+  border-top:    1px solid #2B3339;
+  color:                   #0080FF;
+  margin-left:   0px;
+  margin-right:  0px;
+}
+MainWindow > QTabBar::tab:!selected
+{
+  margin-top: 0px;
+  color:      #8E9CA8;
+}
+MainWindow > QTabBar::tab:first:selected {
+    margin-left:  2px;
+}
+MainWindow > QTabBar::tab:last:selected {
+    margin-right: 2px;
+}
+MainWindow > QTabBar::tab:first:!selected {
+    margin-left:  2px;
+}
+MainWindow > QTabBar::tab:last:!selected {
+    margin-right: 2px;
+}
+
 /* ================= Navigation Toolbar ================= */
 MainWindow #navToolbar
 {
   background:        #2B3339;
   border:  1px solid #000000;
-  padding: 0.2em;
+  padding:             0.2em;
 }
 MainWindow #navToolbar::handle
 {
@@ -850,11 +988,11 @@ MainWindow #navToolbar QToolBarSeparator
 }
 MainWindow #navToolbar QToolButton
 {
-  background:        #2B3339;
   color:             #C7CBD3;
+  background:        #2B3339;
   border:  1px solid #2B3339;
-  padding: 2px;
-  margin:  1px 2px;
+  padding:               2px;
+  margin:            1px 2px;
 }
 MainWindow #navToolbar QToolButton:checked,
 MainWindow #navToolbar QToolButton:hover
@@ -869,7 +1007,7 @@ MainWindow #navToolbar QToolButton:checked:pressed
   border: 1px solid #000000;
 }
 /* "Save" and "Print" icons */
-/* remove the following two rules if you want to return the original icons */
+/* remove 2 following rules to return original icons */
 MainWindow #navToolbar #saveArticleButton
 {
   qproperty-icon: url(icons/dark-save-button.svg);
@@ -878,23 +1016,23 @@ MainWindow #navToolbar #printButton
 {
   qproperty-icon: url(icons/dark-print-button.svg);
 }
-/* Group List and "Look up in" line with Search Pane inactive */
+/* Groups List and "Look up in" line with Search Pane inactive */
 MainWindow #navToolbar GroupComboBox
 {
-  /* font in group list line and in group list itself */
+  /* font in Groups list & line */
   /*font-size:   10.5pt;*/
-  font-family: NotoSansMono, "Noto Sans Mono", Consolas;
-  background:       #2B3339;
+  font-family: NotoSansMono, Consolas;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
-  border-radius:    0px;
+  border-radius:        0px;
 }
 MainWindow #navToolbar GroupComboBox:on
 {
-  background:       #2B3339;
   color:            #C7CBD3;
-  padding-top:   2px;
-  padding-right: 2px;
+  background:       #2B3339;
+  padding-top:          2px;
+  padding-right:        2px;
 }
 MainWindow #navToolbar GroupComboBox::drop-down
 {
@@ -930,32 +1068,69 @@ MainWindow #navToolbar GroupComboBox QComboBoxListView
   min-width:    230px;
   min-height:   500px;
 }
+/* "Look up in" field */
 MainWindow #navToolbar #translateLine
 {
-  /* font in "Look up in" line */
   /*font-size:        10.5pt;*/
-  background:       #2B3339;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
-  border-radius:    0px;
+  border-radius:        0px;
+}
+MainWindow #navToolbar #translateLine:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+MainWindow #navToolbar #translateLine IconButton[toolTip="Drop-down"]
+{
+  qproperty-pixmap: url(icons/dark-drop-down.svg);
+}
+MainWindow #navToolbar #translateLine IconButton
+{
+  qproperty-pixmap: url(icons/dark-search.svg);
 }
 MainWindow #navToolbar #translateLine[noResults="true"]
 {
   background:       #A40000;
   border: 1px solid #000000;
 }
+/* drop-down list of "Look up in" field */
 MainWindow #navToolbar CompletionList
 {
-  /* font in drop-down list of "Look up in" line */
   /*font-size: 10.5pt;*/
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
+}
+MainWindow #navToolbar CompletionList::item
+{
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
+}
+MainWindow #navToolbar CompletionList::item:hover
+{
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+  padding-left: 1px;
+}
+MainWindow #navToolbar CompletionList::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
 }
 MainWindow #navToolbar CompletionList::item:selected:hover
 {
+  color:            #FFFFFF;
+  background:       #006AD5;
   border: 1px solid #0080FF;
 }
 
-/* ================= Translations Panel ================= */
+/* =================== Articles Panel =================== */
 MainWindow #centralWidget QToolButton:hover
 {
   background:       #0080FF;
@@ -966,11 +1141,19 @@ MainWindow #centralWidget QToolButton:pressed
   background:       #000000;
   border: 1px solid #000000;
 }
+/* cards tabs */
+MainWindow #centralWidget #qt_tabwidget_tabbar::tab
+{
+  padding-left: 18px;
+  padding-right: 8px;
+}
 /* "Close Tab" icon */
-/* Delete the following three rules if you want to return the original icon */
+/* remove 3 following rules to return original icons */
 MainWindow #centralWidget QTabBar::close-button
 {
   image: url(icons/dark-close-button.svg);
+  margin-top: 2px;
+  margin-right: 2px;
 }
 MainWindow #centralWidget QTabBar::close-button:hover
 {
@@ -982,15 +1165,19 @@ MainWindow #centralWidget QTabBar::close-button:pressed
   image: url(icons/dark-close-button.svg);
   background: #000000;
 }
-/* "Add Tab" and "Tabs List" icons */
-/* Delete the following two rules if we want to return the original icon */
-MainWindow > #centralWidget > #tabWidget > QToolButton
+/* "New Tab" and "Open Tabs List" icons */
+/* remove 2 following rules to return original icons */
+MainWindow #centralWidget QToolButton[toolTip="New Tab"]
+{
+  qproperty-icon: url(icons/dark-addtab-button.svg);
+}
+MainWindow #centralWidget QToolButton[toolTip="Open Tabs List"]
 {
   qproperty-icon: url(icons/dark-tabs-button.svg);
 }
-MainWindow > #centralWidget > #tabWidget > QToolButton[popupMode="0"]
+MainWindow #centralWidget QToolButton::menu-indicator
 {
-  qproperty-icon: url(icons/dark-addtab-button.svg);
+  background: transparent;
 }
 
 /* =============== Pop-up Navigation Panel ============== */
@@ -998,12 +1185,12 @@ MainWindow > #centralWidget > #tabWidget > QToolButton[popupMode="0"]
 MainWindow #ftsSearchFrame #ftsSearchPrevious,
 MainWindow #ftsSearchFrame #ftsSearchNext
 {
-  qproperty-icon: none;
-  background:       #2B3339;
+  qproperty-icon:      none;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
-  height:    24px;
-  min-width: 70px;
+  height:              24px;
+  min-width:           70px;
 }
 MainWindow #ftsSearchFrame #ftsSearchPrevious:focus,
 MainWindow #ftsSearchFrame #ftsSearchNext:focus
@@ -1014,8 +1201,8 @@ MainWindow #ftsSearchFrame #ftsSearchNext:focus
 MainWindow #ftsSearchFrame #ftsSearchPrevious:hover,
 MainWindow #ftsSearchFrame #ftsSearchNext:hover
 {
-  background:       #0080FF;
   color:            #FFFFFF;
+  background:       #0080FF;
   border: 1px solid #0080FF;
 }
 MainWindow #ftsSearchFrame #ftsSearchPrevious:pressed,
@@ -1039,17 +1226,17 @@ MainWindow #ftsSearchFrame #ftsSearchNext:disabled
 }
 ScanPopup
 {
-  background: #2B3339;
+  background:       #2B3339;
 }
 ScanPopup #groupList
 {
-  /* font in group list line and in group list itself */
+  /* font in Groups list & line */
   /*font-size:   10.5pt;*/
-  font-family: NotoSansMono, "Noto Sans Mono", Consolas;
-  background:       #2B3339;
+  font-family: NotoSansMono, Consolas;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
-  border-radius:    0px;
+  border-radius:        0px;
 }
 ScanPopup #groupList::drop-down
 {
@@ -1085,48 +1272,74 @@ ScanPopup #groupList QComboBoxListView
   min-width:    230px;
   min-height:   500px;
 }
+/* "Look up in" field */
 ScanPopup #translateLine
 {
-  /* font in "Look up in" line */
-  /*font-size:   10.5pt;*/
-  background:       #2B3339;
+  /*font-size:     10.5pt;*/
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
-  border-radius:    0px;
+  border-radius:        0px;
+}
+ScanPopup #translateLine:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+ScanPopup #translateLine IconButton[toolTip="Drop-down"]
+{
+  qproperty-pixmap: url(icons/dark-drop-down.svg);
+}
+ScanPopup #translateLine IconButton
+{
+  qproperty-pixmap: url(icons/dark-search.svg);
 }
 ScanPopup #translateLine[noResults="true"]
 {
   background:       #A40000;
   border: 1px solid #000000;
 }
+/* "Look up in" field's drop-down list */
 ScanPopup CompletionList
 {
-  background:  #2B3339;
-  color:       #C7CBD3;
-  /* font in "Look up in" line's drop-down list */
   /*font-size:   10.5pt;*/
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #4E5B65;
+  min-width:          220px;
 }
-ScanPopup CompletionList::item:selected
+ScanPopup CompletionList::item
 {
-  background: #4E5B65;
-  color:      #C7CBD3;
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
 }
 ScanPopup CompletionList::item:hover
 {
-  background: #0080FF;
-  color:      #FFFFFF;
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+  padding-left:         1px;
+}
+ScanPopup CompletionList::item:selected:!active
+{
+  color:            #C7CBD3;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
 }
 ScanPopup CompletionList::item:selected:hover
 {
+  color:            #FFFFFF;
+  background:       #006AD5;
   border: 1px solid #0080FF;
 }
 ScanPopup QToolButton
 {
   border: 1px solid #2B3339;
-  margin: 1px;
-  width:  20px;
-  height: 20px;
+  margin:               1px;
+  width:               20px;
+  height:              20px;
 }
 ScanPopup QToolButton:checked,
 ScanPopup QToolButton:hover
@@ -1138,51 +1351,61 @@ ScanPopup #dictionaryBar
 {
   background:        #2B3339;
   border:  1px solid #000000;
-  padding: 5px;
+  padding:               5px;
 }
-ScanPopup #dictionaryBar::handle
+ScanPopup #dictionaryBar::handle:horizontal
 {
   background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  width:                    7px;
+  margin:       1px 4px 2px 0px;
 }
+ScanPopup #dictionaryBar::handle:vertical
+{
+  background: #2B3339 url('icons/dark-tb-handle.png');
+  background-position: top left;
+  height:                   7px;
+  margin:       0px 2px 4px 1px;
+}
+/* inactive dictionary button */
 ScanPopup #dictionaryBar QToolButton
 {
-  /* inactive dictionary button */
-  background:       #2B3339;
   color:            #C7CBD3;
+  background:       #2B3339;
   border: 1px solid #2B3339;
-  padding: 2px 0px;
-  margin:  1px 0px;
+  padding:          2px 0px;
+  margin:   0px 0px 1px 1px;
 }
+/* active dictionary button */
 ScanPopup #dictionaryBar QToolButton:checked
 {
-  /* active dictionary button */
-  background:       #3D464E;
   color:            #C7CBD3;
+  background:       #3D464E;
   border: 1px solid #000000;
-  padding: 2px 0px;
-  margin:  1px 0px;
+  padding:          2px 0px;
+  margin:   0px 0px 1px 1px;
 }
+/* inactive dictionary button hovered */
 ScanPopup #dictionaryBar QToolButton:hover
 {
-  /* inactive dictionary button hovered */
   border: 1px solid #4E5B65;
 }
+/* active dictionary button hovered */
 ScanPopup #dictionaryBar QToolButton:checked:hover
 {
-  /* active dictionary button hovered */
   border: 1px solid #0080FF;
 }
-ScanPopup QToolButton:pressed,
+/* dictionary button pressed */
 ScanPopup #dictionaryBar QToolButton:pressed,
-ScanPopup #dictionaryBar QToolButton:checked:pressed
+ScanPopup #dictionaryBar QToolButton:checked:pressed,
+ScanPopup QToolButton:pressed
 {
-  /* dictionary button pushed */
   background:       #000000;
   border: 1px solid #000000;
 }
+/* toolbar show-more button */
 ScanPopup #dictionaryBar #qt_toolbar_ext_button
 {
-  /* toolbar foldout button */
   background:       #4E5B65;
   border: 1px solid #4E5B65;
 }
@@ -1198,7 +1421,7 @@ ScanPopup #dictionaryBar #qt_toolbar_ext_button:checked:pressed
   background:       #000000;
   border: 1px solid #000000;
 }
-/* Remove the following five rules if you want to return the original icons */
+/* remove 5 following rules to return original icons */
 ScanPopup QToolButton#sendWordButton
 {
   qproperty-icon: url(icons/dark-scanpopup-swb.svg);
@@ -1230,11 +1453,32 @@ DictInfo QPushButton
   min-width: 90px;
   height:    24px;
 }
+DictInfo #infoLabel,
+DictInfo #dictionaryFileList
+{
+  background: #232B30;
+}
+DictInfo #infoLabel:focus,
+DictInfo #dictionaryFileList:focus
+{
+  border: 1px solid #4E5B65;
+}
 
 /* ============ DICTIONARY HEADWORDS WINDOW ============= */
 DictHeadwords
 {
   background: #2B3339;
+}
+DictHeadwords #filterLine,
+DictHeadwords #headersListView
+{
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  background:  #232B30;
+}
+DictHeadwords #filterLine:focus,
+DictHeadwords #headersListView:focus
+{
+  border: 1px solid #0080FF;
 }
 DictHeadwords QGroupBox
 {
@@ -1244,10 +1488,10 @@ DictHeadwords QGroupBox
 }
 DictHeadwords QGroupBox::title
 {
-  subcontrol-origin:   margin;
+  subcontrol-origin:       margin;
   subcontrol-position: top center;
-  left:    0px;
-  padding: 1px 3px;
+  left:                       0px;
+  padding:                1px 3px;
 }
 DictHeadwords #searchModeCombo
 {
@@ -1266,23 +1510,31 @@ DictHeadwords QPushButton
 {
   height: 24px;
 }
-DictHeadwords #filterLine:focus
-{
-  border: 1px solid #0080FF;
-}
 
 /* ================== FULL-TEXT SEARCH ================== */
 #FullTextSearchDialog
 {
   background: #2B3339;
 }
+#FullTextSearchDialog #searchLine,
+#FullTextSearchDialog #headwordsView
+{
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  background:  #232B30;
+}
 #FullTextSearchDialog #searchMode
 {
   height: 20px;
 }
+#FullTextSearchDialog #headwordsView:focus,
 #FullTextSearchDialog #searchMode:focus
 {
   border: 1px solid #0080FF;
+}
+#FullTextSearchDialog #distanceBetweenWords,
+#FullTextSearchDialog #articlesPerDictionary
+{
+  background: #232B30;
 }
 #FullTextSearchDialog #searchMode::drop-down:focus
 {
@@ -1301,8 +1553,8 @@ DictHeadwords #filterLine:focus
 }
 #FullTextSearchDialog #searchProgressBar::chunk
 {
-  background-color: #0080FF;
-  margin: 1px;
+  background: #0080FF;
+  margin:         1px;
 }
 #FullTextSearchDialog #nowIndexingLabel
 {
@@ -1331,6 +1583,10 @@ About QPushButton
   min-width: 90px;
   height:    24px;
 }
+About #credits
+{
+  border: 1px solid #4E5B65;
+}
 
 /* =============== PREFERENCES... WINDOW ================ */
 Preferences
@@ -1339,9 +1595,9 @@ Preferences
 }
 Preferences QLineEdit
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background: #232B30;
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
+  background: #232B30;
 }
 Preferences QLineEdit:focus
 {
@@ -1369,32 +1625,37 @@ EditDictionaries QLineEdit
   font-size: 9pt;
 }
 EditDictionaries QLineEdit,
-EditDictionaries DictListWidget,
 EditDictionaries QPlainTextEdit
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  background: #232B30;
+  font-family: "Segoe UI", NotoSans, sans-serif;
   color:      #C7CBD3;
+  background: #232B30;
 }
 EditDictionaries DictListWidget
 {
+  color:            #C7CBD3;
+  background:       #232B30;
   border: 1px solid #4E5B65;
 }
 EditDictionaries QLineEdit:focus,
-EditDictionaries DictListWidget:focus
+EditDictionaries #paths:focus,
+EditDictionaries #soundDirs:focus,
+EditDictionaries #hunspellDictionaries:focus,
+EditDictionaries #mediaWikis:focus,
+EditDictionaries #webSites:focus,
+EditDictionaries #dictServers:focus,
+EditDictionaries #programs:focus,
+EditDictionaries #dictionaryOrder:focus,
+EditDictionaries #inactiveDictionaries:focus,
+EditDictionaries #dictionaryDescription:focus,
+EditDictionaries #dictionaryFileList:focus,
+EditDictionaries #dictionaries:focus
 {
   background:       #232B30;
   border: 1px solid #0080FF;
 }
-EditDictionaries DictListWidget::item:selected
+EditDictionaries #dictionaries:hover
 {
-  background:       #4E5B65;
-  border: 1px solid #4E5B65;
-}
-EditDictionaries DictListWidget::item:hover
-{
-  background:       #0080FF;
-  color:            #FFFFFF;
   border: 1px solid #0080FF;
 }
 EditDictionaries QComboBox
@@ -1407,39 +1668,12 @@ EditDictionaries QPushButton
   min-width: 90px;
   height:    24px;
 }
-EditDictionaries QTreeView
-{
-  background:       #232B30;
-  color:            #C7CBD3;
-  border: 1px solid #4E5B65;
-}
-EditDictionaries QTreeView::item:hover
-{
-  background:   #2B3339;
-  padding-left: 1px;
-}
-EditDictionaries QTreeView::item:selected
-{
-  background:       #0080FF;
-  color:            #FFFFFF;
-  border: 1px solid #0080FF;
-}
-EditDictionaries QTreeView::item:selected:!active
-{
-  background:       #4E5B65;
-  border: 1px solid #4E5B65;
-}
-EditDictionaries QTreeView::item:selected:!active:hover
-{
-  background:   #4E5B65;
-  padding-left: 1px;
-}
 EditDictionaries QHeaderView::section
 {
-  background:       #353F46;
   color:            #C7CBD3;
+  background:       #353F46;
   border: 1px solid #232B30;
-  padding-left:     6px;
+  padding-left:         6px;
 }
 EditDictionaries QTreeView::indicator:unchecked
 {
@@ -1464,14 +1698,14 @@ EditDictionaries QSlider::groove
 {
   background:       #232B30;
   border: 1px solid #4E5B65;
-  height: 4px;
+  height:               4px;
 }
 EditDictionaries QSlider::handle
 {
   background:       #232B30;
   border: 1px solid #4E5B65;
-  width:  8px;
-  margin: -8px 0;
+  width:                8px;
+  margin:            -8px 0;
 }
 EditDictionaries QSlider::handle:hover
 {
@@ -1499,9 +1733,9 @@ EditDictionaries DictGroupsWidget QToolButton[popupMode="0"]
 {
   background:       #232B30;
   border: 1px solid #4E5B65;
-  padding-top:    6px;
-  padding-bottom: 5px;
-  padding-left:   2px;
+  padding-top:          6px;
+  padding-bottom:       5px;
+  padding-left:         2px;
 }
 EditDictionaries DictGroupsWidget QToolButton:hover,
 EditDictionaries DictGroupsWidget QToolButton:pressed
@@ -1522,13 +1756,21 @@ EditDictionaries DictGroupsWidget QLabel#label_3
 {
   qproperty-pixmap: none;
 }
+EditDictionaries IconButton[toolTip="Quick Search"]
+{
+  qproperty-pixmap: url(icons/dark-quick-search.svg);
+}
+EditDictionaries IconButton[toolTip="Clear Search"]
+{
+  qproperty-pixmap: url(icons/dark-clear-search.svg);
+}
 
 /* ================ PRINT PREVIEW WINDOW ================ */
 QPrintPreviewDialog QToolBar
 {
   background:        #2B3339;
   border:  1px solid #000000;
-  padding: 0.2em;
+  padding:             0.2em;
 }
 QPrintPreviewDialog QToolBar::handle
 {
@@ -1536,11 +1778,11 @@ QPrintPreviewDialog QToolBar::handle
 }
 QPrintPreviewDialog QToolBar QToolButton
 {
-  background:        #2B3339;
   color:             #C7CBD3;
+  background:        #2B3339;
   border:  1px solid #2B3339;
-  padding: 2px;
-  margin:  1px 2px;
+  padding:               2px;
+  margin:            1px 2px;
 }
 QPrintPreviewDialog QToolBar QToolButton:checked,
 QPrintPreviewDialog QToolBar QToolButton:hover
@@ -1556,32 +1798,48 @@ QPrintPreviewDialog QToolBar QToolButton:checked:pressed
 }
 QPrintPreviewDialog QToolBar QToolBarSeparator
 {
-  background: #4E5B65;
+  background:       #4E5B65;
+}
+QPrintPreviewDialog QToolBar QLineEdit
+{
+  background:       #232B30;
+}
+QPrintPreviewDialog QGraphicsView
+{
+  border: 1px solid #2B3339;
 }
 
-/* ===================== HELP WINDOW ==================== */
-/*  I did not want to color this window, but it inherits  */
-/*  the styles of other windows from which it was called; */
-/* I had to "balance" it out, and besides, the ID of this */
-/*  window, generated on Linux, does not work on Windows, */
-/*   and I have not yet found a way to find out the ID    */
-/*                  directly on Windows                   */
-QDialog,
-QSplitter
+/* =============================== HELP WINDOW ============================== */
+/*  I  didn't  want  to  color this window, but it inherits the styles of the */
+/*  other  windows it was called from. Also, it has no objectName (ID) in the */
+/*  current version of GoldenDict, so I refer to classes.                     */
+
+QDialog[modal="false"] QTextBrowser
 {
-  background: #2B3339;
+  font-family: "Segoe UI", NotoSans, sans-serif;
+  border: 1px solid #4E5B65;
+  background:       #D3D6DC;
+  padding-left:        20px;
 }
-QTreeView
+QHelpContentWidget,
+QHelpIndexWidget
 {
-  background: #232B30;
-  color:      #C7CBD3;
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #232B30;
+  border-radius:        4px;
+  margin:               6px;
+  padding:              6px;
 }
-QTreeView::item:hover
+QDialog[modal="false"] QListView::item,
+QDialog[modal="false"] QTreeView::item
 {
-  background:   #2B3339;
-  padding-left: 1px;
+  padding-top:    1px;
+  padding-bottom: 1px;
 }
-QTextBrowser
+QDialog[modal="false"] QListView:focus,
+QDialog[modal="false"] QTreeView:focus
 {
-  background: #D3D6DC;
+  border: 1px solid #232B30;
 }
