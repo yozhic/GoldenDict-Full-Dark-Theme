@@ -1366,6 +1366,17 @@ DictHeadwords
 {
   background: #2B3339;
 }
+DictHeadwords #filterLine,
+DictHeadwords #headersListView
+{
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  background:  #232B30;
+}
+DictHeadwords #filterLine:focus,
+DictHeadwords #headersListView:focus
+{
+  border: 1px solid #0080FF;
+}
 DictHeadwords QGroupBox
 {
   margin-top:     6px;
@@ -1395,10 +1406,6 @@ DictHeadwords #searchModeCombo::drop-down:focus
 DictHeadwords QPushButton
 {
   height: 24px;
-}
-DictHeadwords #filterLine:focus
-{
-  border: 1px solid #0080FF;
 }
 
 /* ================== FULL-TEXT SEARCH ================== */
