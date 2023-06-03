@@ -1360,6 +1360,16 @@ DictInfo QPushButton
   min-width: 90px;
   height:    24px;
 }
+DictInfo #infoLabel,
+DictInfo #dictionaryFileList
+{
+  background: #232B30;
+}
+DictInfo #infoLabel:focus,
+DictInfo #dictionaryFileList:focus
+{
+  border: 1px solid #4E5B65;
+}
 
 /* ============ DICTIONARY HEADWORDS WINDOW ============= */
 DictHeadwords
