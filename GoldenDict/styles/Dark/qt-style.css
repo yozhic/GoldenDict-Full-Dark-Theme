@@ -352,55 +352,51 @@ QTabWidget::pane
 }
 QTabBar::tab
 {
-  color:            #C7CBD3;
-  background:       #2B3339;
-  border: 1px solid #4E5B65;
-  padding:          4px 7px;
+  color:             #C7CBD3;
+  background:        #2B3339;
+  border:  1px solid #4E5B65;
+  padding:          4px 12px;
 }
 QTabBar::tab:!selected
 {
-  margin-top: 2px;
+  margin-top:     2px;
+  color:      #8E9CA8;
 }
 QTabBar::tab:!selected:hover
 {
+  color:      #8E9CA8;
   background: #232B30;
+}
+QTabBar::tab:selected
+{
+  border-top:     2px solid #0080FF;
+  border-bottom:  1px solid #2B3339;
+  margin-left:    -1px;
+  margin-right:   -1px;
+  border-top-left-radius:  4px;
+  border-top-right-radius: 4px;
+}
+QTabBar::tab:first:selected {
+    margin-left:  0px;
+}
+QTabBar::tab:last:selected {
+    margin-right: 0px;
 }
 QTabBar::tab:pressed
 {
   background: #232B30;
   margin-top:     3px;
-}
-QTabBar::tab:selected
-{
-  border-top:    2px solid #0080FF;
-  border-bottom: 1px solid #2B3339;
+  border-top-left-radius:  0px;
+  border-top-right-radius: 0px;
 }
 QTabBar::tab:only-one
 {
-  border-top: 1px solid #4E5B65;
-  margin-top: 2px;
-}
-
-/* treeview lists */
-QTreeView::branch:has-children:!has-siblings:closed,
-QTreeView::branch:closed:has-children:has-siblings
-{
-  image: url(:/icons/expand_article.png);
-}
-QTreeView::branch:has-children:!has-siblings:closed:hover,
-QTreeView::branch:closed:has-children:has-siblings:hover
-{
-  image: url(:/icons/expand_article_hovered.png);
-}
-QTreeView::branch:open:has-children:!has-siblings,
-QTreeView::branch:open:has-children:has-siblings
-{
-  image: url(:/icons/collapse_article.png);
-}
-QTreeView::branch:open:has-children:!has-siblings:hover,
-QTreeView::branch:open:has-children:has-siblings:hover
-{
-  image: url(:/icons/collapse_article_hovered.png);
+  border-top:   1px solid #4E5B65;
+  margin-top:   2px;
+  margin-left:  0px;
+  margin-right: 0px;
+  border-top-left-radius:  2px;
+  border-top-right-radius: 2px;
 }
 
 /* groupings */
@@ -1055,6 +1051,12 @@ MainWindow #centralWidget QToolButton:pressed
 {
   background:       #000000;
   border: 1px solid #000000;
+}
+/* cards tabs */
+MainWindow #centralWidget #qt_tabwidget_tabbar::tab
+{
+  padding-left: 18px;
+  padding-right: 8px;
 }
 /* "Close Tab" icon */
 /* remove 3 following rules to return original icons */
