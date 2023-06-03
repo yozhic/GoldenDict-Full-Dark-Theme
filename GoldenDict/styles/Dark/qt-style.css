@@ -1413,13 +1413,25 @@ DictHeadwords QPushButton
 {
   background: #2B3339;
 }
+#FullTextSearchDialog #searchLine,
+#FullTextSearchDialog #headwordsView
+{
+  font-family: NotoSans, "Segoe UI", sans-serif;
+  background:  #232B30;
+}
 #FullTextSearchDialog #searchMode
 {
   height: 20px;
 }
+#FullTextSearchDialog #headwordsView:focus,
 #FullTextSearchDialog #searchMode:focus
 {
   border: 1px solid #0080FF;
+}
+#FullTextSearchDialog #distanceBetweenWords,
+#FullTextSearchDialog #articlesPerDictionary
+{
+  background: #232B30;
 }
 #FullTextSearchDialog #searchMode::drop-down:focus
 {
