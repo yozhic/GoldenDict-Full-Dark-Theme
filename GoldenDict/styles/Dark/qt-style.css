@@ -1099,6 +1099,8 @@ MainWindow #centralWidget #qt_tabwidget_tabbar::tab
 MainWindow #centralWidget QTabBar::close-button
 {
   image: url(icons/dark-close-button.svg);
+  margin-top: 2px;
+  margin-right: 2px;
 }
 MainWindow #centralWidget QTabBar::close-button:hover
 {
