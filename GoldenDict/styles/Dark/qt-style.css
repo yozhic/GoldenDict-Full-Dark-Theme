@@ -880,32 +880,42 @@ MainWindow #dictsPane     #dictsList:focus
 {
   border: 1px solid #0080FF;
 }
+MainWindow #searchPane    #wordList::item,
+MainWindow #historyPane   #historyList::item,
+MainWindow #favoritesPane #favoritesTree::item,
+MainWindow #dictsPane     #dictsList::item
+{
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
+}
 MainWindow #searchPane    #wordList::item:hover,
 MainWindow #historyPane   #historyList::item:hover,
 MainWindow #favoritesPane #favoritesTree::item:hover,
 MainWindow #dictsPane     #dictsList::item:hover
 {
-  color:        #C7CBD3;
-  background:   #232B30;
-  padding-left:     1px;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #232B30;
+  padding-left:         1px;
 }
 MainWindow #searchPane    #wordList::item:selected,
 MainWindow #historyPane   #historyList::item:selected,
 MainWindow #favoritesPane #favoritesTree::item:selected,
 MainWindow #dictsPane     #dictsList::item:selected
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  color:      #C7CBD3;
-  background: #4E5B65;
+  color:            #C7CBD3;
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
 }
 MainWindow #searchPane    #wordList::item:focus,
 MainWindow #historyPane   #historyList::item:focus,
 MainWindow #favoritesPane #favoritesTree::item:focus,
 MainWindow #dictsPane     #dictsList::item:focus
 {
-  font-family: NotoSans, "Noto Sans", "Segoe UI";
-  color:      #FFFFFF;
-  background: #0080FF;
+  color:            #FFFFFF;
+  background:       #006AD5;
+  border: 1px solid #006AD5;
 }
 MainWindow #searchPane #translateLine[noResults="true"]
 {
@@ -1449,7 +1459,6 @@ EditDictionaries QLineEdit
   font-size: 9pt;
 }
 EditDictionaries QLineEdit,
-EditDictionaries DictListWidget,
 EditDictionaries QPlainTextEdit
 {
   font-family: "Segoe UI", NotoSans, sans-serif;
@@ -1458,23 +1467,29 @@ EditDictionaries QPlainTextEdit
 }
 EditDictionaries DictListWidget
 {
+  color:            #C7CBD3;
+  background:       #232B30;
   border: 1px solid #4E5B65;
 }
 EditDictionaries QLineEdit:focus,
-EditDictionaries DictListWidget:focus
+EditDictionaries #paths:focus,
+EditDictionaries #soundDirs:focus,
+EditDictionaries #hunspellDictionaries:focus,
+EditDictionaries #mediaWikis:focus,
+EditDictionaries #webSites:focus,
+EditDictionaries #dictServers:focus,
+EditDictionaries #programs:focus,
+EditDictionaries #dictionaryOrder:focus,
+EditDictionaries #inactiveDictionaries:focus,
+EditDictionaries #dictionaryDescription:focus,
+EditDictionaries #dictionaryFileList:focus,
+EditDictionaries #dictionaries:focus
 {
   background:       #232B30;
   border: 1px solid #0080FF;
 }
-EditDictionaries DictListWidget::item:selected
+EditDictionaries #dictionaries:hover
 {
-  background:       #4E5B65;
-  border: 1px solid #4E5B65;
-}
-EditDictionaries DictListWidget::item:hover
-{
-  color:            #FFFFFF;
-  background:       #0080FF;
   border: 1px solid #0080FF;
 }
 EditDictionaries QComboBox
@@ -1486,33 +1501,6 @@ EditDictionaries QPushButton
 {
   min-width: 90px;
   height:    24px;
-}
-EditDictionaries QTreeView
-{
-  color:            #C7CBD3;
-  background:       #232B30;
-  border: 1px solid #4E5B65;
-}
-EditDictionaries QTreeView::item:hover
-{
-  background:   #2B3339;
-  padding-left:     1px;
-}
-EditDictionaries QTreeView::item:selected
-{
-  color:            #FFFFFF;
-  background:       #0080FF;
-  border: 1px solid #0080FF;
-}
-EditDictionaries QTreeView::item:selected:!active
-{
-  background:       #4E5B65;
-  border: 1px solid #4E5B65;
-}
-EditDictionaries QTreeView::item:selected:!active:hover
-{
-  background:   #4E5B65;
-  padding-left:     1px;
 }
 EditDictionaries QHeaderView::section
 {
