@@ -919,6 +919,42 @@ MainWindow #searchPane #translateLine[noResults="true"]
   border: 1px solid #000000;
 }
 
+/* ===================== Panes Tabs ===================== */
+MainWindow > QTabBar {
+  qproperty-drawBase: 0;
+}
+MainWindow > QTabBar::tab
+{
+  padding: 4px 16px;
+  margin-bottom: 2px;
+  margin-top: -1px;
+}
+MainWindow > QTabBar::tab:selected
+{
+  border-bottom: 1px solid #0080FF;
+  border-top:    1px solid #2B3339;
+  color:                   #0080FF;
+  margin-left:   0px;
+  margin-right:  0px;
+}
+MainWindow > QTabBar::tab:!selected
+{
+  margin-top: 0px;
+  color:      #8E9CA8;
+}
+MainWindow > QTabBar::tab:first:selected {
+    margin-left:  2px;
+}
+MainWindow > QTabBar::tab:last:selected {
+    margin-right: 2px;
+}
+MainWindow > QTabBar::tab:first:!selected {
+    margin-left:  2px;
+}
+MainWindow > QTabBar::tab:last:!selected {
+    margin-right: 2px;
+}
+
 /* ================= Navigation Toolbar ================= */
 MainWindow #navToolbar
 {
