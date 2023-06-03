@@ -1114,13 +1114,13 @@ MainWindow #centralWidget QTabBar::close-button:pressed
 }
 /* "New Tab" and "Open Tabs List" icons */
 /* remove 2 following rules to return original icons */
-MainWindow > #centralWidget > #tabWidget > QToolButton
-{
-  qproperty-icon: url(icons/dark-tabs-button.svg);
-}
-MainWindow > #centralWidget > #tabWidget > QToolButton[popupMode="0"]
+MainWindow #centralWidget QToolButton[toolTip="New Tab"]
 {
   qproperty-icon: url(icons/dark-addtab-button.svg);
+}
+MainWindow #centralWidget QToolButton[toolTip="Open Tabs List"]
+{
+  qproperty-icon: url(icons/dark-tabs-button.svg);
 }
 
 /* =============== Pop-up Navigation Panel ============== */
