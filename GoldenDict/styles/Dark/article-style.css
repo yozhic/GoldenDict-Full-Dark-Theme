@@ -72,6 +72,11 @@ body
 /*                    ARTICLE GENERALS                    */
 /* ====================================================== */
 
+::selection
+{
+  color:      #002A4F;
+  background: #C7DCFF;
+}
 a
 {
   text-decoration: none;
@@ -80,11 +85,6 @@ a
 a:hover
 {
   text-decoration: underline;
-}
-::selection
-{
-  color:      #FFFFFF;
-  background: #0080FF;
 }
 
 /* ====================================================== */
@@ -203,6 +203,7 @@ a:hover
   float:        right;
 
   color:            #FFFFFF;
+  background:       #0080FF;
   border: 1px solid #0080FF;
 }
 .gdcollapsedarticle .gddictname
