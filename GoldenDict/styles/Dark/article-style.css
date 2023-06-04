@@ -4,8 +4,32 @@
 /* ====================================================== */
 
 @font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans Italic') url('file:./fonts/NotoSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans Bold') url('file:./fonts/NotoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans Bold Italic') url('file:./fonts/NotoSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
     font-family: NotoSerifMedium;
-    src: url('file:./fonts/NotoSerif-Medium.ttf');
+    src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
 }
 
 /* ====================================================== */
@@ -14,9 +38,9 @@
 
 html
 {
-  width:  100%;
-  height: 100%;
-  background-color: rgb(43,51,57);
+  width:         100%;
+  height:        100%;
+  background: #2B3339;
 }
 html::after
 {
@@ -39,9 +63,9 @@ html::after
 }
 body
 {
-  font-family: "Segoe UI", "Arial Unicode MS", "Noto Sans", sans-serif;
-  font-size:  10.8pt;
-  margin:     5px 10px;
+  font-family: "Segoe UI", NotoSans, NotoSansUnicode, "Arial Unicode MS", sans-serif;
+  font-size:   10.8pt;
+  margin:    5px 10px;
 }
 
 /* ====================================================== */
