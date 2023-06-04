@@ -12,33 +12,36 @@
 /*                     ARTICLE WINDOW                     */
 /* ====================================================== */
 
-html {
+html
+{
   width:  100%;
   height: 100%;
   background-color: rgb(43,51,57);
 }
-html::after {
-  /* adjusting the transparency of the background image */
+html::after
+{
+  /* adjusting transparency of background image */
   content: "";
-  top:    0;
-  left:   0;
-  bottom: 0;
-  right:  0;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
   position: absolute;
   z-index: -1;
 
-  /* change the background image and adjust its opacity */
+  /* change background image and adjust its opacity */
   background-image: url('file:./styles/Dark/dark-av-background-openbook.svg');
-  opacity: .08;
-  background-size: 60%;
-  background-position: center;
+  opacity:                 .08;
+  background-size:         60%;
+  background-position:  center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-body {
+body
+{
   font-family: "Segoe UI", "Arial Unicode MS", "Noto Sans", sans-serif;
   font-size:  10.8pt;
-  margin: 5px 10px;
+  margin:     5px 10px;
 }
 
 /* ====================================================== */
@@ -48,7 +51,7 @@ body {
 a
 {
   text-decoration: none;
-  color: darkblue;
+  color:        #00008B;
 }
 a:hover
 {
@@ -56,13 +59,8 @@ a:hover
 }
 ::selection
 {
-  background: #0080FF;
   color:      #FFFFFF;
-}
-/* don't remember what this rule was for */
-code::selection
-{
-  background: #333333;
+  background: #0080FF;
 }
 
 /* ====================================================== */
@@ -74,15 +72,15 @@ code::selection
   font-family: NotoSerifMedium, Cambria;
   font-weight: normal;
 }
-.dsl_stress                { color: red; }
-.dsl_stress_without_accent { display:inline; }
-.dsl_stress_with_accent    { display:none; }
-.dsl_s_wav img             { display:none; }
+.dsl_stress                { color:      red; }
+.dsl_stress_without_accent { display: inline; }
+.dsl_stress_with_accent    { display:   none; }
+.dsl_s_wav img             { display:   none; }
 .dsl_s_wav a
 {
   display: inline-block;
-  width:  24px;
-  height: 24px;
+  width:   24px;
+  height:  24px;
   background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
   vertical-align: text-bottom;
 }
@@ -110,7 +108,6 @@ code::selection
 .dsl_ex .dsl_lang .dsl_u,
 .dsl_ex .dsl_lang .dsl_trs
 {
-  /*color: royalblue !important;*/
   color: dimgray !important;
 }
 
@@ -127,13 +124,16 @@ code::selection
   background:       #D3D6DC;
   border: 1px solid #D3D6DC;
 }
-.gdactivearticle {
+.gdactivearticle
+{
   border: 1px solid #0080FF;
 }
-.gdarticleseparator + script + .gdactivearticle .gddictname {
+.gdarticleseparator + script + .gdactivearticle .gddictname
+{
   border-top: 1px solid #0080FF;
 }
-.gdarticleseparator {
+.gdarticleseparator
+{
   display: none;
 }
 /* Hide the 'From ' string which preceeds dictionary name in the heading */
@@ -141,15 +141,16 @@ code::selection
 {
   display: none;
 }
-.gddictname {
+.gddictname
+{
   /* needed to be able to reorder elements, e.g. icon, dictionary name, collapse icon */
   display: -webkit-box;
-  font-size: 12px;
-  font-weight: normal;
-  float:       right;
-  margin:       -6px;
-  margin-bottom: 5px;
-  margin-left:   2px;
+  font-size:      12px;
+  font-weight:  normal;
+  float:         right;
+  margin:         -6px;
+  margin-bottom:   5px;
+  margin-left:     2px;
   padding-right: 0.3em;
   padding-top:   0.3em;
 
@@ -158,50 +159,54 @@ code::selection
   border: 1px solid #000000;
 
   -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
+  user-select:         none;
+  cursor:           default;
 }
 
 /* Actual text with the dictionary title */
-.gddicttitle {
-  display:block;
+.gddicttitle
+{
+  display: block;
   -webkit-box-ordinal-group: 1;
 }
 .gdactivearticle .gddictname
 {
-  font-size: 12px;
+  font-size:     12px;
   font-weight: normal;
-  margin: -6px;
+  margin:        -6px;
   margin-bottom: 10px;
-  margin-left: 2px;
+  margin-left:    2px;
+  float:        right;
 
-  float: right;
-  background:       #0080FF;
   color:            #FFFFFF;
   border: 1px solid #0080FF;
 }
-.gdcollapsedarticle .gddictname {
+.gdcollapsedarticle .gddictname
+{
   opacity: 0.7;
 }
 
 /* article collapsed */
-.gdcollapsedarticle {
+.gdcollapsedarticle
+{
   background:       #2B3339;
   border: 1px solid #4E5B65;
   /* here we change the pattern */
   background-image: url('file:./styles/Dark/dark-av-collapse-pattern.png');
 }
 
-/* Move the collapse/expand buttons to the last, 3rd position */
-.collapse_expand_area {
+/* move the collapse/expand buttons to the last, 3rd position */
+.collapse_expand_area
+{
   display: block;
   -webkit-box-ordinal-group: 3;
 }
-.gddicticon {
-  display: block;
-  vertical-align: text-bottom;
-  padding-right: -1em;
-  padding-left: 0.3em;
+.gddicticon
+{
+  display:               block;
+  vertical-align:  text-bottom;
+  padding-right:          -1em;
+  padding-left:          0.3em;
   -webkit-box-ordinal-group: 2;
 }
 .gdexpandicon,
@@ -209,35 +214,39 @@ code::selection
 .gdcollapseicon,
 .gdcollapseicon:hover
 {
-    width:15px;
-    background-position: center 35%;
-    background-repeat:no-repeat;
-    vertical-align: text-bottom;
-    padding-left: -5px;
-    margin-left:   0px;
+  width:                     15px;
+  background-position: center 35%;
+  background-repeat:    no-repeat;
+  vertical-align:     text-bottom;
+  padding-left:              -5px;
+  margin-left:                0px;
 }
-.gdexpandicon {
-    background-image: url('qrcx://localhost/icons/expand_article.png');
+.gdexpandicon
+{
+  background-image: url('qrcx://localhost/icons/expand_article.png');
 }
-.gdexpandicon:hover {
-    background-image: url('qrcx://localhost/icons/expand_article_hovered.png');
+.gdexpandicon:hover
+{
+  background-image: url('qrcx://localhost/icons/expand_article_hovered.png');
 }
-.gdcollapseicon {
-    background-image: url('qrcx://localhost/icons/collapse_article.png');
+.gdcollapseicon
+{
+  background-image: url('qrcx://localhost/icons/collapse_article.png');
 }
-.gdcollapseicon:hover {
-    background-image: url('qrcx://localhost/icons/collapse_article_hovered.png');
+.gdcollapseicon:hover
+{
+  background-image: url('qrcx://localhost/icons/collapse_article_hovered.png');
 }
 
-/* The first headword in a (possibly) multi-headword DSL article */
+/* first headword in a multi-headword DSL article */
 .gdarticlebody > span:first-child .dsl_headwords,
 .gdarticlebody > h3:first-child
 {
-  margin-top: -3px;
+  margin-top:      -3px;
   display: inline-block;
 }
-.gdspellsuggestion {
-  /* Add some vertical space before the article */
+.gdspellsuggestion
+{
   margin-top: 1.5em;
 }
 
@@ -247,24 +256,25 @@ code::selection
 
 .gdnotfound,
 .gdstemmedsuggestion_head,
-.gdstemmedsuggestion_body {
+.gdstemmedsuggestion_body
+{
   color: #C7CBD3;
 }
-.gdstemmedsuggestion_body > a {
+.gdstemmedsuggestion_body > a
+{
   color: #0080FF;
 }
 
 /* remove ads */
-body > h3 {
-  visibility: hidden;
+body > h3,
+body > p
+{
+  visibility:            hidden;
   background-color: transparent;
 }
-body > p  {
-  visibility: hidden;
-  background-color: transparent;
-}
-body {
-  background: transparent;
+body
+{
+  background:       transparent;
 }
 
 /* ====================================================== */
@@ -386,4 +396,3 @@ body {
     linear-gradient(90deg,  #000000 30%, rgba(0, 0, 0, 0) 31%);
   background-color: #0080FF;
 }
-
