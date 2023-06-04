@@ -85,6 +85,11 @@ a
 a:hover
 {
   text-decoration: underline;
+  cursor:            pointer;
+}
+a.dsl_url:hover
+{
+  cursor: alias;
 }
 
 /* ====================================================== */
