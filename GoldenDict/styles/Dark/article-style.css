@@ -96,6 +96,7 @@ a.dsl_url:hover
 /*                          DSL                           */
 /* ====================================================== */
 
+.dsl_com { color: inherit; }
 .dsl_t
 {
   font-family: NotoSerifMedium, Cambria;
