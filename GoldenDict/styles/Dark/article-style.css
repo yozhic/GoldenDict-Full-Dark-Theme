@@ -97,9 +97,10 @@ a.dsl_url:hover
 /* ====================================================== */
 
 .dsl_com { color: inherit; }
-.dsl_t
+.dsl_t,
+font[color] > .dsl_com > .dsl_trs
 {
-  font-family: NotoSerifMedium, Cambria;
+  font-family: NotoSerifMedium, Cambria, serif;
   font-weight: normal;
 }
 .dsl_stress                { color:      red; }
