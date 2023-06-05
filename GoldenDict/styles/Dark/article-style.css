@@ -125,7 +125,7 @@ font[color] > .dsl_com > .dsl_trs
 .dsl_ex .dsl_opt :not(a),
 .dsl_ex .dsl_trn
 {
-  color: lightslategray;
+  color: #778899 /*lightslategray*/;
 }
 .dsl_p,
 .dsl_p :not(a),
@@ -139,7 +139,7 @@ font[color] > .dsl_com > .dsl_trs
 .dsl_ex .dsl_lang .dsl_u,
 .dsl_ex .dsl_lang .dsl_trs
 {
-  color: dimgray !important;
+  color: #696969 /*dimgray*/ !important;
 }
 
 /* ====================================================== */
@@ -167,7 +167,7 @@ font[color] > .dsl_com > .dsl_trs
 {
   display: none;
 }
-/* Hide the 'From ' string which preceeds dictionary name in the heading */
+/* hide the 'From ' string which preceeds dictionary name in the heading */
 .gdfromprefix
 {
   display: none;
@@ -185,8 +185,8 @@ font[color] > .dsl_com > .dsl_trs
   padding-right: 0.3em;
   padding-top:   0.3em;
 
-  background:       #C7CBD3;
   color:            #000000;
+  background:       #C7CBD3;
   border: 1px solid #000000;
 
   -webkit-user-select: none;
@@ -194,7 +194,7 @@ font[color] > .dsl_com > .dsl_trs
   cursor:           default;
 }
 
-/* Actual text with the dictionary title */
+/* actual text with the dictionary title */
 .gddicttitle
 {
   display: block;
@@ -227,7 +227,7 @@ font[color] > .dsl_com > .dsl_trs
   background-image: url('file:./styles/Dark/dark-av-collapse-pattern.png');
 }
 
-/* move the collapse/expand buttons to the last, 3rd position */
+/* move collapse/expand buttons to the last, 3rd position */
 .collapse_expand_area
 {
   display: block;
@@ -301,12 +301,12 @@ font[color] > .dsl_com > .dsl_trs
 body > h3,
 body > p
 {
-  visibility:            hidden;
-  background-color: transparent;
+  visibility:      hidden;
+  background: transparent;
 }
 body
 {
-  background:       transparent;
+  background: transparent;
 }
 
 /* ====================================================== */
