@@ -31,6 +31,17 @@
     font-family: NotoSerifMedium;
     src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
 }
+/* connecting additional Unicode ranges */
+/*
+@font-face {
+    font-family: NotoSansUnicode;
+    src: url('file:./fonts/NotoSansGlagolitic-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: NotoSansUnicode;
+    src: url('file:./fonts/NotoSansPhoenician-Regular.ttf') format('truetype');
+}
+*/
 
 /* ====================================================== */
 /*                     ARTICLE WINDOW                     */
