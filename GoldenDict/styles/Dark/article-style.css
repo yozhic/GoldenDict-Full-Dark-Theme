@@ -28,17 +28,25 @@
     font-style: italic;
 }
 @font-face {
-    font-family: NotoSerifMedium;
+    font-family: NotoSerif;
     src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: NotoSerif;
+    src: local('Noto Serif Medium Italic') url('file:./fonts/NotoSerif-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 /* connecting additional Unicode ranges */
 /*
 @font-face {
-    font-family: NotoSansUnicode;
+    font-family: NotoSansExpansion;
     src: url('file:./fonts/NotoSansGlagolitic-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: NotoSansUnicode;
+    font-family: NotoSansExpansion;
     src: url('file:./fonts/NotoSansPhoenician-Regular.ttf') format('truetype');
 }
 */
@@ -74,7 +82,7 @@ html::after
 }
 body
 {
-  font-family: "Segoe UI", NotoSans, NotoSansUnicode, "Arial Unicode MS", sans-serif;
+  font-family: "Segoe UI", NotoSans, NotoSansExpansion, "Arial Unicode MS", sans-serif;
   font-size:   10.8pt;
   margin:    5px 10px;
 }
@@ -111,8 +119,7 @@ a.dsl_url:hover
 .dsl_t,
 font[color] > .dsl_com > .dsl_trs
 {
-  font-family: NotoSerifMedium, Cambria, serif;
-  font-weight: normal;
+  font-family: NotoSerif, Cambria, serif;
 }
 .dsl_stress                { color:      red; }
 .dsl_stress_without_accent { display: inline; }
