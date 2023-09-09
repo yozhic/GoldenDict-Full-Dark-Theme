@@ -139,6 +139,15 @@ font[color] > .dsl_com > .dsl_trs
   background: url('file:./styles/Dark/dark-av-sound-icon-outline.png') no-repeat center;
   vertical-align: -35%;
 }
+.dsl_video img { display: none; }
+.dsl_video .img
+{
+  display: inline-block;
+  width:   24px;
+  height:  24px;
+  background: url('file:./styles/Dark/dark-av-video-icon-outline.png') no-repeat center;
+  vertical-align: -35%;
+}
 .dsl_opt,
 .dsl_opt .dsl_ex,
 .dsl_opt .dsl_ex :not(a),
