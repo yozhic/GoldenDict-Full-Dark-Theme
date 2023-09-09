@@ -124,14 +124,20 @@ font[color] > .dsl_com > .dsl_trs
 .dsl_stress                { color:      red; }
 .dsl_stress_without_accent { display: inline; }
 .dsl_stress_with_accent    { display:   none; }
-.dsl_s_wav img             { display:   none; }
-.dsl_s_wav a
+
+.dsl_s_wav img,
+.lsa_play img
+{
+  display: none;
+}
+.dsl_s_wav a,
+.lsa_play script + td a
 {
   display: inline-block;
   width:   24px;
   height:  24px;
-  background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
-  vertical-align: text-bottom;
+  background: url('file:./styles/Dark/dark-av-sound-icon-outline.png') no-repeat center;
+  vertical-align: -35%;
 }
 .dsl_opt,
 .dsl_opt .dsl_ex,
