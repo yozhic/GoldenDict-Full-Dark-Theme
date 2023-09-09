@@ -1,6 +1,6 @@
-# Full dark theme for the GoldenDict interface on Windows
+# Full Dark Theme for the GoldenDict interface on Windows
 
-Tested on GoldenDict 1.5.0-RC2-491 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
+Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
 _See screenshots below._  
 _For README in Russian see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md)._
 
@@ -40,11 +40,19 @@ Colors used in `qt-style.css`:
 Color     | Description
 :-------- | :-----------
 `#2B3339` | main background  
-`#232B30` | darker background in tables and some input fields (in the `Dictionaries...` preferences)  
+`#232B30` | darker background in tables and some input fields  
 `#4E5B65` | frame lines; unfocused elements highlighting  
 `#C7CBD3` | text  
-`#0080FF` | (brigth blue) accents & focused selections  
-`#A40000` | (rubin) highlighting in the search field in case of a negative result; accents on close buttons  
+`#8E9CA8` | dimmed text  
+`#0080FF` | (brigth blue) accents & hovers  
+`#FFFFFF` | text on brigth blue background  
+`#006AD5` | (dimmed blue) list selections  
+`#A40000` | (rubin) highlighting in the search field in case of a negative result; accent on close buttons  
+`#D3D6DC` | articles background  
+`#000000` | pressed elements; some borders  
+`#353F46` | tables headers  
+`#3D464E` | accents in dictionaries buttons  
+
 
 You can change the color-code with the Find/Replace tool in any text editor.  
 
