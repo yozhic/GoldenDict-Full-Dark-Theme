@@ -4,65 +4,111 @@
 /* ====================================================== */
 
 @font-face {
-    font-family: NotoSerifSB;
-    src: url('file:./fonts/NotoSerif-SemiBold.ttf');
+    font-family: NotoSans;
+    src: local('Noto Sans Medium') url('file:./fonts/NotoSans-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style:  normal;
 }
+@font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans Medium Italic') url('file:./fonts/NotoSans-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style:  italic;
+}
+@font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans Bold') url('file:./fonts/NotoSans-Bold.ttf') format('truetype');
+    font-weight:  bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: NotoSans;
+    src: local('Noto Sans Bold Italic') url('file:./fonts/NotoSans-BoldItalic.ttf') format('truetype');
+    font-weight:  bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: NotoSerif;
+    src: local('Noto Serif SemiBold') url('file:./fonts/NotoSerif-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style:  normal;
+}
+@font-face {
+    font-family: NotoSerif;
+    src: local('Noto Serif SemiBold Italic') url('file:./fonts/NotoSerif-SemiBoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style:  italic;
+}
+/* connecting additional Unicode ranges */
+/*
+@font-face {
+    font-family: NotoSansExpansion;
+    src: url('file:./fonts/NotoSansPhoenician-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: NotoSansExpansion;
+    src: url('file:./fonts/ShafarikGlagolitic.ttf') format('truetype');
+}
+*/
 
 /* ====================================================== */
 /*                     ARTICLE WINDOW                     */
 /* ====================================================== */
 
-html {
-  width:  100%;
-  height: 100%;
-  background-color: rgb(43,51,57);
+html
+{
+  width:         100%;
+  height:        100%;
+  background: #2B3339;
 }
-html::after {
-  /* adjusting the transparency of the background image */
+html::after
+{
+  /* adjusting transparency of background image */
   content: "";
-  top:    0;
-  left:   0;
-  bottom: 0;
-  right:  0;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
   position: absolute;
   z-index: -1;
 
-  /* change the background image and adjust its opacity */
+  /* change background image and adjust its opacity */
   background-image: url('file:./styles/Dark/dark-av-background-openbook.svg');
-  opacity: .08;
-  background-size: 60%;
-  background-position: center;
+  opacity:                 .08;
+  background-size:         60%;
+  background-position:  center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-body {
-  font-family: "Segoe UI Semibold", "Noto Sans Medium", "Arial Unicode MS", sans-serif;
-  font-size:  10.8pt;
-  margin: 5px 10px;
+body
+{
+  font-family: "Segoe UI Semibold", NotoSans, NotoSansExpansion, sans-serif;
+  font-size:   10.8pt;
+  margin:    5px 10px;
 }
 
 /* ====================================================== */
 /*                    ARTICLE GENERALS                    */
 /* ====================================================== */
 
+::selection
+{
+  color:      #8CC6FF;
+  background: #5C7E99;
+}
 a
 {
   text-decoration: none;
-  color: #379BFF;
+  color:        #379BFF;
 }
 a:hover
 {
   text-decoration: underline;
+  cursor:            pointer;
 }
-::selection
+a.dsl_url:hover
 {
-  background: #0080FF;
-  color:      #FFFFFF;
-}
-/* don't remember what this rule was for */
-code::selection
-{
-  background: #333333;
+  cursor: alias;
 }
 
 /* ====================================================== */
@@ -71,29 +117,46 @@ code::selection
 
 .dsl_headwords
 {
-  font-family: "Segoe UI", "Noto Sans";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   font-weight: bold;
 }
 .dsl_b
 {
-  font-family: "Segoe UI", "Noto Sans";
+  font-family: "Segoe UI", NotoSans, sans-serif;
   font-weight: bold;
 }
-.dsl_t
+.dsl_com { color: inherit; }
+.dsl_t,
+font[color] > .dsl_com > .dsl_trs
 {
-  font-family: NotoSerifSB, Cambria;
+  font-family: NotoSerif, Cambria, serif;
 }
-.dsl_stress                { color: red; }
-.dsl_stress_without_accent { display:inline; }
-.dsl_stress_with_accent    { display:none; }
-.dsl_s_wav img             { display:none; }
-.dsl_s_wav a
+.dsl_stress                { color:      red; }
+.dsl_stress_without_accent { display: inline; }
+.dsl_stress_with_accent    { display:   none; }
+
+.dsl_s_wav img,
+.lsa_play img
+{
+  display: none;
+}
+.dsl_s_wav a,
+.lsa_play script + td a
 {
   display: inline-block;
-  width:  24px;
-  height: 24px;
-  background: url('file:./styles/Dark/dark-av-play-icon.png') no-repeat center;
-  vertical-align: text-bottom;
+  width:   24px;
+  height:  24px;
+  background: url('file:./styles/Dark-Deep/dd-av-sound-icon-outline.png') no-repeat center;
+  vertical-align: -35%;
+}
+.dsl_video img { display: none; }
+.dsl_video .img
+{
+  display: inline-block;
+  width:   24px;
+  height:  24px;
+  background: url('file:./styles/Dark-Deep/dd-av-video-icon-outline.png') no-repeat center;
+  vertical-align: -35%;
 }
 .dsl_opt,
 .dsl_opt .dsl_ex,
@@ -107,19 +170,19 @@ code::selection
 {
   color: #9B9B9B;
 }
-/* color index_lang in examples */
-.dsl_ex .dsl_lang,
-.dsl_ex .dsl_lang .dsl_u,
-.dsl_ex .dsl_lang .dsl_trs
-{
-  color: #888FA0 !important;
-}
 .dsl_p,
 .dsl_p :not(a),
 .dsl_article font[color=c_default_color]
 {
   color: #FF7B3C !important;
   cursor: help;
+}
+/* color index_lang in examples */
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_trs
+{
+  color: #888FA0 !important;
 }
 .dsl_com
 {
@@ -148,7 +211,6 @@ font[color=olive]         { color: #F0E68C !important; }
 font[color=darkolivegreen]{ color: #ADFF2F !important; }
 font[color=olivedrab]     { color: #ADFF2F !important; }
 
-
 /* ====================================================== */
 /*                      ARTICLE BOXES                     */
 /* ====================================================== */
@@ -163,84 +225,94 @@ font[color=olivedrab]     { color: #ADFF2F !important; }
   color:            #CBD0D8;
   border: 1px solid #4E5B65;
 }
-.gdactivearticle {
+.gdactivearticle
+{
   border: 1px solid #0080FF;
 }
-.gdarticleseparator + script + .gdactivearticle .gddictname {
+.gdarticleseparator + script + .gdactivearticle .gddictname
+{
   border-top: 1px solid #0080FF;
 }
-.gdarticleseparator + script + .gdarticle .gddictname {
+.gdarticleseparator + script + .gdarticle .gddictname
+{
   border-top: 1px solid #4E5B65;
 }
-.gdarticleseparator {
+.gdarticleseparator
+{
   display: none;
 }
-/* Hide the 'From ' string which preceeds dictionary name in the heading */
+/* hide the 'From ' string which preceeds dictionary name in the heading */
 .gdfromprefix
 {
   display: none;
 }
-.gddictname {
+.gddictname
+{
   /* needed to be able to reorder elements, e.g. icon, dictionary name, collapse icon */
   display: -webkit-box;
-  font-size: 12px;
-  font-weight: normal;
-  float:       right;
-  margin:       -6px;
-  margin-bottom: 5px;
-  margin-left:   2px;
+  font-size:      12px;
+  font-weight:  normal;
+  float:         right;
+  margin:         -6px;
+  margin-bottom:   5px;
+  margin-left:     2px;
   padding-right: 0.3em;
   padding-top:   0.3em;
 
-  background:       #2B3339;
   color:            #CBD0D8;
+  background:       #2B3339;
   border: 1px solid #4E5B65;
 
   -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
+  user-select:         none;
+  cursor:           default;
 }
 
-/* Actual text with the dictionary title */
-.gddicttitle {
-  display:block;
+/* actual text with the dictionary title */
+.gddicttitle
+{
+  display: block;
   -webkit-box-ordinal-group: 1;
 }
 .gdactivearticle .gddictname
 {
-  font-size: 12px;
+  font-size:     12px;
   font-weight: normal;
-  margin: -6px;
+  margin:        -6px;
   margin-bottom: 10px;
-  margin-left: 2px;
+  margin-left:    2px;
+  float:        right;
 
-  float: right;
-  background:       #0080FF;
   color:            #FFFFFF;
+  background:       #0080FF;
   border: 1px solid #0080FF;
 }
-.gdcollapsedarticle .gddictname {
+.gdcollapsedarticle .gddictname
+{
   opacity: 0.7;
 }
 
 /* article collapsed */
-.gdcollapsedarticle {
+.gdcollapsedarticle
+{
   background:       #2B3339;
   border: 1px solid #4E5B65;
   /* here we change the pattern */
   background-image: url('file:./styles/Dark/dark-av-collapse-pattern.png');
 }
 
-/* Move the collapse/expand buttons to the last, 3rd position */
-.collapse_expand_area {
+/* move collapse/expand buttons to the last, 3rd position */
+.collapse_expand_area
+{
   display: block;
   -webkit-box-ordinal-group: 3;
 }
-.gddicticon {
-  display: block;
-  vertical-align: text-bottom;
-  padding-right: -1em;
-  padding-left: 0.3em;
+.gddicticon
+{
+  display:               block;
+  vertical-align:  text-bottom;
+  padding-right:          -1em;
+  padding-left:          0.3em;
   -webkit-box-ordinal-group: 2;
 }
 .gdexpandicon,
@@ -248,35 +320,39 @@ font[color=olivedrab]     { color: #ADFF2F !important; }
 .gdcollapseicon,
 .gdcollapseicon:hover
 {
-    width:15px;
-    background-position: center 35%;
-    background-repeat:no-repeat;
-    vertical-align: text-bottom;
-    padding-left: -5px;
-    margin-left:   0px;
+  width:                     15px;
+  background-position: center 35%;
+  background-repeat:    no-repeat;
+  vertical-align:     text-bottom;
+  padding-left:              -5px;
+  margin-left:                0px;
 }
-.gdexpandicon {
-    background-image: url('qrcx://localhost/icons/expand_article.png');
+.gdexpandicon
+{
+  background-image: url('qrcx://localhost/icons/expand_article.png');
 }
-.gdexpandicon:hover {
-    background-image: url('qrcx://localhost/icons/expand_article_hovered.png');
+.gdexpandicon:hover
+{
+  background-image: url('qrcx://localhost/icons/expand_article_hovered.png');
 }
-.gdcollapseicon {
-    background-image: url('qrcx://localhost/icons/collapse_article.png');
+.gdcollapseicon
+{
+  background-image: url('qrcx://localhost/icons/collapse_article.png');
 }
-.gdcollapseicon:hover {
-    background-image: url('qrcx://localhost/icons/collapse_article_hovered.png');
+.gdcollapseicon:hover
+{
+  background-image: url('qrcx://localhost/icons/collapse_article_hovered.png');
 }
 
-/* The first headword in a (possibly) multi-headword DSL article */
+/* first headword in a multi-headword DSL article */
 .gdarticlebody > span:first-child .dsl_headwords,
 .gdarticlebody > h3:first-child
 {
-  margin-top: -3px;
+  margin-top:      -3px;
   display: inline-block;
 }
-.gdspellsuggestion {
-  /* Add some vertical space before the article */
+.gdspellsuggestion
+{
   margin-top: 1.5em;
 }
 
@@ -286,23 +362,24 @@ font[color=olivedrab]     { color: #ADFF2F !important; }
 
 .gdnotfound,
 .gdstemmedsuggestion_head,
-.gdstemmedsuggestion_body {
+.gdstemmedsuggestion_body
+{
   color: #CBD0D8;
 }
-.gdstemmedsuggestion_body > a {
+.gdstemmedsuggestion_body > a
+{
   color: #0080FF;
 }
 
 /* remove ads */
-body > h3 {
-  visibility: hidden;
-  background-color: transparent;
+body > h3,
+body > p
+{
+  visibility:      hidden;
+  background: transparent;
 }
-body > p  {
-  visibility: hidden;
-  background-color: transparent;
-}
-body {
+body
+{
   background: transparent;
 }
 
