@@ -7,37 +7,37 @@
     font-family: NotoSans;
     src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style:  normal;
 }
 @font-face {
     font-family: NotoSans;
     src: local('Noto Sans Italic') url('file:./fonts/NotoSans-Italic.ttf') format('truetype');
     font-weight: normal;
-    font-style: italic;
+    font-style:  italic;
 }
 @font-face {
     font-family: NotoSans;
     src: local('Noto Sans Bold') url('file:./fonts/NotoSans-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight:  bold;
     font-style: normal;
 }
 @font-face {
     font-family: NotoSans;
     src: local('Noto Sans Bold Italic') url('file:./fonts/NotoSans-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
+    font-weight:  bold;
     font-style: italic;
 }
 @font-face {
     font-family: NotoSerif;
     src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style:  normal;
 }
 @font-face {
     font-family: NotoSerif;
     src: local('Noto Serif Medium Italic') url('file:./fonts/NotoSerif-MediumItalic.ttf') format('truetype');
     font-weight: normal;
-    font-style: italic;
+    font-style:  italic;
 }
 /* connecting additional Unicode ranges */
 /*
