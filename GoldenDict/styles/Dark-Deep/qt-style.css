@@ -83,17 +83,9 @@ QToolButton
   color:      #C7CBD3;
   background: #2B3339;
 }
-QListView,
-QTreeView
-{
-  font-family: NotoSans, "Segoe UI", sans-serif;
-  color:      #C7CBD3;
-  background: #2B3339;
-}
 QComboBox,
 QGroupBox,
 QLineEdit,
-QListView,
 QPlainTextEdit,
 QPushButton,
 QSpinBox
@@ -205,7 +197,7 @@ QRadioButton::indicator:unchecked:disabled:hover
 /* list views */
 QListView
 {
-  font-family: "Segoe UI", NotoSans, sans-serif;
+  font-family: NotoSans, "Segoe UI", sans-serif;
   color:            #C7CBD3;
   background:       #232B30;
   border: 1px solid #4E5B65;
@@ -242,7 +234,7 @@ QListView::item:selected:!active:hover
 /* treeview lists */
 QTreeView
 {
-  font-family: "Segoe UI", NotoSans, sans-serif;
+  font-family: NotoSans, "Segoe UI", sans-serif;
   color:            #C7CBD3;
   background:       #232B30;
   border: 1px solid #4E5B65;
