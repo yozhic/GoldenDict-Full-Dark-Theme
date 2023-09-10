@@ -93,7 +93,11 @@ body
 
 ::selection
 {
+  /*
   color:      #8CC6FF;
+  color:      #CCE6FF;
+  */
+  color:      #E8F3FF;
   background: #5C7E99;
 }
 a
