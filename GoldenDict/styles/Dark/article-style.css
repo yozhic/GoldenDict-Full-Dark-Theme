@@ -133,20 +133,42 @@ font[color] > .dsl_com > .dsl_trs
 .dsl_s_wav a,
 .lsa_play script + td a
 {
-  display: inline-block;
-  width:   24px;
-  height:  24px;
-  background: url('file:./styles/Dark/dark-av-sound-icon-outline.png') no-repeat center;
-  vertical-align: -35%;
+  display:       inline-block;
+  vertical-align: text-bottom;
+  width:       16px;
+  height:      16px;
+  margin-left:  4px;
+  margin-right: 2px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M8.5,1L8.5,1C8.4,1,8.3,1,8.2,1.1L3.3,5H1C0.5,5,0,5.5,0,6v3c0,0.5,0.5,1,1,1h2.3l4.9,3.9c0.2,0.2,0.5,0.1,0.7-0.1C9,13.7,9,13.6,9,13.5v-12C9,1.2,8.8,1,8.5,1z M3,9H1V6h2V9z M8,12.5L4,9.3V5.7l4-3.2V12.5z M10,8.8V6.2C10,6.1,10.1,6,10.2,6h0.6C10.9,6,11,6.1,11,6.2v2.6C11,8.9,10.9,9,10.8,9h-0.6C10.1,9,10,8.9,10,8.8z M12.8,10h-0.6C12.1,10,12,9.9,12,9.8V5.2C12,5.1,12.1,5,12.2,5h0.6C12.9,5,13,5.1,13,5.2v4.6C13,9.9,12.9,10,12.8,10z' fill='%23000000'/%3E%3C/svg%3E") no-repeat center;
+}
+.dsl_s_wav a:hover,
+.lsa_play script + td a:hover
+{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M8.5,1L8.5,1C8.4,1,8.3,1,8.2,1.1L3.3,5H1C0.5,5,0,5.5,0,6v3c0,0.5,0.5,1,1,1h2.3l4.9,3.9c0.2,0.2,0.5,0.1,0.7-0.1C9,13.7,9,13.6,9,13.5v-12C9,1.2,8.8,1,8.5,1z M3,9H1V6h2V9z M8,12.5L4,9.3V5.7l4-3.2V12.5z M10,8.8V6.2C10,6.1,10.1,6,10.2,6h0.6C10.9,6,11,6.1,11,6.2v2.6C11,8.9,10.9,9,10.8,9h-0.6C10.1,9,10,8.9,10,8.8z M12.8,10h-0.6C12.1,10,12,9.9,12,9.8V5.2C12,5.1,12.1,5,12.2,5h0.6C12.9,5,13,5.1,13,5.2v4.6C13,9.9,12.9,10,12.8,10z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
+}
+.dsl_s_wav a:active,
+.lsa_play script + td a:active
+{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M8.5,1L8.5,1C8.4,1,8.3,1,8.2,1.1L3.3,5H1C0.5,5,0,5.5,0,6v3c0,0.5,0.5,1,1,1h2.3l4.9,3.9c0.2,0.2,0.5,0.1,0.7-0.1C9,13.7,9,13.6,9,13.5v-12C9,1.2,8.8,1,8.5,1z M3,9H1V6h2V9z M8,12.5L4,9.3V5.7l4-3.2V12.5z M11.5,7.5C11.5,8.3,10.8,9,10,9V6C10.8,6,11.5,6.7,11.5,7.5z M15.5,7.5c0,3-2.5,5.5-5.5,5.5v-1c2.5,0,4.5-2,4.5-4.5S12.5,3,10,3V2C13,2,15.5,4.5,15.5,7.5z M13.5,7.5c0,1.9-1.6,3.5-3.5,3.5v-1c1.4,0,2.5-1.1,2.5-2.5S11.4,5,10,5V4C11.9,4,13.5,5.6,13.5,7.5z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
 }
 .dsl_video img { display: none; }
 .dsl_video .img
 {
-  display: inline-block;
-  width:   24px;
-  height:  24px;
-  background: url('file:./styles/Dark/dark-av-video-icon-outline.png') no-repeat center;
-  vertical-align: -35%;
+  display:       inline-block;
+  vertical-align: text-bottom;
+  width:       16px;
+  height:      16px;
+  margin-left:  4px;
+  margin-right: 2px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M1.5,1C0.7,1,0,1.7,0,2.5v8C0,11.3,0.7,12,1.5,12H7c0,0.2,0,0.3,0,0.5c0,0.2,0,0.3,0,0.5H4v1h7v-1H8c0-0.2,0-0.2,0-0.5c0-0.2,0-0.3,0-0.5h5.5c0.8,0,1.5-0.7,1.5-1.5v-8C15,1.7,14.3,1,13.5,1H1.5z M1.5,2h12C13.8,2,14,2.2,14,2.5v8c0,0.3-0.2,0.5-0.5,0.5h-12C1.2,11,1,10.8,1,10.5v-8C1,2.2,1.2,2,1.5,2z M3,4H2V3h1V4z M3,6H2V5h1V6z M3,8H2V7h1V8z M3,10H2V9h1V10z M13,4h-1V3h1V4z M13,6h-1V5h1V6z M13,8h-1V7h1V8z M13,10h-1V9h1V10z' fill='%23000000'/%3E%3C/svg%3E") no-repeat center;
+}
+.dsl_video .img:hover
+{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M1.5,1C0.7,1,0,1.7,0,2.5v8C0,11.3,0.7,12,1.5,12H7c0,0.2,0,0.3,0,0.5c0,0.2,0,0.3,0,0.5H4v1h7v-1H8c0-0.2,0-0.2,0-0.5c0-0.2,0-0.3,0-0.5h5.5c0.8,0,1.5-0.7,1.5-1.5v-8C15,1.7,14.3,1,13.5,1H1.5z M1.5,2h12C13.8,2,14,2.2,14,2.5v8c0,0.3-0.2,0.5-0.5,0.5h-12C1.2,11,1,10.8,1,10.5v-8C1,2.2,1.2,2,1.5,2z M3,4H2V3h1V4z M3,6H2V5h1V6z M3,8H2V7h1V8z M3,10H2V9h1V10z M13,4h-1V3h1V4z M13,6h-1V5h1V6z M13,8h-1V7h1V8z M13,10h-1V9h1V10z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
+}
+.dsl_video .img:active
+{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M13.5,1h-12C0.7,1,0,1.7,0,2.5v8C0,11.3,0.7,12,1.5,12H7c0,0.2,0,0.3,0,0.5s0,0.3,0,0.5H4v1h7v-1H8c0-0.2,0-0.2,0-0.5c0-0.2,0-0.3,0-0.5h5.5c0.8,0,1.5-0.7,1.5-1.5v-8C15,1.7,14.3,1,13.5,1z M14,10.5c0,0.3-0.2,0.5-0.5,0.5h-12C1.2,11,1,10.8,1,10.5v-8C1,2.2,1.2,2,1.5,2h12C13.8,2,14,2.2,14,2.5V10.5z M3,4H2V3h1V4z M3,6H2V5h1V6z M3,8H2V7h1V8z M3,10H2V9h1V10z M13,4h-1V3h1V4z M13,6h-1V5h1V6z M13,8h-1V7h1V8z M13,10h-1V9h1V10z M5,10V3l6,3.5L5,10z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
 }
 .dsl_opt,
 .dsl_opt .dsl_ex,
