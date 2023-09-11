@@ -1745,6 +1745,10 @@ EditDictionaries DictGroupsWidget QToolButton
 {
   qproperty-icon: url(icons/dark-tabs-button.svg);
 }
+EditDictionaries DictGroupsWidget QToolButton::menu-indicator
+{
+  background: transparent;
+}
 EditDictionaries DictGroupsWidget QLabel#label_3
 {
   qproperty-pixmap: none;
