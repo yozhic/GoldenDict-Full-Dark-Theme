@@ -162,7 +162,7 @@ QGroupBox::indicator:checked:hover,
 QRadioButton::indicator:checked,
 QRadioButton::indicator:checked:hover
 {
-  image: url(icons/dark-checkmark.svg);
+  image: url('./icons/dark-checkmark.svg');
   border: 1px solid #0080FF;
   /*background:       #0080FF;*/
   /*margin: 2px;*/
@@ -183,7 +183,7 @@ QCheckBox::indicator:checked:disabled:hover,
 QRadioButton::indicator:checked:disabled,
 QRadioButton::indicator:checked:disabled:hover
 {
-  image: url(icons/dark-checkmark-disabled.svg);
+  image: url('./icons/dark-checkmark-disabled.svg');
   border: 1px solid #4E5B65;
   /*background:       #4E5B65;*/
   /*margin:     0px;*/
@@ -688,7 +688,7 @@ MainStatusBar #icon
 /* remove 3 following rules to return original icon */
 #searchFrame #searchCloseButton
 {
-  qproperty-icon: url(icons/dark-close-button.svg);
+  qproperty-icon: url('./icons/dark-close-button.svg');
 }
 #searchFrame #searchCloseButton:hover
 {
@@ -720,7 +720,7 @@ MainWindow::separator
 }
 MainWindow::separator:hover
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
 }
 
 /* ======================== Menu ======================== */
@@ -757,14 +757,14 @@ MainWindow #dictionaryBar
 /* capture area of Dictionary Toolbar */
 MainWindow #dictionaryBar::handle:horizontal
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
   background-position: top left;
   width:                    7px;
   margin-right:             2px;
 }
 MainWindow #dictionaryBar::handle:vertical
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
   background-position: top left;
   height:                   7px;
   margin:       0px 1px 3px 1px;
@@ -973,7 +973,7 @@ MainWindow #navToolbar
 }
 MainWindow #navToolbar::handle
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
 }
 MainWindow #navToolbar QToolBarSeparator
 {
@@ -1003,11 +1003,11 @@ MainWindow #navToolbar QToolButton:checked:pressed
 /* remove 2 following rules to return original icons */
 MainWindow #navToolbar #saveArticleButton
 {
-  qproperty-icon: url(icons/dark-save-button.svg);
+  qproperty-icon: url('./icons/dark-save-button.svg');
 }
 MainWindow #navToolbar #printButton
 {
-  qproperty-icon: url(icons/dark-print-button.svg);
+  qproperty-icon: url('./icons/dark-print-button.svg');
 }
 /* Groups List and "Look up in" line with Search Pane inactive */
 MainWindow #navToolbar GroupComboBox
@@ -1077,11 +1077,11 @@ MainWindow #navToolbar #translateLine:focus
 }
 MainWindow #navToolbar #translateLine IconButton[toolTip="Drop-down"]
 {
-  qproperty-pixmap: url(icons/dark-drop-down.svg);
+  qproperty-pixmap: url('./icons/dark-drop-down.svg');
 }
 MainWindow #navToolbar #translateLine IconButton
 {
-  qproperty-pixmap: url(icons/dark-search.svg);
+  qproperty-pixmap: url('./icons/dark-search.svg');
 }
 MainWindow #navToolbar #translateLine[noResults="true"]
 {
@@ -1144,29 +1144,29 @@ MainWindow #centralWidget #qt_tabwidget_tabbar::tab
 /* remove 3 following rules to return original icons */
 MainWindow #centralWidget QTabBar::close-button
 {
-  image: url(icons/dark-close-button.svg);
+  image: url('./icons/dark-close-button-tab.svg');
   margin-top: 2px;
   margin-right: 2px;
 }
 MainWindow #centralWidget QTabBar::close-button:hover
 {
-  image: url(icons/dark-close-button-hover.svg);
+  image: url('./icons/dark-close-button-tab-hover.svg');
   background: #A40000;
 }
 MainWindow #centralWidget QTabBar::close-button:pressed
 {
-  image: url(icons/dark-close-button.svg);
+  image: url('./icons/dark-close-button-tab.svg');
   background: #000000;
 }
 /* "New Tab" and "Open Tabs List" icons */
 /* remove 2 following rules to return original icons */
 MainWindow #centralWidget QToolButton[toolTip="New Tab"]
 {
-  qproperty-icon: url(icons/dark-addtab-button.svg);
+  qproperty-icon: url('./icons/dark-addtab-button.svg');
 }
 MainWindow #centralWidget QToolButton[toolTip="Open Tabs List"]
 {
-  qproperty-icon: url(icons/dark-tabs-button.svg);
+  qproperty-icon: url('./icons/dark-tabs-button.svg');
 }
 MainWindow #centralWidget QToolButton::menu-indicator
 {
@@ -1281,11 +1281,11 @@ ScanPopup #translateLine:focus
 }
 ScanPopup #translateLine IconButton[toolTip="Drop-down"]
 {
-  qproperty-pixmap: url(icons/dark-drop-down.svg);
+  qproperty-pixmap: url('./icons/dark-drop-down.svg');
 }
 ScanPopup #translateLine IconButton
 {
-  qproperty-pixmap: url(icons/dark-search.svg);
+  qproperty-pixmap: url('./icons/dark-search.svg');
 }
 ScanPopup #translateLine[noResults="true"]
 {
@@ -1348,14 +1348,14 @@ ScanPopup #dictionaryBar
 }
 ScanPopup #dictionaryBar::handle:horizontal
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
   background-position: top left;
   width:                    7px;
   margin:       1px 4px 2px 0px;
 }
 ScanPopup #dictionaryBar::handle:vertical
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
   background-position: top left;
   height:                   7px;
   margin:       0px 2px 4px 1px;
@@ -1417,23 +1417,23 @@ ScanPopup #dictionaryBar #qt_toolbar_ext_button:checked:pressed
 /* remove 5 following rules to return original icons */
 ScanPopup QToolButton#sendWordButton
 {
-  qproperty-icon: url(icons/dark-scanpopup-swb.svg);
+  qproperty-icon: url('./icons/dark-scanpopup-swb.svg');
 }
 ScanPopup QToolButton#showDictionaryBar
 {
-  qproperty-icon: url(icons/dark-scanpopup-sdb.svg);
+  qproperty-icon: url('./icons/dark-scanpopup-sdb.svg');
 }
 ScanPopup QToolButton#pinButton
 {
-  qproperty-icon: url(icons/dark-scanpopup-pin.svg);
+  qproperty-icon: url('./icons/dark-scanpopup-pin.svg');
 }
 ScanPopup QToolButton#onTopButton
 {
-  qproperty-icon: url(icons/dark-scanpopup-top.svg);
+  qproperty-icon: url('./icons/dark-scanpopup-top.svg');
 }
 ScanPopup QToolButton#pronounceButton
 {
-  qproperty-icon: url(icons/dark-scanpopup-pron.svg);
+  qproperty-icon: url('./icons/dark-scanpopup-pron.svg');
 }
 
 /* ============ DICTIONARY ANNOTATION WINDOW ============ */
@@ -1681,7 +1681,7 @@ EditDictionaries QTreeView::indicator:unchecked:hover
 EditDictionaries QTreeView::indicator:checked,
 EditDictionaries QTreeView::indicator:checked:hover
 {
-  image: url(icons/dark-checkmark.svg);
+  image: url('./icons/dark-checkmark.svg');
   background:       #2B3339;
   border: 1px solid #0080FF;
   /*background:       #0080FF;*/
@@ -1743,7 +1743,7 @@ EditDictionaries DictGroupsWidget QToolButton[popupMode="0"]:pressed
 }
 EditDictionaries DictGroupsWidget QToolButton
 {
-  qproperty-icon: url(icons/dark-tabs-button.svg);
+  qproperty-icon: url('./icons/dark-tabs-button.svg');
 }
 EditDictionaries DictGroupsWidget QToolButton::menu-indicator
 {
@@ -1755,11 +1755,11 @@ EditDictionaries DictGroupsWidget QLabel#label_3
 }
 EditDictionaries IconButton[toolTip="Quick Search"]
 {
-  qproperty-pixmap: url(icons/dark-quick-search.svg);
+  qproperty-pixmap: url('./icons/dark-search-quick.svg');
 }
 EditDictionaries IconButton[toolTip="Clear Search"]
 {
-  qproperty-pixmap: url(icons/dark-clear-search.svg);
+  qproperty-pixmap: url('./icons/dark-search-clear.svg');
 }
 
 /* ================ PRINT PREVIEW WINDOW ================ */
@@ -1771,7 +1771,7 @@ QPrintPreviewDialog QToolBar
 }
 QPrintPreviewDialog QToolBar::handle
 {
-  background: #2B3339 url('icons/dark-tb-handle.png');
+  background: #2B3339 url('./icons/dark-tb-handle.png');
 }
 QPrintPreviewDialog QToolBar QToolButton
 {
