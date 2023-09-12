@@ -1,8 +1,8 @@
 # Full Dark Theme for the GoldenDict interface on Windows
 
 Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
-_See screenshots below._  
-_For README in Russian see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md)._
+
+<sub>_For README in Russian see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md)._</sub>  
 
 
 ## Installation
@@ -68,34 +68,45 @@ In the file `qt-style.css` you can also customize:
 ## Screenshots
 ### Main window
 _Welcome screen_  
+
 ![GoldenDict Dark theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_WELCOME.png)  
 
 _Dark theme_  
+
 ![GoldenDict Dark theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME.png)  
 
 _Dark Deep theme_  
+
 ![GoldenDict Dark Deep theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_DEEP_THEME.png)  
 
 _Scan Pop-up window_  
+
 ![GoldenDict Dark Deep theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_SCAN_POPUP.png)  
 
 ### Modal Windows
+
 _Full-text Search window_  
+
 ![Full-text Search window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_FTS.png)  
 
 _Dictionary Headwords window_  
+
 ![Dictionary Headwords window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dic_Headwords.png)  
 
 _Dictionary annotation window_  
+
 ![Dictionary annotation window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About_Dic.png)  
 
 _`About` window_  
+
 ![About window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About.png)  
 
 _`Dictionaries...` window_  
+
 ![Dictionaries... window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dicts.png)  
 
 _`Preferences...` window_  
+
 ![Preferences... window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Prefs.png)  
 
 
