@@ -285,12 +285,11 @@ QTreeView::branch:open:has-children:has-siblings:hover
 /* drop-down lists */
 QComboBox::drop-down
 {
-  background:        #2B3339;
+  background:    transparent;
   border:  1px solid #4E5B65;
-  border-left:          none;
+  border:               none;
   width:                20px;
   subcontrol-position: right;
-  subcontrol-origin:  margin;
 }
 QComboBox::down-arrow
 {
@@ -300,28 +299,33 @@ QComboBox::down-arrow
   border-right: 5px solid #2B3339;
   border-top:   5px solid #4E5B65;
 }
+QComboBox:hover
+{
+  background: #232B30;
+}
 QComboBox::down-arrow:hover
 {
   border-top: 5px solid #0080FF;
 }
-QComboBox::drop-down:pressed
-{
-  background: #000000;
-}
 QComboBox:on
 {
-  padding-top:   2px;
-  padding-right: 2px;
+  background: #232B30;
+  padding-top:    2px;
+  padding-right:  2px;
+}
+QComboBox::drop-down:on
+{
+  background: #232B30;
 }
 QComboBox::down-arrow:on
 {
-  top:           2px;
-  right:         2px;
+  top:            2px;
+  right:          2px;
 }
 QComboBox QComboBoxListView
 {
   color:                      #C7CBD3;
-  background:                 #2B3339;
+  background:                 #232B30;
   selection-color:            #FFFFFF;
   selection-background-color: #006AD5;
 }
@@ -1007,28 +1011,20 @@ MainWindow #navToolbar #printButton
 MainWindow #navToolbar GroupComboBox
 {
   /* font in Groups list & line */
-  /*font-size:   10.5pt;*/
   font-family: Consolas, "Noto Sans Mono";
+  font-size:   9.1pt;
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
   border-radius:        0px;
 }
-MainWindow #navToolbar GroupComboBox:on
-{
-  color:            #C7CBD3;
-  background:       #2B3339;
-  padding-top:          2px;
-  padding-right:        2px;
-}
 MainWindow #navToolbar GroupComboBox::drop-down
 {
-  background:        #2B3339;
+  background:    transparent;
   border:  1px solid #4E5B65;
-  border-left:          none;
+  border:               none;
   width:                20px;
   subcontrol-position: right;
-  subcontrol-origin:  margin;
 }
 MainWindow #navToolbar GroupComboBox::down-arrow
 {
@@ -1038,31 +1034,59 @@ MainWindow #navToolbar GroupComboBox::down-arrow
   border-right: 5px solid #2B3339;
   border-top:   5px solid #4E5B65;
 }
+MainWindow #navToolbar GroupComboBox:hover
+{
+  background: #232B30;
+}
 MainWindow #navToolbar GroupComboBox::down-arrow:hover
 {
   border-top: 5px solid #0080FF;
 }
-MainWindow #navToolbar GroupComboBox::drop-down:pressed
+MainWindow #navToolbar GroupComboBox:on
 {
-  background: #000000;
+  background:       #232B30;
+  padding-top:          2px;
+  padding-right:        2px;
+}
+MainWindow #navToolbar GroupComboBox::drop-down:on
+{
+  background: #232B30;
+}
+MainWindow #navToolbar GroupComboBox::down-arrow:on
+{
+  top:            2px;
+  right:          2px;
 }
 MainWindow #navToolbar GroupComboBox QComboBoxListView
 {
+  color:                      #C7CBD3;
+  background:                 #232B30;
+  selection-color:            #FFFFFF;
+  selection-background-color: #006AD5;
   /* drop-down list indents */
-  padding-top:  10px;
-  padding-left: 10px;
+  padding-top:  .5em;
+  padding-left: .5em;
   /* drop-down list size */
-  min-width:    230px;
-  min-height:   500px;
+  min-width:    18em;
+  min-height:   40em;
 }
+MainWindow #navToolbar GroupComboBox QComboBoxListView:focus
+{
+  border: 1px solid #4E5B65;
+}
+
 /* "Look up in" field */
 MainWindow #navToolbar #translateLine
 {
-  /*font-size:        10.5pt;*/
+  font-size:          9.1pt;
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
   border-radius:        0px;
+}
+MainWindow #navToolbar #translateLine:hover
+{
+  background:       #232B30;
 }
 MainWindow #navToolbar #translateLine:focus
 {
@@ -1080,29 +1104,33 @@ MainWindow #navToolbar #translateLine IconButton
 MainWindow #navToolbar #translateLine[noResults="true"]
 {
   background:       #A40000;
-  border: 1px solid #000000;
+  border: 1px solid #A40000;
+}
+MainWindow #navToolbar #translateLine[noResults="true"]:hover
+{
+  border: 1px solid #4E5B65;
 }
 /* drop-down list of "Look up in" field */
 MainWindow #navToolbar CompletionList
 {
-  /*font-size: 10.5pt;*/
   font-family: "Segoe UI", "Noto Sans", sans-serif;
+  font-size:   9.1pt;
   color:            #C7CBD3;
-  background:       #2B3339;
+  background:       #232B30;
   border: 1px solid #4E5B65;
 }
 MainWindow #navToolbar CompletionList::item
 {
   color:            #C7CBD3;
-  background:       #2B3339;
-  border: 1px solid #2B3339;
+  background:       #232B30;
+  border: 1px solid #232B30;
 }
 MainWindow #navToolbar CompletionList::item:hover
 {
   color:            #C7CBD3;
   background:       #4E5B65;
   border: 1px solid #4E5B65;
-  padding-left: 1px;
+  padding-left:         1px;
 }
 MainWindow #navToolbar CompletionList::item:selected:!active
 {
@@ -1227,12 +1255,11 @@ ScanPopup #groupList
 }
 ScanPopup #groupList::drop-down
 {
-  background:        #2B3339;
+  background:    transparent;
   border:  1px solid #4E5B65;
-  border-left:          none;
+  border:               none;
   width:                20px;
   subcontrol-position: right;
-  subcontrol-origin:  margin;
 }
 ScanPopup #groupList::down-arrow
 {
@@ -1242,31 +1269,60 @@ ScanPopup #groupList::down-arrow
   border-right: 5px solid #2B3339;
   border-top:   5px solid #4E5B65;
 }
+ScanPopup #groupList:hover
+{
+  background: #232B30;
+}
 ScanPopup #groupList::down-arrow:hover
 {
   border-top: 5px solid #0080FF;
 }
-ScanPopup #groupList::drop-down:pressed
+ScanPopup #groupList:on
 {
-  background: #000000;
+  background: #232B30;
+  padding-top:    2px;
+  padding-right:  2px;
+}
+ScanPopup #groupList::drop-down:on
+{
+  background: #232B30;
+}
+ScanPopup #groupList::down-arrow:on
+{
+  top:            2px;
+  right:          2px;
 }
 ScanPopup #groupList QComboBoxListView
 {
+  color:                      #C7CBD3;
+  background:                 #232B30;
+  selection-color:            #FFFFFF;
+  selection-background-color: #006AD5;
   /* drop-down list indents */
-  padding-top:  10px;
-  padding-left: 10px;
+  padding-top:  .5em;
+  padding-left: .5em;
   /* drop-down list size */
-  min-width:    230px;
-  min-height:   500px;
+  min-width:    16em;
+  min-height:   35em;
 }
+ScanPopup #groupList QComboBoxListView:focus
+{
+  border: 1px solid #4E5B65;
+}
+
 /* "Look up in" field */
 ScanPopup #translateLine
 {
-  /*font-size:     10.5pt;*/
+  /*font-size: 9pt;*/
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
   border-radius:        0px;
+  width:               12em;
+}
+ScanPopup #translateLine:hover
+{
+  background:       #232B30;
 }
 ScanPopup #translateLine:focus
 {
@@ -1284,23 +1340,27 @@ ScanPopup #translateLine IconButton
 ScanPopup #translateLine[noResults="true"]
 {
   background:       #A40000;
-  border: 1px solid #000000;
+  border: 1px solid #A40000;
+}
+ScanPopup #translateLine[noResults="true"]:hover
+{
+  border: 1px solid #4E5B65;
 }
 /* "Look up in" field's drop-down list */
 ScanPopup CompletionList
 {
-  /*font-size:   10.5pt;*/
+  /*font-size: 9pt;*/
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   color:            #C7CBD3;
-  background:       #2B3339;
+  background:       #232B30;
   border: 1px solid #4E5B65;
-  min-width:          220px;
+  min-width:           17em;
 }
 ScanPopup CompletionList::item
 {
   color:            #C7CBD3;
-  background:       #2B3339;
-  border: 1px solid #2B3339;
+  background:       #232B30;
+  border: 1px solid #232B30;
 }
 ScanPopup CompletionList::item:hover
 {
@@ -1484,14 +1544,9 @@ DictHeadwords #searchModeCombo
 {
   height: 20px;
 }
-DictHeadwords #searchModeCombo:focus
+DictHeadwords #searchModeCombo QComboBoxListView:focus
 {
-  border: 1px solid #0080FF;
-}
-DictHeadwords #searchModeCombo::drop-down:focus
-{
-  border: 1px solid #0080FF;
-  border-left: none;
+  border:     1px solid #4E5B65;
 }
 DictHeadwords QPushButton
 {
@@ -1513,20 +1568,18 @@ DictHeadwords QPushButton
 {
   height: 20px;
 }
-#FullTextSearchDialog #headwordsView:focus,
-#FullTextSearchDialog #searchMode:focus
+#FullTextSearchDialog #searchMode QComboBoxListView:focus
 {
-  border: 1px solid #0080FF;
+  border:     1px solid #4E5B65;
 }
 #FullTextSearchDialog #distanceBetweenWords,
 #FullTextSearchDialog #articlesPerDictionary
 {
   background: #232B30;
 }
-#FullTextSearchDialog #searchMode::drop-down:focus
+#FullTextSearchDialog #headwordsView:focus
 {
   border: 1px solid #0080FF;
-  border-left: none;
 }
 #FullTextSearchDialog QPushButton
 {
@@ -1742,6 +1795,15 @@ EditDictionaries DictGroupsWidget QToolButton
 EditDictionaries DictGroupsWidget QToolButton::menu-indicator
 {
   background: transparent;
+}
+EditDictionaries DictGroupsWidget #groupIcon QComboBoxListView
+{
+  min-height: 20em;
+}
+EditDictionaries DictGroupsWidget #groupIcon QComboBoxListView:focus
+{
+  border: 1px solid #4E5B65;
+  height: 10em;
 }
 EditDictionaries DictGroupsWidget QLabel#label_3
 {
