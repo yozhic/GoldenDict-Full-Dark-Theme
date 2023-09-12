@@ -136,14 +136,14 @@ QCheckBox::indicator:unchecked,
 QGroupBox::indicator:unchecked,
 QRadioButton::indicator:unchecked
 {
-  background:       #2B3339;
+  background:       #232B30;
   border: 1px solid #4E5B65;
 }
 QCheckBox::indicator:unchecked:hover,
 QGroupBox::indicator:unchecked:hover,
 QRadioButton::indicator:unchecked:hover
 {
-  background:       #2B3339;
+  background:       #232B30;
   border: 1px solid #0080FF;
 }
 QCheckBox::indicator:checked,
@@ -154,8 +154,8 @@ QRadioButton::indicator:checked,
 QRadioButton::indicator:checked:hover
 {
   image: url('./icons/dark-checkmark.svg');
+  background:       #232B30;
   border: 1px solid #0080FF;
-  /*background:       #0080FF;*/
   /*margin: 2px;*/
 }
 QCheckBox::indicator:checked:pressed,
@@ -175,13 +175,16 @@ QRadioButton::indicator:checked:disabled,
 QRadioButton::indicator:checked:disabled:hover
 {
   image: url('./icons/dark-checkmark-disabled.svg');
+  background:       #2B3339;
   border: 1px solid #4E5B65;
-  /*background:       #4E5B65;*/
   /*margin:     0px;*/
 }
+QCheckBox::indicator:unchecked:disabled,
+QRadioButton::indicator:unchecked:disabled,
 QCheckBox::indicator:unchecked:disabled:hover,
 QRadioButton::indicator:unchecked:disabled:hover
 {
+  background:       #2B3339;
   border: 1px solid #4E5B65;
 }
 
