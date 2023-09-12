@@ -1,4 +1,4 @@
-# Full Dark Theme for the GoldenDict interface on Windows
+# GoldenDict Windows Full Dark Theme
 
 Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
 
@@ -28,7 +28,7 @@ Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.
 
 ## Main window background image
 
-The Main Window background image can be replaced or its transparency can be adjusted. See the comments in the `ARTICLE WINDOW` section of the `article-style.css` file.  
+The Main Window background image can be replaced and its transparency can be adjusted. See the comments in the `ARTICLE WINDOW` section of the `article-style.css` file.  
 
 You can also replace the pattern file for collapsed articles. See the corresponding comment in the `ARTICLE BOXES` section of the `article-style.css` file.  
 
@@ -69,45 +69,45 @@ In the file `qt-style.css` you can also customize:
 ### Main window
 _Welcome screen_  
 
-![GoldenDict Dark theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_WELCOME.png)  
+![Welcome screen](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_WELCOME.png)  
 
 _Dark theme_  
 
-![GoldenDict Dark theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME.png)  
+![Dark Main window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME.png)  
 
 _Dark Deep theme_  
 
-![GoldenDict Dark Deep theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_DEEP_THEME.png)  
+![Dark Deep Main window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_DEEP_THEME.png)  
 
 _Scan Pop-up window_  
 
-![GoldenDict Dark Deep theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_SCAN_POPUP.png)  
+![Dark Deep Scan Pop-up](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_SCAN_POPUP.png)  
 
 ### Modal Windows
 
 _Full-text Search window_  
 
-![Full-text Search window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_FTS.png)  
+![Dark Full-text Search](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_FTS.png)  
 
 _Dictionary Headwords window_  
 
-![Dictionary Headwords window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dic_Headwords.png)  
+![Dark Headwords](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dic_Headwords.png)  
 
 _Dictionary annotation window_  
 
-![Dictionary annotation window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About_Dic.png)  
+![Dark Annotation](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About_Dic.png)  
 
-_`About` window_  
+_About window_  
 
-![About window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About.png)  
+![Dark About](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About.png)  
 
-_`Dictionaries...` window_  
+_Dictionaries window_  
 
-![Dictionaries... window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dicts.png)  
+![Dark Dictionaries](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dicts.png)  
 
-_`Preferences...` window_  
+_Preferences window_  
 
-![Preferences... window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Prefs.png)  
+![Dark Preferences](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Prefs.png)  
 
 
 ## Credits
