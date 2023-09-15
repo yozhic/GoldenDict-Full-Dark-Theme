@@ -67,7 +67,6 @@ QMessageBox,
 QPlainTextEdit,
 QPushButton,
 QRadioButton,
-QSpinBox,
 QToolButton
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
@@ -78,18 +77,84 @@ QComboBox,
 QGroupBox,
 QLineEdit,
 QPlainTextEdit,
-QPushButton,
-QSpinBox
+QPushButton
 {
   border: 1px solid #4E5B65;
 }
 QLineEdit:focus,
 QPlainTextEdit:focus,
-QPushButton:focus,
-QSpinBox:focus
+QPushButton:focus
 {
   background:       #2B3339;
   border: 1px solid #0080FF;
+}
+
+/* spinboxes */
+QSpinBox
+{
+  font-family: "Segoe UI", "Noto Sans", sans-serif;
+  color:            #C7CBD3;
+  background:       #232B30;
+  border: 1px solid #4E5B65;
+  height:           17px;
+  padding-top:       2px;
+  padding-bottom:    2px;
+  padding-left:      2px;
+  selection-background-color: #4E5B65;
+}
+QSpinBox:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+QSpinBox:disabled
+{
+  background:       #2B3339;
+}
+QSpinBox::up-button
+{
+  subcontrol-position: top right;
+  border: 1px solid #4E5B65;
+  width:       16px;
+  margin-top:   1px;
+  margin-right: 1px;
+}
+QSpinBox::up-arrow
+{
+  padding-top: 1px;
+  image: url('./icons/dark-arrow-up.svg');
+}
+QSpinBox::up-arrow:hover
+{
+  padding-top: 1px;
+  image: url('./icons/dark-arrow-up-h.svg');
+}
+QSpinBox::down-button
+{
+  subcontrol-position: bottom right;
+  border: 1px solid #4E5B65;
+  width:        16px;
+  margin-bottom: 1px;
+  margin-right:  1px;
+}
+QSpinBox::down-arrow
+{
+  image: url('./icons/dark-arrow-down.svg');
+}
+QSpinBox::down-arrow:hover
+{
+  image: url('./icons/dark-arrow-down-h.svg');
+}
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover
+{
+  border: 1px solid #0080FF;
+}
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed
+{
+  border: 1px solid #000000;
+  background:       #000000;
 }
 
 /* buttons */
