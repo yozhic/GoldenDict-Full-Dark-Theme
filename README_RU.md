@@ -1,26 +1,26 @@
 # Тёмная тема для GoldenDict на Windows
 
+<sup>[ [en](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main) | ru ]</sup>  
 Тема благополучно протестирована на GoldenDict 1.5.0-7 (Qt 5.12.3) на Windows 10, 8.1 и 7.  
-_См. ниже снимки с экрана._  
 
 
 ## Установка
 
 1. Скачиваем репозиторий: на [главной странице](https://github.com/yozhic/GoldenDict-Full-Dark-Theme) кнопка `Code`, далее из выпадающего меню `Download ZIP`. Распаковываем скачанный архив.  
 
-2. Папки `styles` и `fonts` вместе со всем содержимым перемещаем в папку настроек GD — та, что открывается по команде меню `Справка` → `Папка конфигурации` (`Help` → `Configuration Folder`).  
+2. Папки `styles` и `fonts` вместе со всем содержимым перемещаем в папку настроек GD — та, что открывается по команде меню `Справка` → `Папка конфигурации` (`Help` → `Configuration Folder`):  
 
-   Если программа установлена в стандартном режиме, то `Папка конфигурации` располагается по адресу:  
+   - Если программа установлена в стандартном режиме, то `Папка конфигурации` располагается по адресу:  
 
-   ```
-   c:\Users\<user>\AppData\Roaming\GoldenDict\
-   ```
+     ```
+     c:\Users\<user>\AppData\Roaming\GoldenDict\
+     ```
 
-   Если установка портабельная, то рядом с исполняемым файлом `GoldenDict.exe` в подпапке `portable`:  
+   - Если установка портабельная, то рядом с исполняемым файлом `GoldenDict.exe` в подпапке `portable`:  
 
-   ```
-   GoldenDict\portable\
-   ```
+     ```
+     GoldenDict\portable\
+     ```
 
 3. Папку `icons` перемещаем в программную папку `GoldenDict`, рядом к исполняемому файлу `GoldenDict.exe`.  
 
@@ -54,8 +54,8 @@ _См. ниже снимки с экрана._
 
 В файле `article-style.css`:  
 
-1. Можно заменить фоновое изображение в основной панели или настроить его прозрачность. См. комментарии в секции `ARTICLE WINDOW`.  
-2. Можно заменить изображение для паттерна блоков свёрнутых статей. См. комментарии в секции `ARTICLE BOXES`.  
+1. Можно заменить фоновое изображение в основной панели или настроить его прозрачность. _См. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76)._  
+2. Можно заменить изображение для заливки блоков свёрнутых статей. _См. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L282)._  
 
 В файле `qt-style.css` настраиваются:  
 
@@ -63,38 +63,50 @@ _См. ниже снимки с экрана._
 2. Гарнитуры шрифтов и их размеры. Для этого нужно выполнить поиск по слову `font`, а затем отредактировать, закомментировать или удалить найденные правила.  
 
 
-## Снимки с экрана
+## Внешний вид
 ### Главное окно
+
 _Стартовый экран_  
-![GoldenDict Dark theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_WELCOME.png)  
+
+![Вид главного окна сразу после старта программы](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_WELCOME.png)  
 
 _Тема Dark_  
-![GoldenDict Dark theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME.png)  
+
+![Вид главного окна с применённой темой Dark](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME.png)  
 
 _Тема Dark Deep_  
-![GoldenDict Dark Deep theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_DEEP_THEME.png)  
+
+![Вид главного окна с применённой темой Dark Deep](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_DEEP_THEME.png)  
 
 _Всплывающее окно перевода_  
-![GoldenDict Dark Deep theme](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_SCAN_POPUP.png)  
 
-### Дополнительные окна
-_Окно Полнотекстовый поиск_  
-![Full-text Search window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_FTS.png)  
+![Вид всплывающего окна перевода с применённой темой Dark Deep, Ctrl+C+C](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_SCAN_POPUP.png)  
 
-_Окно Заголовки словаря_  
-![Dictionary Headwords window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dic_Headwords.png)  
+### Вспомогательные окна
 
-_Окно Информация о словаре_  
-![Dictionary annotation window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About_Dic.png)  
+_Окно полнотекстового поиска_  
 
-_Окно Справка_  
-![About window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About.png)  
+![Вид окна полнотекстового поиска, Ctrl+Shift+F](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_FTS.png)  
 
-_Диалог настроек `Словари...`_  
-![Dictionaries... window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dicts.png)  
+_Окно заголовков словаря_  
 
-_Диалог настроек `Параметры...`_  
-![Preferences... window](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Prefs.png)  
+![Вид окна заголовков словаря](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dic_Headwords.png)  
+
+_Окно информации о словаре_  
+
+![Вид окна информации о словаре](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About_Dic.png)  
+
+_Окно информации о программе_  
+
+![Вид окна информации о программе](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_About.png)  
+
+_Диалог настройки словарей_  
+
+![Вид диалога настройки словарей](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Dicts.png)  
+
+_Диалог настроек программы_  
+
+![Вид диалога настроек программы](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_Prefs.png)  
 
 
 ## Благодарности

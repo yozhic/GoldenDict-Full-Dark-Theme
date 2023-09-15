@@ -1,36 +1,28 @@
 # GoldenDict Windows Full Dark Theme
 
+<sup>[ en | [ru](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md) ]</sup>  
 Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
-
-<sub>_For README in Russian see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md)._</sub>  
 
 
 ## Installation
 
-1. Move `styles` and `fonts` folders to the `GD Configuration Folder`.  
+1. Move `styles` and `fonts` folders to the `GD Configuration Folder`:  
 
-   If `GoldenDict` is installed by default, the `GD Configuration Folder` is located at the:
+   - If `GoldenDict` is installed by default, the `GD Configuration Folder` is located at the:
 
-   ```
-   c:\Users\<user>\AppData\Roaming\GoldenDict\
-   ```
+     ```
+     c:\Users\<user>\AppData\Roaming\GoldenDict\
+     ```
 
-   For a portable installation, the `GD Configuration Folder` is located here:
+   - For a portable installation, the `GD Configuration Folder` is located here:
 
-   ```
-   GoldenDict\portable\
-   ```
+     ```
+     GoldenDict\portable\
+     ```
 
 2. Move the `icons` folder to the `GoldenDict` program folder: `c:\Program Files\GoldenDict\`.  
 
    To return to the original GD icons, you need to remove the appropriate rules in `qt-style.css` - see comments inside.  
-
-
-## Main window background image
-
-The Main Window background image can be replaced and its transparency can be adjusted. See the comments in the `ARTICLE WINDOW` section of the `article-style.css` file.  
-
-You can also replace the pattern file for collapsed articles. See the corresponding comment in the `ARTICLE BOXES` section of the `article-style.css` file.  
 
 
 ## Color palette
@@ -54,12 +46,17 @@ Color     | Description
 `#3D464E` | accents in dictionaries buttons  
 
 
-You can change the color-code with the Find/Replace tool in any text editor.  
+You can change the color by find/replace its code in any text editor.  
 
 
 ## Customization
 
-In the file `qt-style.css` you can also customize:  
+In `article-style.css` you can also customize:  
+
+1. Main window background image or its transparency: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76).  
+2. Pattern for collapsed articles: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L282).  
+
+In `qt-style.css` you can also customize:  
 
 1. Drop-down lists size. Search by keyword `drop-down list size`. Then change, comment or delete the corresponding values.  
 2. Font typefaces and size. Search by keyword `font`. Then change, comment or delete the corresponding values.  
@@ -67,6 +64,7 @@ In the file `qt-style.css` you can also customize:
 
 ## Screenshots
 ### Main window
+
 _Welcome screen_  
 
 ![Welcome screen](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/screenshots/GD_WIN_DARK_THEME_WELCOME.png)  
