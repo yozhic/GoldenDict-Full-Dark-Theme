@@ -1962,3 +1962,15 @@ QDialog[modal="false"] QTreeView:focus
 {
   border: 1px solid #232B30;
 }
+QDialog[modal="false"] QTreeView::branch:has-siblings:!adjoins-item
+{
+  border-image: url('./icons/dark-tv-vline.svg');
+}
+QDialog[modal="false"] QTreeView::branch:has-siblings:adjoins-item
+{
+  border-image: url('./icons/dark-tv-branch-more.svg');
+}
+QDialog[modal="false"] QTreeView::branch:!has-children:!has-siblings:adjoins-item
+{
+  border-image: url('./icons/dark-tv-branch-end.svg');
+}
