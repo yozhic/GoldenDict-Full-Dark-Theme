@@ -1053,7 +1053,7 @@ MainWindow #navToolbar QToolButton
 MainWindow #navToolbar QToolButton:checked,
 MainWindow #navToolbar QToolButton:hover
 {
-  background:       #0080FF;
+  background:       #0062C4;
   border: 1px solid #0080FF;
 }
 MainWindow #navToolbar QToolButton:pressed,
@@ -1456,7 +1456,7 @@ ScanPopup QToolButton
 ScanPopup QToolButton:checked,
 ScanPopup QToolButton:hover
 {
-  background:       #0080FF;
+  background:       #0062C4;
   border: 1px solid #0080FF;
 }
 ScanPopup #dictionaryBar
@@ -1905,7 +1905,7 @@ QPrintPreviewDialog QToolBar QToolButton
 QPrintPreviewDialog QToolBar QToolButton:checked,
 QPrintPreviewDialog QToolBar QToolButton:hover
 {
-  background:       #0080FF;
+  background:       #0062C4;
   border: 1px solid #0080FF;
 }
 QPrintPreviewDialog QToolBar QToolButton:pressed,
@@ -1950,6 +1950,16 @@ QHelpIndexWidget
   border-radius:        4px;
   margin:               6px;
   padding:              6px;
+}
+QDialog[modal="false"] QToolButton:hover
+{
+  background:       #0062C4;
+  border: 1px solid #0080FF;
+}
+QDialog[modal="false"] QToolButton:pressed
+{
+  background:       #000000;
+  border: 1px solid #000000;
 }
 QDialog[modal="false"] QListView::item,
 QDialog[modal="false"] QTreeView::item
