@@ -1725,6 +1725,11 @@ EditDictionaries
 {
   background: #2B3339;
 }
+EditDictionaries QTreeView::item
+{
+  padding-top:    1px;
+  padding-bottom: 1px;
+}
 EditDictionaries QLineEdit
 {
   font-size: 9pt;
@@ -1932,7 +1937,7 @@ QPrintPreviewDialog QGraphicsView
 /*  other  windows it was called from. Also, it has no objectName (ID) in the */
 /*  current version of GoldenDict, so I refer to classes.                     */
 
-QDialog[modal="false"] QTextBrowser
+QDialog[windowTitle="GoldenDict help"] QTextBrowser
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   border: 1px solid #4E5B65;
@@ -1951,36 +1956,36 @@ QHelpIndexWidget
   margin:               6px;
   padding:              6px;
 }
-QDialog[modal="false"] QToolButton:hover
+QDialog[windowTitle="GoldenDict help"] QToolButton:hover
 {
   background:       #0062C4;
   border: 1px solid #0080FF;
 }
-QDialog[modal="false"] QToolButton:pressed
+QDialog[windowTitle="GoldenDict help"] QToolButton:pressed
 {
   background:       #000000;
   border: 1px solid #000000;
 }
-QDialog[modal="false"] QListView::item,
-QDialog[modal="false"] QTreeView::item
+QDialog[windowTitle="GoldenDict help"] QListView::item,
+QDialog[windowTitle="GoldenDict help"] QTreeView::item
 {
   padding-top:    1px;
   padding-bottom: 1px;
 }
-QDialog[modal="false"] QListView:focus,
-QDialog[modal="false"] QTreeView:focus
+QDialog[windowTitle="GoldenDict help"] QListView:focus,
+QDialog[windowTitle="GoldenDict help"] QTreeView:focus
 {
   border: 1px solid #232B30;
 }
-QDialog[modal="false"] QTreeView::branch:has-siblings:!adjoins-item
+QDialog[windowTitle="GoldenDict help"] QTreeView::branch:has-siblings:!adjoins-item
 {
   border-image: url('./icons/dark-tv-vline.svg');
 }
-QDialog[modal="false"] QTreeView::branch:has-siblings:adjoins-item
+QDialog[windowTitle="GoldenDict help"] QTreeView::branch:has-siblings:adjoins-item
 {
   border-image: url('./icons/dark-tv-branch-more.svg');
 }
-QDialog[modal="false"] QTreeView::branch:!has-children:!has-siblings:adjoins-item
+QDialog[windowTitle="GoldenDict help"] QTreeView::branch:!has-children:!has-siblings:adjoins-item
 {
   border-image: url('./icons/dark-tv-branch-end.svg');
 }
