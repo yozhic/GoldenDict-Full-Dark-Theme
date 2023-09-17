@@ -1936,7 +1936,8 @@ QDialog[modal="false"] QTextBrowser
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   border: 1px solid #4E5B65;
-  background:       #D3D6DC;
+                  /*#D3D6DC*/
+  background:       #D1D7E2;
   padding-left:        20px;
 }
 QHelpContentWidget,

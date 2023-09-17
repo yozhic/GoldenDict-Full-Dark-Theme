@@ -207,8 +207,9 @@ font[color] > .dsl_com > .dsl_trs
   margin-bottom: 10px;
   padding:        5px;
 
-  background:       #D3D6DC;
-  border: 1px solid #D3D6DC;
+                  /*#D3D6DC*/
+  background:       #D1D7E2;
+  border: 1px solid #D1D7E2;
 }
 .gdactivearticle
 {
