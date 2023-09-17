@@ -1801,9 +1801,9 @@ EditDictionaries QTreeView::indicator:checked:hover
 }
 EditDictionaries QSlider::groove
 {
-  background:       #232B30;
+  background: qlineargradient(x1:0, x2:1, stop:0 #000000, stop:0.4 #232B30, stop:0.6 #232B30, stop:1 #004488);
   border: 1px solid #4E5B65;
-  height:               4px;
+  height:               6px;
 }
 EditDictionaries QSlider::handle
 {
