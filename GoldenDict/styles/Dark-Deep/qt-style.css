@@ -276,8 +276,8 @@ QListView::item:selected,
 QListView::item:selected:active
 {
   color:            #FFFFFF;
-  background:       #006AD5;
-  border: 1px solid #006AD5;
+  background:       #0062C4;
+  border: 1px solid #0062C4;
 }
 QListView::item:selected:!active
 {
@@ -313,8 +313,8 @@ QTreeView::item:selected,
 QTreeView::item:selected:active
 {
   color:            #FFFFFF;
-  background:       #006AD5;
-  border: 1px solid #006AD5;
+  background:       #0062C4;
+  border: 1px solid #0062C4;
 }
 QTreeView::item:selected:!active
 {
@@ -500,7 +500,7 @@ QLineEdit:active,
 QPlainTextEdit:active
 {
   selection-color:            #FFFFFF;
-  selection-background-color: #006AD5;
+  selection-background-color: #0062C4;
 }
 QLineEdit:!active,
 QPlainTextEdit:!active
@@ -982,8 +982,8 @@ MainWindow #favoritesPane #favoritesTree::item:focus,
 MainWindow #dictsPane     #dictsList::item:focus
 {
   color:            #FFFFFF;
-  background:       #006AD5;
-  border: 1px solid #006AD5;
+  background:       #0062C4;
+  border: 1px solid #0062C4;
 }
 MainWindow #searchPane #translateLine[noResults="true"]
 {
