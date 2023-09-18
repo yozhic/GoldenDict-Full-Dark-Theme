@@ -1158,7 +1158,7 @@ MainWindow #navToolbar #translateLine:focus
   background:       #232B30;
   border: 1px solid #0080FF;
 }
-MainWindow #navToolbar #translateLine IconButton[toolTip="Drop-down"]
+MainWindow #navToolbar #translateLine IconButton[toolTip]
 {
   qproperty-pixmap: url('./icons/dark-drop-down.svg');
 }
@@ -1247,11 +1247,11 @@ MainWindow #centralWidget QTabBar::close-button:pressed
 }
 /* "New Tab" and "Open Tabs List" icons */
 /* remove 2 following rules to return original icons */
-MainWindow #centralWidget QToolButton[toolTip="New Tab"]
+MainWindow #centralWidget QToolButton[popupMode="0"]
 {
   qproperty-icon: url('./icons/dark-addtab-button.svg');
 }
-MainWindow #centralWidget QToolButton[toolTip="Open Tabs List"]
+MainWindow #centralWidget QToolButton[popupMode="2"]
 {
   qproperty-icon: url('./icons/dark-tabs-button.svg');
 }
@@ -1394,7 +1394,7 @@ ScanPopup #translateLine:focus
   background:       #232B30;
   border: 1px solid #0080FF;
 }
-ScanPopup #translateLine IconButton[toolTip="Drop-down"]
+ScanPopup #translateLine IconButton[toolTip]
 {
   qproperty-pixmap: url('./icons/dark-drop-down.svg');
 }
@@ -1847,22 +1847,21 @@ EditDictionaries DictGroupsWidget QToolButton[popupMode="0"]
   padding-bottom:       5px;
   padding-left:         2px;
 }
-EditDictionaries DictGroupsWidget QToolButton:hover,
-EditDictionaries DictGroupsWidget QToolButton:pressed
+EditDictionaries DictGroupsWidget QToolButton:hover
 {
   background:       #0080FF;
   border: 1px solid #0080FF;
 }
-EditDictionaries DictGroupsWidget QToolButton[popupMode="0"]:pressed
+EditDictionaries DictGroupsWidget QToolButton:pressed
 {
   background:       #000000;
   border: 1px solid #000000;
 }
-EditDictionaries DictGroupsWidget QToolButton
+EditDictionaries DictGroupsWidget QToolButton[popupMode="2"]
 {
   qproperty-icon: url('./icons/dark-tabs-button.svg');
 }
-EditDictionaries DictGroupsWidget QToolButton::menu-indicator
+EditDictionaries DictGroupsWidget QToolButton[popupMode="2"]::menu-indicator
 {
   background: transparent;
 }
@@ -1879,11 +1878,13 @@ EditDictionaries DictGroupsWidget QLabel#label_3
 {
   qproperty-pixmap: none;
 }
-EditDictionaries IconButton[toolTip="Quick Search"]
+EditDictionaries #OrderAndProps #searchLine IconButton[width="30"],
+EditDictionaries #Groups #searchLine IconButton[width="30"]
 {
   qproperty-pixmap: url('./icons/dark-search-quick.svg');
 }
-EditDictionaries IconButton[toolTip="Clear Search"]
+EditDictionaries #OrderAndProps #searchLine IconButton,
+EditDictionaries #Groups #searchLine IconButton
 {
   qproperty-pixmap: url('./icons/dark-search-clear.svg');
 }
