@@ -1941,8 +1941,7 @@ QDialog[windowTitle="GoldenDict help"] QTextBrowser
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   border: 1px solid #4E5B65;
-                  /*#D3D6DC*/
-  background:       #D1D7E2;
+  background:       #D3D6DC;
   padding-left:        20px;
 }
 QHelpContentWidget,
