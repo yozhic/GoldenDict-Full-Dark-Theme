@@ -6,23 +6,23 @@ Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.
 
 ## Installation
 
-1. Move `styles` and `fonts` folders to the `GD Configuration Folder`:  
+1. Move `styles` and `fonts` folders to the GD `Configuration Folder`:  
 
-   - If `GoldenDict` is installed by default, the `GD Configuration Folder` is located at the:
+   - If GD is installed by default, it's located at the:
 
      ```
      c:\Users\<user>\AppData\Roaming\GoldenDict\
      ```
 
-   - For a portable installation, the `GD Configuration Folder` is located here:
+   - If installation is portable, it's located at the:
 
      ```
      GoldenDict\portable\
      ```
 
-2. Move the `icons` folder to the `GoldenDict` program folder: `c:\Program Files\GoldenDict\`.  
+2. Move `icons` folder to the GD program folder: `c:\Program Files\GoldenDict\` or `GoldenDict\`.  
 
-   To return to the original GD icons, you need to remove the appropriate rules in `qt-style.css` - see comments inside.  
+   To return to the original GD icons, you need to remove the appropriate rules in `qt-style.css` (see comments inside).  
 
 
 ## Color palette
