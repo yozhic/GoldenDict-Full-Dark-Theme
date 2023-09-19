@@ -348,44 +348,49 @@ QTreeView::branch:open:has-children:has-siblings:hover
 }
 
 /* drop-down lists */
-QComboBox::drop-down
-{
-  background:    transparent;
-  border:  1px solid #4E5B65;
-  border:               none;
-  width:                20px;
-  subcontrol-position: right;
-}
-QComboBox::down-arrow
-{
-  width:  0;
-  height: 0;
-  border-left:  5px solid #2B3339;
-  border-right: 5px solid #2B3339;
-  border-top:   5px solid #4E5B65;
-}
-QComboBox:hover
-{
-  background: #232B30;
-}
-QComboBox::down-arrow:hover
-{
-  border-top: 5px solid #0080FF;
-}
 QComboBox:on
 {
   background: #232B30;
   padding-top:    2px;
   padding-right:  2px;
 }
+QComboBox:hover
+{
+  background: #232B30;
+}
+QComboBox::drop-down
+{
+  background:    transparent;
+  border:  1px solid #4E5B65;
+  border:               none;
+  width:                20px;
+}
 QComboBox::drop-down:on
 {
   background: #232B30;
+}
+QComboBox::down-arrow
+{
+  /*
+  width:  0;
+  height: 0;
+  border-left:  5px solid #2B3339;
+  border-right: 5px solid #2B3339;
+  border-top:   5px solid #4E5B65;
+  */
+  image: url(:/icons/collapse_article.png);
+  width:  9px;
+  height: 9px;
 }
 QComboBox::down-arrow:on
 {
   top:            2px;
   right:          2px;
+}
+QComboBox::down-arrow:hover
+{
+  /*border-top: 5px solid #0080FF;*/
+  image: url(:/icons/collapse_article_hovered.png);
 }
 QComboBox QComboBoxListView
 {
