@@ -1929,9 +1929,28 @@ QPrintPreviewDialog QToolBar QToolBarSeparator
 {
   background:       #4E5B65;
 }
-QPrintPreviewDialog QToolBar QLineEdit
+QPrintPreviewDialog QComboBox,
+QPrintPreviewDialog QLineEdit
 {
   background:       #232B30;
+}
+QPrintPreviewDialog QComboBox
+{
+  selection-background-color: #4E5B65;
+}
+QPrintPreviewDialog QComboBox:on,
+QPrintPreviewDialog QComboBox:focus,
+QPrintPreviewDialog QLineEdit:focus
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+QPrintPreviewDialog QComboBox QComboBoxListView
+{
+  color:                      #C7CBD3;
+  background:                 #232B30;
+  selection-color:            #FFFFFF;
+  selection-background-color: #0062C4;
 }
 QPrintPreviewDialog QGraphicsView
 {
