@@ -82,7 +82,7 @@ html::after
 }
 body
 {
-  font-family: "Segoe UI", NotoSans, NotoSansExpansion, "Arial Unicode MS", sans-serif;
+  font-family: "Segoe UI", NotoSans, NotoSansExpansion, "Segoe UI Historic", "Segoe UI Symbol", "Segoe UI Emoji", "Arial Unicode MS", sans-serif;
   font-size:   10.8pt;
   margin:    5px 10px;
 }
