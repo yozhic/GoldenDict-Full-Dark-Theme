@@ -1994,7 +1994,7 @@ QDialog[windowTitle="GoldenDict help"] QListView::item,
 QDialog[windowTitle="GoldenDict help"] QTreeView::item
 {
   padding-top:    1px;
-  padding-bottom: 1px;
+  padding-bottom: 2px;
 }
 QDialog[windowTitle="GoldenDict help"] QListView:focus,
 QDialog[windowTitle="GoldenDict help"] QTreeView:focus
