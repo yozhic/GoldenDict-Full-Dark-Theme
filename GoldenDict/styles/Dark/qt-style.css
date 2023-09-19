@@ -378,19 +378,19 @@ QComboBox::down-arrow
   border-right: 5px solid #2B3339;
   border-top:   5px solid #4E5B65;
   */
-  image: url(:/icons/collapse_article.png);
-  width:  9px;
-  height: 9px;
+  image: url('./icons/dark-drop-down.svg');
+  width:  16px;
+  height: 16px;
 }
 QComboBox::down-arrow:on
 {
-  top:            2px;
-  right:          2px;
+  top:    2px;
+  right:  2px;
 }
 QComboBox::down-arrow:hover
 {
   /*border-top: 5px solid #0080FF;*/
-  image: url(:/icons/collapse_article_hovered.png);
+  image: url('./icons/dark-drop-down-h.svg');
 }
 QComboBox QComboBoxListView
 {
@@ -437,11 +437,13 @@ QTabBar::tab:selected
   border-top-left-radius:  4px;
   border-top-right-radius: 4px;
 }
-QTabBar::tab:first:selected {
-    margin-left:  0px;
+QTabBar::tab:first:selected
+{
+  margin-left:  0px;
 }
-QTabBar::tab:last:selected {
-    margin-right: 0px;
+QTabBar::tab:last:selected
+{
+  margin-right: 0px;
 }
 QTabBar::tab:pressed
 {
@@ -896,12 +898,23 @@ MainWindow #dictionaryBar #qt_toolbar_ext_button:checked:pressed
 /* ====== Search, History, Dictionaries, Favorites ====== */
 /* ================= "Look up in" line ================== */
 
-/* drop-down list of Dictionaries Groups */
+/* Dictionaries Groups list */
 MainWindow #searchPane GroupComboBox
 {
   /* font in Groups list & line */
   font-family: Consolas, "Noto Sans Mono";
   font-size:   9.1pt;
+}
+MainWindow #searchPane GroupComboBox::down-arrow
+{
+  image: url(:/icons/collapse_article.png);
+  width:  9px;
+  height: 9px;
+  right:  1px;
+}
+MainWindow #searchPane GroupComboBox::down-arrow:hover
+{
+  image: url(:/icons/collapse_article_hovered.png);
 }
 MainWindow #searchPane GroupComboBox QComboBoxListView
 {
@@ -997,7 +1010,8 @@ MainWindow #searchPane #translateLine[noResults="true"]
 }
 
 /* ===================== Panes Tabs ===================== */
-MainWindow > QTabBar {
+MainWindow > QTabBar
+{
   qproperty-drawBase: 0;
 }
 MainWindow > QTabBar::tab
@@ -1019,17 +1033,21 @@ MainWindow > QTabBar::tab:!selected
   margin-top: 0px;
   color:      #8E9CA8;
 }
-MainWindow > QTabBar::tab:first:selected {
-    margin-left:  2px;
+MainWindow > QTabBar::tab:first:selected
+{
+  margin-left:  2px;
 }
-MainWindow > QTabBar::tab:last:selected {
-    margin-right: 2px;
+MainWindow > QTabBar::tab:last:selected
+{
+  margin-right: 2px;
 }
-MainWindow > QTabBar::tab:first:!selected {
-    margin-left:  2px;
+MainWindow > QTabBar::tab:first:!selected
+{
+  margin-left:  2px;
 }
-MainWindow > QTabBar::tab:last:!selected {
-    margin-right: 2px;
+MainWindow > QTabBar::tab:last:!selected
+{
+  margin-right: 2px;
 }
 
 /* ================= Navigation Toolbar ================= */
@@ -1067,8 +1085,8 @@ MainWindow #navToolbar QToolButton:checked:pressed
   background:       #000000;
   border: 1px solid #000000;
 }
-/* "Save" and "Print" icons */
-/* remove 2 following rules to return original icons */
+/* "Save" and "Print" icons 
+   remove 2 following rules to return original icons */
 MainWindow #navToolbar #saveArticleButton
 {
   qproperty-icon: url('./icons/dark-save-button.svg');
@@ -1077,10 +1095,11 @@ MainWindow #navToolbar #printButton
 {
   qproperty-icon: url('./icons/dark-print-button.svg');
 }
-/* Groups List and "Look up in" line with Search Pane inactive */
+/* Search Pane inactive:
+   Dictionaries Groups list and "Look up in" field */
 MainWindow #navToolbar GroupComboBox
 {
-  /* font in Groups list & line */
+  /* font in Groups list & field */
   font-family: Consolas, "Noto Sans Mono";
   font-size:   9.1pt;
   color:            #C7CBD3;
@@ -1088,44 +1107,49 @@ MainWindow #navToolbar GroupComboBox
   border: 1px solid #4E5B65;
   border-radius:        0px;
 }
-MainWindow #navToolbar GroupComboBox::drop-down
-{
-  background:    transparent;
-  border:  1px solid #4E5B65;
-  border:               none;
-  width:                20px;
-  subcontrol-position: right;
-}
-MainWindow #navToolbar GroupComboBox::down-arrow
-{
-  width:  0;
-  height: 0;
-  border-left:  5px solid #2B3339;
-  border-right: 5px solid #2B3339;
-  border-top:   5px solid #4E5B65;
-}
-MainWindow #navToolbar GroupComboBox:hover
-{
-  background: #232B30;
-}
-MainWindow #navToolbar GroupComboBox::down-arrow:hover
-{
-  border-top: 5px solid #0080FF;
-}
 MainWindow #navToolbar GroupComboBox:on
 {
   background:       #232B30;
   padding-top:          2px;
   padding-right:        2px;
 }
+MainWindow #navToolbar GroupComboBox:hover
+{
+  background:       #232B30;
+}
+MainWindow #navToolbar GroupComboBox::drop-down
+{
+  background:    transparent;
+  border:  1px solid #4E5B65;
+  border:               none;
+  width:                20px;
+}
 MainWindow #navToolbar GroupComboBox::drop-down:on
 {
-  background: #232B30;
+  background:        #232B30;
+}
+MainWindow #navToolbar GroupComboBox::down-arrow
+{
+  /*
+  width:  0;
+  height: 0;
+  border-left:  5px solid #2B3339;
+  border-right: 5px solid #2B3339;
+  border-top:   5px solid #4E5B65;
+  */
+  image: url(:/icons/collapse_article.png);
+  width:  10px;
+  height: 10px;
+  right:   2px;
 }
 MainWindow #navToolbar GroupComboBox::down-arrow:on
 {
-  top:            2px;
-  right:          2px;
+  top:    2px;
+}
+MainWindow #navToolbar GroupComboBox::down-arrow:hover
+{
+  /*border-top: 5px solid #0080FF;*/
+  image: url(:/icons/collapse_article_hovered.png);
 }
 MainWindow #navToolbar GroupComboBox QComboBoxListView
 {
@@ -1165,7 +1189,7 @@ MainWindow #navToolbar #translateLine:focus
 }
 MainWindow #navToolbar #translateLine IconButton[toolTip]
 {
-  qproperty-pixmap: url('./icons/dark-drop-down.svg');
+  qproperty-pixmap: url('./icons/dark-tline-ddown.svg');
 }
 MainWindow #navToolbar #translateLine IconButton
 {
@@ -1323,44 +1347,50 @@ ScanPopup #groupList
   border: 1px solid #4E5B65;
   border-radius:        0px;
 }
-ScanPopup #groupList::drop-down
-{
-  background:    transparent;
-  border:  1px solid #4E5B65;
-  border:               none;
-  width:                20px;
-  subcontrol-position: right;
-}
-ScanPopup #groupList::down-arrow
-{
-  width:  0;
-  height: 0;
-  border-left:  5px solid #2B3339;
-  border-right: 5px solid #2B3339;
-  border-top:   5px solid #4E5B65;
-}
-ScanPopup #groupList:hover
-{
-  background: #232B30;
-}
-ScanPopup #groupList::down-arrow:hover
-{
-  border-top: 5px solid #0080FF;
-}
 ScanPopup #groupList:on
 {
   background: #232B30;
   padding-top:    2px;
   padding-right:  2px;
 }
+ScanPopup #groupList:hover
+{
+  background: #232B30;
+}
+ScanPopup #groupList::drop-down
+{
+  background:    transparent;
+  border:  1px solid #4E5B65;
+  border:               none;
+  width:                20px;
+}
 ScanPopup #groupList::drop-down:on
 {
   background: #232B30;
 }
+ScanPopup #groupList::down-arrow
+{
+  /*
+  width:  0;
+  height: 0;
+  border-left:  5px solid #2B3339;
+  border-right: 5px solid #2B3339;
+  border-top:   5px solid #4E5B65;
+  */
+  image: url(:/icons/collapse_article.png);
+  width:  8px;
+  height: 8px;
+  right:  1px;
+}
 ScanPopup #groupList::down-arrow:on
 {
-  top:            2px;
-  right:          2px;
+  top:    2px;
+  right:  2px;
+}
+ScanPopup #groupList::down-arrow:hover
+{
+  /*border-top: 5px solid #0080FF;*/
+  image: url(:/icons/collapse_article_hovered.png);
 }
 ScanPopup #groupList QComboBoxListView
 {
@@ -1401,7 +1431,7 @@ ScanPopup #translateLine:focus
 }
 ScanPopup #translateLine IconButton[toolTip]
 {
-  qproperty-pixmap: url('./icons/dark-drop-down.svg');
+  qproperty-pixmap: url('./icons/dark-tline-ddown.svg');
 }
 ScanPopup #translateLine IconButton
 {
