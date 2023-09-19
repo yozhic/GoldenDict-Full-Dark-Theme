@@ -1008,6 +1008,14 @@ MainWindow #searchPane #translateLine[noResults="true"]
   background:       #A40000;
   border: 1px solid #000000;
 }
+/* identify borders when the panels are floating */
+MainWindow #searchPane,
+MainWindow #historyPane,
+MainWindow #favoritesPane,
+MainWindow #dictsPane
+{
+  background:       #1F272C;
+}
 
 /* ===================== Panes Tabs ===================== */
 MainWindow > QTabBar
