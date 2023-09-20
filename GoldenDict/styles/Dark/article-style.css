@@ -4,50 +4,50 @@
 /* ====================================================== */
 
 @font-face {
-    font-family: NotoSans;
-    src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style:  normal;
+  font-family: NotoSans;
+  src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
 }
 @font-face {
-    font-family: NotoSans;
-    src: local('Noto Sans Italic') url('file:./fonts/NotoSans-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style:  italic;
+  font-family: NotoSans;
+  src: local('Noto Sans Italic') url('file:./fonts/NotoSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
 }
 @font-face {
-    font-family: NotoSans;
-    src: local('Noto Sans Bold') url('file:./fonts/NotoSans-Bold.ttf') format('truetype');
-    font-weight:  bold;
-    font-style: normal;
+  font-family: NotoSans;
+  src: local('Noto Sans Bold') url('file:./fonts/NotoSans-Bold.ttf') format('truetype');
+  font-weight:  bold;
+  font-style: normal;
 }
 @font-face {
-    font-family: NotoSans;
-    src: local('Noto Sans Bold Italic') url('file:./fonts/NotoSans-BoldItalic.ttf') format('truetype');
-    font-weight:  bold;
-    font-style: italic;
+  font-family: NotoSans;
+  src: local('Noto Sans Bold Italic') url('file:./fonts/NotoSans-BoldItalic.ttf') format('truetype');
+  font-weight:  bold;
+  font-style: italic;
 }
 @font-face {
-    font-family: NotoSerif;
-    src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style:  normal;
+  font-family: NotoSerif;
+  src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
 }
 @font-face {
-    font-family: NotoSerif;
-    src: local('Noto Serif Medium Italic') url('file:./fonts/NotoSerif-MediumItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style:  italic;
+  font-family: NotoSerif;
+  src: local('Noto Serif Medium Italic') url('file:./fonts/NotoSerif-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
 }
 /* connecting additional Unicode ranges */
 /*
 @font-face {
-    font-family: NotoSansExpansion;
-    src: url('file:./fonts/NotoSansGlagolitic-Regular.ttf') format('truetype');
+  font-family: NotoSansExpansion;
+  src: url('file:./fonts/NotoSansGlagolitic-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: NotoSansExpansion;
-    src: url('file:./fonts/NotoSansPhoenician-Regular.ttf') format('truetype');
+  font-family: NotoSansExpansion;
+  src: url('file:./fonts/NotoSansPhoenician-Regular.ttf') format('truetype');
 }
 */
 
@@ -115,16 +115,27 @@ a.dsl_url:hover
 /*                          DSL                           */
 /* ====================================================== */
 
-.dsl_com { color: inherit; }
+.dsl_com
+{
+  color: inherit;
+}
 .dsl_t,
 font[color] > .dsl_com > .dsl_trs
 {
   font-family: NotoSerif, Cambria, serif;
 }
-.dsl_stress                { color:      red; }
-.dsl_stress_without_accent { display: inline; }
-.dsl_stress_with_accent    { display:   none; }
-
+.dsl_stress
+{
+  color: red;
+}
+.dsl_stress_without_accent
+{
+  display: inline;
+}
+.dsl_stress_with_accent
+{
+  display: none;
+}
 .dsl_s_wav img,
 .lsa_play img
 {
@@ -151,7 +162,10 @@ font[color] > .dsl_com > .dsl_trs
 {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M8.5,1L8.5,1C8.4,1,8.3,1,8.2,1.1L3.3,5H1C0.5,5,0,5.5,0,6v3c0,0.5,0.5,1,1,1h2.3l4.9,3.9c0.2,0.2,0.5,0.1,0.7-0.1C9,13.7,9,13.6,9,13.5v-12C9,1.2,8.8,1,8.5,1z M3,9H1V6h2V9z M8,12.5L4,9.3V5.7l4-3.2V12.5z M11.5,7.5C11.5,8.3,10.8,9,10,9V6C10.8,6,11.5,6.7,11.5,7.5z M15.5,7.5c0,3-2.5,5.5-5.5,5.5v-1c2.5,0,4.5-2,4.5-4.5S12.5,3,10,3V2C13,2,15.5,4.5,15.5,7.5z M13.5,7.5c0,1.9-1.6,3.5-3.5,3.5v-1c1.4,0,2.5-1.1,2.5-2.5S11.4,5,10,5V4C11.9,4,13.5,5.6,13.5,7.5z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
 }
-.dsl_video img { display: none; }
+.dsl_video img
+{
+  display: none;
+}
 .dsl_video .img
 {
   display:       inline-block;

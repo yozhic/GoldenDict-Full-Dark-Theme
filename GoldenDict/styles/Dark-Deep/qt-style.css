@@ -360,10 +360,9 @@ QComboBox:hover
 }
 QComboBox::drop-down
 {
-  background:    transparent;
-  border:  1px solid #4E5B65;
-  border:               none;
-  width:                20px;
+  background: transparent;
+  border:            none;
+  width:             20px;
 }
 QComboBox::drop-down:on
 {
@@ -743,7 +742,7 @@ MainStatusBar #icon
 /* "Look up in" field */
 #searchFrame #searchText
 {
-  /*font-size: 10.5pt;*/
+  font-size: 9.1pt;
 }
 #searchFrame #searchText:focus
 {
@@ -754,8 +753,8 @@ MainStatusBar #icon
   background:       #A40000;
   border: 1px solid #000000;
 }
-/* "Close Panel" icon */
-/* remove 3 following rules to return original icon */
+/* "Close Panel" icon
+   remove 3 following rules to return original icon */
 #searchFrame #searchCloseButton
 {
   qproperty-icon: url('./icons/dark-close-button.svg');
@@ -878,20 +877,49 @@ MainWindow #dictionaryBar QToolButton:checked:pressed
 /* toolbar show-more button */
 MainWindow #dictionaryBar #qt_toolbar_ext_button
 {
-  background:       #3D464E;
-  border: 1px solid #4E5B65;
+  margin: 0px;
 }
-MainWindow #dictionaryBar #qt_toolbar_ext_button:checked,
-MainWindow #dictionaryBar #qt_toolbar_ext_button:hover
+MainWindow #dictionaryBar[orientation="1"] #qt_toolbar_ext_button
 {
-  background:       #0080FF;
-  border: 1px solid #0080FF;
+  padding: 0px 2px 0px 1px;
+  background:   #4E5B65;
+  border-color: #2B3339;
+  border-width: 2px 0px;
 }
-MainWindow #dictionaryBar #qt_toolbar_ext_button:pressed,
-MainWindow #dictionaryBar #qt_toolbar_ext_button:checked:pressed
+MainWindow #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:checked,
+MainWindow #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:hover
 {
-  background:       #000000;
-  border: 1px solid #000000;
+  background:   #0080FF;
+  border-color: #2B3339;
+  border-width: 2px 0px;
+}
+MainWindow #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:pressed,
+MainWindow #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:checked:pressed
+{
+  background:   #000000;
+  border-color: #2B3339;
+  border-width: 2px 0px;
+}
+MainWindow #dictionaryBar[orientation="2"] #qt_toolbar_ext_button
+{
+  padding: 1px 0px 2px 0px;
+  background:   #4E5B65;
+  border-color: #2B3339;
+  border-width: 0px 2px;
+}
+MainWindow #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:checked,
+MainWindow #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:hover
+{
+  background:   #0080FF;
+  border-color: #2B3339;
+  border-width: 0px 2px;
+}
+MainWindow #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:pressed,
+MainWindow #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:checked:pressed
+{
+  background:   #000000;
+  border-color: #2B3339;
+  border-width: 0px 2px;
 }
 
 /* ======================= PANES ======================== */
@@ -902,7 +930,7 @@ MainWindow #dictionaryBar #qt_toolbar_ext_button:checked:pressed
 MainWindow #searchPane GroupComboBox
 {
   /* font in Groups list & line */
-  font-family: Consolas, "Noto Sans Mono";
+  font-family: Consolas, "Noto Sans Mono", monospace;
   font-size:   9.1pt;
 }
 MainWindow #searchPane GroupComboBox::down-arrow
@@ -1108,7 +1136,7 @@ MainWindow #navToolbar #printButton
 MainWindow #navToolbar GroupComboBox
 {
   /* font in Groups list & field */
-  font-family: Consolas, "Noto Sans Mono";
+  font-family: Consolas, "Noto Sans Mono", monospace;
   font-size:   9.1pt;
   color:            #C7CBD3;
   background:       #2B3339;
@@ -1127,14 +1155,13 @@ MainWindow #navToolbar GroupComboBox:hover
 }
 MainWindow #navToolbar GroupComboBox::drop-down
 {
-  background:    transparent;
-  border:  1px solid #4E5B65;
-  border:               none;
-  width:                20px;
+  background:   transparent;
+  border:              none;
+  width:               20px;
 }
 MainWindow #navToolbar GroupComboBox::drop-down:on
 {
-  background:        #232B30;
+  background:       #232B30;
 }
 MainWindow #navToolbar GroupComboBox::down-arrow
 {
@@ -1264,12 +1291,12 @@ MainWindow #centralWidget #qt_tabwidget_tabbar::tab
   padding-left: 18px;
   padding-right: 8px;
 }
-/* "Close Tab" icon */
-/* remove 3 following rules to return original icons */
+/* "Close Tab" icon
+   remove 3 following rules to return original icons */
 MainWindow #centralWidget QTabBar::close-button
 {
   image: url('./icons/dark-close-button-tab.svg');
-  margin-top: 2px;
+  margin-top:   2px;
   margin-right: 2px;
 }
 MainWindow #centralWidget QTabBar::close-button:hover
@@ -1282,8 +1309,8 @@ MainWindow #centralWidget QTabBar::close-button:pressed
   image: url('./icons/dark-close-button-tab.svg');
   background: #000000;
 }
-/* "New Tab" and "Open Tabs List" icons */
-/* remove 2 following rules to return original icons */
+/* "New Tab" and "Open Tabs List" icons
+   remove 2 following rules to return original icons */
 MainWindow #centralWidget QToolButton[popupMode="0"]
 {
   qproperty-icon: url('./icons/dark-addtab-button.svg');
@@ -1348,7 +1375,7 @@ ScanPopup
 ScanPopup #groupList
 {
   /* font in Groups list & line */
-  font-family: Consolas, "Noto Sans Mono";
+  font-family: Consolas, "Noto Sans Mono", monospace;
   font-size:   8pt;
   color:            #C7CBD3;
   background:       #2B3339;
@@ -1367,10 +1394,9 @@ ScanPopup #groupList:hover
 }
 ScanPopup #groupList::drop-down
 {
-  background:    transparent;
-  border:  1px solid #4E5B65;
-  border:               none;
-  width:                20px;
+  background: transparent;
+  border:            none;
+  width:             20px;
 }
 ScanPopup #groupList::drop-down:on
 {
@@ -1561,20 +1587,49 @@ ScanPopup QToolButton:pressed
 /* toolbar show-more button */
 ScanPopup #dictionaryBar #qt_toolbar_ext_button
 {
-  background:       #4E5B65;
-  border: 1px solid #4E5B65;
+  margin: 0px;
 }
-ScanPopup #dictionaryBar #qt_toolbar_ext_button:checked,
-ScanPopup #dictionaryBar #qt_toolbar_ext_button:hover
+ScanPopup #dictionaryBar[orientation="1"] #qt_toolbar_ext_button
 {
-  background:       #0080FF;
-  border: 1px solid #0080FF;
+  padding: 0px 2px 0px 1px;
+  background:   #4E5B65;
+  border-color: #2B3339;
+  border-width: 1px 0px 2px 0px;
 }
-ScanPopup #dictionaryBar #qt_toolbar_ext_button:pressed,
-ScanPopup #dictionaryBar #qt_toolbar_ext_button:checked:pressed
+ScanPopup #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:checked,
+ScanPopup #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:hover
 {
-  background:       #000000;
-  border: 1px solid #000000;
+  background:   #0080FF;
+  border-color: #2B3339;
+  border-width: 1px 0px 2px 0px;
+}
+ScanPopup #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:pressed,
+ScanPopup #dictionaryBar[orientation="1"] #qt_toolbar_ext_button:checked:pressed
+{
+  background:   #000000;
+  border-color: #2B3339;
+  border-width: 1px 0px 2px 0px;
+}
+ScanPopup #dictionaryBar[orientation="2"] #qt_toolbar_ext_button
+{
+  padding: 1px 0px 2px 0px;
+  background:   #4E5B65;
+  border-color: #2B3339;
+  border-width: 0px 1px 0px 2px;
+}
+ScanPopup #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:checked,
+ScanPopup #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:hover
+{
+  background:   #0080FF;
+  border-color: #2B3339;
+  border-width: 0px 1px 0px 2px;
+}
+ScanPopup #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:pressed,
+ScanPopup #dictionaryBar[orientation="2"] #qt_toolbar_ext_button:checked:pressed
+{
+  background:   #000000;
+  border-color: #2B3339;
+  border-width: 0px 1px 0px 2px;
 }
 /* remove 5 following rules to return original icons */
 ScanPopup QToolButton#sendWordButton
