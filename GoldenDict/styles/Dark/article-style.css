@@ -292,8 +292,8 @@ font[color] > .dsl_com > .dsl_trs
 {
   background:       #2B3339;
   border: 1px solid #4E5B65;
-  /* here we change the pattern */
-  background-image: url('file:./styles/Dark/dark-av-collapse-pattern.png');
+  /* pattern graphy_transparent.png */
+  background-image: url('data:image/png%3Bbase64,iVBORw0KGgoAAAANSUhEUgAAAFAAAACgAgMAAADm7QMnAAAADFBMVEWIiIixsbGxsbGxsbF0SLUbAAAABHRSTlP/bytS3QghxwAAAEVJREFUeAFjYA3FAA4Mq17tWrcalVhBtOBK7IL/McFf4rUPZYtGLRq1aNSiUYtGLSJcoYzWR4PBolGLRi0atWjUotH6CAA67a9q5+gpSAAAAABJRU5ErkJggg%3D%3D');
 }
 
 /* move collapse/expand buttons to the last, 3rd position */
