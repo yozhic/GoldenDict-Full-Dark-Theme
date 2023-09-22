@@ -107,24 +107,12 @@ a:hover
   text-decoration: underline;
   cursor:            pointer;
 }
-a.dsl_url:hover
-{
-  cursor: alias;
-}
 
 /* ====================================================== */
 /*                          DSL                           */
 /* ====================================================== */
 
-.dsl_com
-{
-  color: inherit;
-}
-.dsl_t,
-font[color] > .dsl_com > .dsl_trs
-{
-  font-family: NotoSerif, Cambria, serif;
-}
+/*---format tags---*/
 .dsl_stress
 {
   color: red;
@@ -137,6 +125,51 @@ font[color] > .dsl_com > .dsl_trs
 {
   display: none;
 }
+/*---structure tags---*/
+.dsl_p,
+.dsl_p :not(a),
+.dsl_article font[color=c_default_color]
+{
+  color: #3399FF !important;
+  cursor: help;
+}
+.dsl_opt,
+.dsl_opt .dsl_ex,
+.dsl_opt .dsl_ex :not(a),
+.dsl_opt .dsl_ex font[color],
+.dsl_opt .dsl_trn
+{
+  color: #778899 /*lightslategray*/;
+}
+.dsl_t
+{
+  font-family: NotoSerif, Cambria, serif;
+}
+/*---search tags---*/
+.dsl_com
+{
+  color: inherit;
+}
+.dsl_ex,
+.dsl_ex .dsl_opt,
+.dsl_ex .dsl_opt :not(a),
+.dsl_ex .dsl_trn
+{
+  color: #778899 /*lightslategray*/;
+}
+/* color index_lang in examples */
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_trs
+{
+  color: #696969 /*dimgray*/ !important;
+}
+/*---link tags---*/
+a.dsl_url:hover
+{
+  cursor: alias;
+}
+/*---media tags---*/
 .dsl_s_wav img,
 .lsa_play img
 {
@@ -184,32 +217,6 @@ font[color] > .dsl_com > .dsl_trs
 .dsl_video .img:active
 {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M13.5,1h-12C0.7,1,0,1.7,0,2.5v8C0,11.3,0.7,12,1.5,12H7c0,0.2,0,0.3,0,0.5s0,0.3,0,0.5H4v1h7v-1H8c0-0.2,0-0.2,0-0.5c0-0.2,0-0.3,0-0.5h5.5c0.8,0,1.5-0.7,1.5-1.5v-8C15,1.7,14.3,1,13.5,1z M14,10.5c0,0.3-0.2,0.5-0.5,0.5h-12C1.2,11,1,10.8,1,10.5v-8C1,2.2,1.2,2,1.5,2h12C13.8,2,14,2.2,14,2.5V10.5z M3,4H2V3h1V4z M3,6H2V5h1V6z M3,8H2V7h1V8z M3,10H2V9h1V10z M13,4h-1V3h1V4z M13,6h-1V5h1V6z M13,8h-1V7h1V8z M13,10h-1V9h1V10z M5,10V3l6,3.5L5,10z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
-}
-.dsl_opt,
-.dsl_opt .dsl_ex,
-.dsl_opt .dsl_ex :not(a),
-.dsl_opt .dsl_ex font[color],
-.dsl_opt .dsl_trn,
-.dsl_ex,
-.dsl_ex .dsl_opt,
-.dsl_ex .dsl_opt :not(a),
-.dsl_ex .dsl_trn
-{
-  color: #778899 /*lightslategray*/;
-}
-.dsl_p,
-.dsl_p :not(a),
-.dsl_article font[color=c_default_color]
-{
-  color: #3399FF !important;
-  cursor: help;
-}
-/* color index_lang in examples */
-.dsl_ex .dsl_lang,
-.dsl_ex .dsl_lang .dsl_u,
-.dsl_ex .dsl_lang .dsl_trs
-{
-  color: #696969 /*dimgray*/ !important;
 }
 
 /* ====================================================== */

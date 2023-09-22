@@ -107,10 +107,6 @@ a:hover
   text-decoration: underline;
   cursor:            pointer;
 }
-a.dsl_url:hover
-{
-  cursor: alias;
-}
 
 /* ====================================================== */
 /*                          DSL                           */
@@ -121,19 +117,33 @@ a.dsl_url:hover
   font-family: "Segoe UI", NotoSans, sans-serif;
   font-weight: bold;
 }
+/* lighten dark colors */
+font[color=blue]          { color: #8882FF !important; }
+font[color=mediumblue]    { color: #8882FF !important; }
+font[color=darkblue]      { color: #8882FF !important; }
+font[color=darkslateblue] { color: #8882FF !important; }
+font[color=midnightblue]  { color: #8882FF !important; }
+font[color=navy]          { color: #8882FF !important; }
+font[color=darkmagenta]   { color: #FF22FF !important; }
+font[color=purple]        { color: #FF22FF !important; }
+font[color=indigo]        { color: #B959FF !important; }
+font[color=darkred]       { color: #D20000 !important; }
+font[color=maroon]        { color: #D20000 !important; }
+font[color=darkslategray] { color: #768390 !important; }
+font[color=dimgray]       { color: #A7A7A7 !important; }
+font[color=green]         { color: #32CD32 !important; }
+font[color=darkgreen]     { color: #32CD32 !important; }
+font[color=forestgreen]   { color: #32CD32 !important; }
+font[color=seagreen]      { color: #00FF7F !important; }
+font[color=mediumseagreen]{ color: #00FF7F !important; }
+font[color=olive]         { color: #F0E68C !important; }
+font[color=darkolivegreen]{ color: #ADFF2F !important; }
+font[color=olivedrab]     { color: #ADFF2F !important; }
+/*---format tags---*/
 .dsl_b
 {
   font-family: "Segoe UI", NotoSans, sans-serif;
   font-weight: bold;
-}
-.dsl_com
-{
-  color: inherit;
-}
-.dsl_t,
-font[color] > .dsl_com > .dsl_trs
-{
-  font-family: NotoSerif, Cambria, serif;
 }
 .dsl_stress
 {
@@ -147,6 +157,52 @@ font[color] > .dsl_com > .dsl_trs
 {
   display:   none;
 }
+/*---structure tags---*/
+.dsl_p,
+.dsl_p :not(a),
+.dsl_article font[color=c_default_color]
+{
+  color: #FF7B3C !important;
+  cursor: help;
+}
+.dsl_opt,
+.dsl_opt .dsl_ex,
+.dsl_opt .dsl_ex :not(a),
+.dsl_opt .dsl_ex font[color],
+.dsl_opt .dsl_trn
+{
+  color: #9B9B9B;
+}
+.dsl_t
+{
+  font-family: NotoSerif, Cambria, serif;
+}
+/*---search tags---*/
+.dsl_com
+{
+  /*color: inherit;*/
+  color: #C7CBD3;
+}
+.dsl_ex,
+.dsl_ex .dsl_opt,
+.dsl_ex .dsl_opt :not(a),
+.dsl_ex .dsl_trn
+{
+  color: #9B9B9B;
+}
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_trs
+{
+  /* color index_lang in examples */
+  color: #888FA0 !important;
+}
+/*---link tags---*/
+a.dsl_url:hover
+{
+  cursor: alias;
+}
+/*---media tags---*/
 .dsl_s_wav img,
 .lsa_play img
 {
@@ -192,58 +248,7 @@ font[color] > .dsl_com > .dsl_trs
 {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M13.5,1h-12C0.7,1,0,1.7,0,2.5v8C0,11.3,0.7,12,1.5,12H7c0,0.2,0,0.3,0,0.5s0,0.3,0,0.5H4v1h7v-1H8c0-0.2,0-0.2,0-0.5c0-0.2,0-0.3,0-0.5h5.5c0.8,0,1.5-0.7,1.5-1.5v-8C15,1.7,14.3,1,13.5,1z M14,10.5c0,0.3-0.2,0.5-0.5,0.5h-12C1.2,11,1,10.8,1,10.5v-8C1,2.2,1.2,2,1.5,2h12C13.8,2,14,2.2,14,2.5V10.5z M3,4H2V3h1V4z M3,6H2V5h1V6z M3,8H2V7h1V8z M3,10H2V9h1V10z M13,4h-1V3h1V4z M13,6h-1V5h1V6z M13,8h-1V7h1V8z M13,10h-1V9h1V10z M5,10V3l6,3.5L5,10z' fill='%230080FF'/%3E%3C/svg%3E") no-repeat center;
 }
-.dsl_opt,
-.dsl_opt .dsl_ex,
-.dsl_opt .dsl_ex :not(a),
-.dsl_opt .dsl_ex font[color],
-.dsl_opt .dsl_trn,
-.dsl_ex,
-.dsl_ex .dsl_opt,
-.dsl_ex .dsl_opt :not(a),
-.dsl_ex .dsl_trn
-{
-  color: #9B9B9B;
-}
-.dsl_p,
-.dsl_p :not(a),
-.dsl_article font[color=c_default_color]
-{
-  color: #FF7B3C !important;
-  cursor: help;
-}
-/* color index_lang in examples */
-.dsl_ex .dsl_lang,
-.dsl_ex .dsl_lang .dsl_u,
-.dsl_ex .dsl_lang .dsl_trs
-{
-  color: #888FA0 !important;
-}
-.dsl_com
-{
-  color: #C7CBD3;
-}
-/* lighten dark colors */
-font[color=blue]          { color: #8882FF !important; }
-font[color=mediumblue]    { color: #8882FF !important; }
-font[color=darkblue]      { color: #8882FF !important; }
-font[color=darkslateblue] { color: #8882FF !important; }
-font[color=midnightblue]  { color: #8882FF !important; }
-font[color=navy]          { color: #8882FF !important; }
-font[color=darkmagenta]   { color: #FF22FF !important; }
-font[color=purple]        { color: #FF22FF !important; }
-font[color=indigo]        { color: #B959FF !important; }
-font[color=darkred]       { color: #D20000 !important; }
-font[color=maroon]        { color: #D20000 !important; }
-font[color=darkslategray] { color: #768390 !important; }
-font[color=dimgray]       { color: #A7A7A7 !important; }
-font[color=green]         { color: #32CD32 !important; }
-font[color=darkgreen]     { color: #32CD32 !important; }
-font[color=forestgreen]   { color: #32CD32 !important; }
-font[color=seagreen]      { color: #00FF7F !important; }
-font[color=mediumseagreen]{ color: #00FF7F !important; }
-font[color=olive]         { color: #F0E68C !important; }
-font[color=darkolivegreen]{ color: #ADFF2F !important; }
-font[color=olivedrab]     { color: #ADFF2F !important; }
+
 
 /* ====================================================== */
 /*                      ARTICLE BOXES                     */
