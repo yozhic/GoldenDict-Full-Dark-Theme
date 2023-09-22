@@ -268,13 +268,13 @@ a.dsl_url:hover
 {
   border: 1px solid #0080FF;
 }
-.gdarticleseparator + script + .gdactivearticle .gddictname
-{
-  border-top: 1px solid #0080FF;
-}
 .gdarticleseparator + script + .gdarticle .gddictname
 {
   border-top: 1px solid #4E5B65;
+}
+.gdarticleseparator + script + .gdactivearticle .gddictname
+{
+  border-top: 1px solid #0080FF;
 }
 .gdarticleseparator
 {
@@ -295,14 +295,11 @@ a.dsl_url:hover
   margin:         -6px;
   margin-bottom:   5px;
   margin-left:     2px;
-  padding: .3em .3em .2em .6em;
+  padding: .3em .3em .2em .7em;
 
   color:            #CBD0D8;
   background:       #2B3339;
-  border-top:    none;
-  border-right:  none;
-  border-left:   1px solid #4E5B65;
-  border-bottom: 1px solid #4E5B65;
+  border: 1px solid #4E5B65;
 
   -webkit-user-select: none;
   user-select:         none;
@@ -323,14 +320,11 @@ a.dsl_url:hover
   margin:         -6px;
   margin-bottom:   5px;
   margin-left:     2px;
-  padding: .3em .3em .2em .6em;
+  padding: .3em .3em .2em .7em;
 
-  color:      #FFFFFF;
-  background: #0080FF;
-  border-top:    none;
-  border-right:  none;
-  border-left:   1px solid #0080FF;
-  border-bottom: 1px solid #0080FF;
+  color:            #FFFFFF;
+  background:       #0080FF;
+  border: 1px solid #0080FF;
 }
 .gdcollapsedarticle .gddictname
 {
