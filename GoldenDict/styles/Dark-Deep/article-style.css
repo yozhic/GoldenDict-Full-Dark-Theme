@@ -289,18 +289,20 @@ a.dsl_url:hover
 {
   /* needed to be able to reorder elements, e.g. icon, dictionary name, collapse icon */
   display: -webkit-box;
-  font-size:      12px;
+  font-size:     .85em;
   font-weight:  normal;
   float:         right;
   margin:         -6px;
   margin-bottom:   5px;
   margin-left:     2px;
-  padding-right: 0.3em;
-  padding-top:   0.3em;
+  padding: .3em .3em .2em .6em;
 
   color:            #CBD0D8;
   background:       #2B3339;
-  border: 1px solid #4E5B65;
+  border-top:    none;
+  border-right:  none;
+  border-left:   1px solid #4E5B65;
+  border-bottom: 1px solid #4E5B65;
 
   -webkit-user-select: none;
   user-select:         none;
@@ -314,16 +316,21 @@ a.dsl_url:hover
 }
 .gdactivearticle .gddictname
 {
-  font-size:     12px;
-  font-weight: normal;
-  margin:        -6px;
-  margin-bottom: 10px;
-  margin-left:    2px;
-  float:        right;
+  display: -webkit-box;
+  font-size:     .85em;
+  font-weight:  normal;
+  float:         right;
+  margin:         -6px;
+  margin-bottom:   5px;
+  margin-left:     2px;
+  padding: .3em .3em .2em .6em;
 
-  color:            #FFFFFF;
-  background:       #0080FF;
-  border: 1px solid #0080FF;
+  color:      #FFFFFF;
+  background: #0080FF;
+  border-top:    none;
+  border-right:  none;
+  border-left:   1px solid #0080FF;
+  border-bottom: 1px solid #0080FF;
 }
 .gdcollapsedarticle .gddictname
 {

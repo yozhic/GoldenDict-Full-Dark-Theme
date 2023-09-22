@@ -253,18 +253,20 @@ a.dsl_url:hover
 {
   /* needed to be able to reorder elements, e.g. icon, dictionary name, collapse icon */
   display: -webkit-box;
-  font-size:      12px;
+  font-size:     .85em;
   font-weight:  normal;
   float:         right;
   margin:         -6px;
   margin-bottom:   5px;
   margin-left:     2px;
-  padding-right: 0.3em;
-  padding-top:   0.3em;
+  padding: .3em .3em .2em .6em;
 
-  color:            #000000;
-  background:       #C7CBD3;
-  border: 1px solid #000000;
+  color:      #000000;
+  background: #C7CBD3;
+  border-top:    none;
+  border-right:  none;
+  border-left:   1px solid #000000;
+  border-bottom: 1px solid #000000;
 
   -webkit-user-select: none;
   user-select:         none;
@@ -279,22 +281,26 @@ a.dsl_url:hover
 }
 .gdactivearticle .gddictname
 {
-  font-size:     12px;
-  font-weight: normal;
-  margin:        -6px;
-  margin-bottom: 10px;
-  margin-left:    2px;
-  float:        right;
+  display: -webkit-box;
+  font-size:     .85em;
+  font-weight:  normal;
+  float:         right;
+  margin:         -6px;
+  margin-bottom:   5px;
+  margin-left:     2px;
+  padding: .3em .3em .2em .6em;
 
-  color:            #FFFFFF;
-  background:       #0080FF;
-  border: 1px solid #0080FF;
+  color:      #FFFFFF;
+  background: #0080FF;
+  border-top:    none;
+  border-right:  none;
+  border-left:   1px solid #0080FF;
+  border-bottom: 1px solid #0080FF;
 }
 .gdcollapsedarticle .gddictname
 {
   opacity: 0.7;
 }
-
 /* article collapsed */
 .gdcollapsedarticle
 {
@@ -303,7 +309,6 @@ a.dsl_url:hover
   /* pattern graphy_transparent.png */
   background-image: url('data:image/png%3Bbase64,iVBORw0KGgoAAAANSUhEUgAAAFAAAACgAgMAAADm7QMnAAAADFBMVEWIiIixsbGxsbGxsbF0SLUbAAAABHRSTlP/bytS3QghxwAAAEVJREFUeAFjYA3FAA4Mq17tWrcalVhBtOBK7IL/McFf4rUPZYtGLRq1aNSiUYtGLSJcoYzWR4PBolGLRi0atWjUotH6CAA67a9q5+gpSAAAAABJRU5ErkJggg%3D%3D');
 }
-
 /* move collapse/expand buttons to the last, 3rd position */
 .collapse_expand_area
 {
@@ -346,7 +351,6 @@ a.dsl_url:hover
 {
   background-image: url('qrcx://localhost/icons/collapse_article_hovered.png');
 }
-
 /* first headword in a multi-headword DSL article */
 .gdarticlebody > span:first-child .dsl_headwords,
 .gdarticlebody > h3:first-child
