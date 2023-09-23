@@ -1,0 +1,13 @@
+// example
+.dsl_video img
+{
+  display: none;
+}
+.dsl_video .img
+{
+  display: inline-block;
+  width:   24px;
+  height:  24px;
+  background: url('file:./styles/dark-av-video-icon.png') no-repeat center;
+  vertical-align: -35%;
+}

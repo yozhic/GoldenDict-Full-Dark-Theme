@@ -1,0 +1,18 @@
+// example
+html::after
+{
+  content: "";
+  top:    0;
+  left:   0;
+  bottom: 0;
+  right:  0;
+  position: absolute;
+  z-index: -1;
+
+  background-image: url('file:./styles/dark-av-background-gdicon.png');
+  opacity: 1;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

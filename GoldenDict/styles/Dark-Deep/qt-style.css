@@ -2079,7 +2079,7 @@ QPrintPreviewDialog QGraphicsView
 /* =============================== HELP WINDOW ============================== */
 /*  I  didn't  want  to  color this window, but it inherits the styles of the */
 /*  other  windows it was called from. Also, it has no objectName (ID) in the */
-/*  current version of GoldenDict, so I refer to classes.                     */
+/*  current version of GD, so I refer to window title.                        */
 
 QDialog[windowTitle="GoldenDict help"] QTextBrowser
 {
