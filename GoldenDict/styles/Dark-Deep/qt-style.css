@@ -707,34 +707,40 @@ MainStatusBar #icon
   border-top: 5px solid #4E5B65;
   margin-top: 3px;
 }
+#searchFrame #searchPrevious
+{
+  qproperty-icon: url('./icons/dark-arrow-back.svg');
+}
+#searchFrame #searchNext
+{
+  qproperty-icon: url('./icons/dark-arrow-next.svg');
+}
+#searchFrame #highlightAllButton
+{
+  qproperty-icon: url('./icons/dark-marker.svg');
+}
 #searchFrame #searchPrevious,
 #searchFrame #searchNext,
 #searchFrame #highlightAllButton
 {
-  qproperty-icon: none;
-  height:         18px;
-  padding-left:    5px;
-  padding-right:   5px;
-}
-#searchFrame #searchPrevious
-{
-  min-width:      50px;
-}
-#searchFrame #searchNext
-{
-  min-width:      30px;
-}
-#searchFrame #highlightAllButton
-{
-  min-width:      70px;
+  color:            #C7CBD3;
+  background:       #2B3339;
+  border: 1px solid #2B3339;
+  height:      18px;
+  padding-left: 2px;
 }
 #searchFrame #searchPrevious:hover,
-#searchFrame #searchNext:hover,
+#searchFrame #searchNext:hover
+{
+  color:            #FFFFFF;
+  background:       #0080FF;
+  border: 1px solid #0080FF;
+}
 #searchFrame #highlightAllButton:hover,
 #searchFrame #highlightAllButton:checked
 {
   color:            #FFFFFF;
-  background:       #0080FF;
+  background:       #0062C4;
   border: 1px solid #0080FF;
 }
 #searchFrame #searchPrevious:pressed,
