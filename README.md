@@ -1,28 +1,80 @@
-# GoldenDict Windows Full Dark Theme
-
+﻿# GoldenDict Windows Full Dark Theme
 <sup>[ en | [ru](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md) ]</sup>  
-Tested on GoldenDict 1.5.0-7 (Qt 5.12.3) on Windows 10, 8.1 and 7.  
+This theme has been successfully tested on:  
+
+- GoldenDict 1.5.0-8 (commit [f303bb4](https://github.com/goldendict/goldendict/commit/f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc))  
+- Qt 5.12.3  
+- Windows 10, 8.1 and 7  
+
+> [!WARNING]  
+> Fixes may be required for use in other configurations and on other operating systems.  
 
 
 ## Installation
 
-1. Move `styles` and `fonts` folders to the GD `Configuration Folder`:  
+Download [source code](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/archive/refs/heads/main.zip) and unzip the archive.  
 
-   - If GD is installed by default, it's located at the:
+### Standard setup
 
-     ```
-     c:\Users\<user>\AppData\Roaming\GoldenDict\
-     ```
+Move `fonts` and `styles` folders to:  
 
-   - If installation is portable, it's located at the:
+```
+c:\
+ └─ Users\
+     └─ <user>\
+         └─ AppData\
+             └─ Roaming\
+                 └─ GoldenDict\
+                     ├─ fonts\   ←
+                     ├─ index\
+                     ├─ styles\  ←
+                     ├─ config
+                     └─ ...
+```
 
-     ```
-     GoldenDict\portable\
-     ```
+Move `icons` folder to:  
 
-2. Move `icons` folder to the GD program folder: `c:\Program Files\GoldenDict\` or `GoldenDict\`.  
+```
+c:\
+ └─ Program Files\
+     └─ GoldenDict\
+         ├─ audio\
+         ├─ bearer\
+         ├─ content\
+         ├─ ...
+         ├─ icons\  ←
+         ├─ ...
+         ├─ GoldenDict.exe
+         └─ ...
+```
 
-   To return to the original GD icons, you need to remove the appropriate rules in `qt-style.css` (see comments inside).  
+### Portable setup
+
+Move `fonts`, `icons` and `styles` folders to:  
+
+```
+GoldenDict\
+    ├─ audio\
+    ├─ bearer\
+    ├─ content\
+    ├─ ...
+    ├─ icons\          ←
+    ├─ ...
+    ├─ platforms\
+    ├─ portable\
+    │      ├─ cache\
+    │      ├─ fonts\   ←
+    │      ├─ index\
+    │      ├─ styles\  ←
+    │      ├─ config
+    │      └─ ...
+    ├─ ...
+    ├─ sqldrivers\
+    ├─ styles\
+    ├─ ...
+    ├─ GoldenDict.exe
+    └─ ...
+```
 
 
 ## Color palette
@@ -54,7 +106,8 @@ You can change the color by find/replace its code in any text editor.
 In `article-style.css` you can also customize:  
 
 1. Main window background image or its transparency: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76).  
-2. Pattern for collapsed articles: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L282).  
+2. Pattern for collapsed articles: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L348).  
+3. Icons for sound and video files: see examples in the [`extras`](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main/GoldenDict/extras) folder.  
 
 In `qt-style.css` you can also customize:  
 
@@ -110,5 +163,5 @@ _Preferences window_
 
 ## Credits
 
-Thanks to [KDAB](https://github.com/KDAB) for [GammaRay](https://github.com/KDAB/GammaRay) ❤️  
+Thanks to [KDAB](https://github.com/KDAB) for [GammaRay](https://github.com/KDAB/GammaRay) ❤  
 Thanks to [robertknight](https://github.com/robertknight) for [Qt-Inspector](https://github.com/robertknight/Qt-Inspector)  

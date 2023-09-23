@@ -1,30 +1,79 @@
 # Тёмная тема для GoldenDict на Windows
-
 <sup>[ [en](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main) | ru ]</sup>  
-Тема благополучно протестирована на GoldenDict 1.5.0-7 (Qt 5.12.3) на Windows 10, 8.1 и 7.  
+Тема благополучно протестирована на:  
 
+- GoldenDict 1.5.0-8 (коммит [f303bb4](https://github.com/goldendict/goldendict/commit/f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc))  
+- Qt 5.12.3  
+- Windows 10, 8.1 и 7  
+
+> [!WARNING]  
+> Для использования в других конфигурациях и на других операционных системах могут понадобиться исправления.  
 
 ## Установка
 
-1. Скачиваем репозиторий: на [главной странице](https://github.com/yozhic/GoldenDict-Full-Dark-Theme) кнопка `Code`, далее из выпадающего меню `Download ZIP`. Распаковываем скачанный архив.  
+Скачиваем репозиторий: на [главной странице](https://github.com/yozhic/GoldenDict-Full-Dark-Theme) кнопка `Code`, далее из выпадающего меню `Download ZIP`. Распаковываем скачанный архив.  
 
-2. Папки `styles` и `fonts` вместе со всем содержимым перемещаем в папку настроек GD — та, что открывается по команде меню `Справка` → `Папка конфигурации` (`Help` → `Configuration Folder`):  
+### Стандартная установка
 
-   - Если программа установлена в стандартном режиме, то `Папка конфигурации` располагается по адресу:  
+Папки `fonts` и `styles` с содержимым перемещаем в папку настроек GD (та, что открывается по команде меню `Справка`/`Help` → `Папка конфигурации`/`Configuration Folder`):  
 
-     ```
-     c:\Users\<user>\AppData\Roaming\GoldenDict\
-     ```
+```
+c:\
+ └─ Users\
+     └─ <user>\
+         └─ AppData\
+             └─ Roaming\
+                 └─ GoldenDict\
+                     ├─ fonts\   ←
+                     ├─ index\
+                     ├─ styles\  ←
+                     ├─ config
+                     └─ ...
+```
 
-   - Если установка портабельная, то рядом с исполняемым файлом `GoldenDict.exe` в подпапке `portable`:  
+Папку `icons` с содержимым перемещаем в папку GD, рядом к исполняемому файлу `GoldenDict.exe`:  
 
-     ```
-     GoldenDict\portable\
-     ```
+```
+c:\
+ └─ Program Files\
+     └─ GoldenDict\
+         ├─ audio\
+         ├─ bearer\
+         ├─ content\
+         ├─ ...
+         ├─ icons\  ←
+         ├─ ...
+         ├─ GoldenDict.exe
+         └─ ...
+```
 
-3. Папку `icons` перемещаем в программную папку `GoldenDict`, рядом к исполняемому файлу `GoldenDict.exe`.  
+### Портативная установка
 
-   В этой папке содержится графический элемент для отображения областей захвата разделителей панелей, а также монохромные иконки для главного и всплывающего окон. Чтобы вернуть отображение стандартных иконок GD, нужно закомментировать или удалить соответствующие правила в `qt-style.css`: в комментариях отмечено, какие именно.  
+Папки `fonts`, `icons` и `styles` с содержимым перемещаем в папку с программой, соблюдая следующую структуру:  
+
+```
+GoldenDict\
+    ├─ audio\
+    ├─ bearer\
+    ├─ content\
+    ├─ ...
+    ├─ icons\          ←
+    ├─ ...
+    ├─ platforms\
+    ├─ portable\
+    │      ├─ cache\
+    │      ├─ fonts\   ←
+    │      ├─ index\
+    │      ├─ styles\  ←
+    │      ├─ config
+    │      └─ ...
+    ├─ ...
+    ├─ sqldrivers\
+    ├─ styles\
+    ├─ ...
+    ├─ GoldenDict.exe
+    └─ ...
+```
 
 
 ## Цветовая палитра темы
@@ -54,13 +103,14 @@
 
 В файле `article-style.css`:  
 
-1. Можно заменить фоновое изображение в основной панели или настроить его прозрачность. _См. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76)._  
-2. Можно заменить изображение для заливки блоков свёрнутых статей. _См. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L282)._  
+1. Можно заменить фоновое изображение в основной панели или настроить его прозрачность: _см. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76)._  
+2. Можно заменить изображение для заливки блоков свёрнутых статей: _см. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L348)._  
+3. Можно заменить иконки файлов звука и видео: _см. примеры в папке [`extras`](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main/GoldenDict/extras)._  
 
-В файле `qt-style.css` настраиваются:  
+В файле `qt-style.css`:  
 
-1. Размер выпадающего списка групп словарей. Для этого нужно выполнить поиск по фразе `drop-down list size`, а затем отредактировать, закомментировать или удалить найденные правила.  
-2. Гарнитуры шрифтов и их размеры. Для этого нужно выполнить поиск по слову `font`, а затем отредактировать, закомментировать или удалить найденные правила.  
+1. Можно настроить размер выпадающего списка групп словарей. Для этого выполняем поиск по фразе `drop-down list size`, а затем редактируем, комментируем или удаляем найденные правила.  
+2. Можно настроить гарнитуры шрифтов и их размеры. Для этого выполняем поиск по слову `font`, а затем редактируем, комментируем или удаляем найденные правила.  
 
 
 ## Внешний вид
