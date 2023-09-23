@@ -146,7 +146,8 @@ a:hover
 {
   font-family: NotoSerif, Cambria, serif;
 }
-/*
+/* icon for "Expand optional parts"
+   required GD ≥ 1.5.0-8 commit f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc */
 .hidden_expand_opt[src$="expand_opt.png"]
 {
   display:  inline-block;
@@ -183,7 +184,6 @@ a:hover
   height:       16px;
   padding-left: 16px;
 }
-*/
 /*---search tags---*/
 .dsl_com
 {
