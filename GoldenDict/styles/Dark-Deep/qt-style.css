@@ -89,7 +89,10 @@ QPushButton:focus
   background:       #2B3339;
   border: 1px solid #0080FF;
 }
-
+QLineEdit
+{
+  padding: 1px;
+}
 /* spinboxes */
 QSpinBox
 {
@@ -748,7 +751,7 @@ MainStatusBar #icon
 /* "Look up in" field */
 #searchFrame #searchText
 {
-  font-size: 9.1pt;
+  font-size: 9pt;
 }
 #searchFrame #searchText:focus
 {
@@ -973,7 +976,7 @@ MainWindow #searchPane GroupComboBox QComboBoxListView
 MainWindow #searchPane QLabel
 {
   /* font in panes headers */
-  font-size: 9.1pt;
+  font-size:  9.1pt;
 }
 MainWindow #historyPane   #historyPaneTitleBar #historyLabel,
 MainWindow #historyPane   #historyPaneTitleBar #historyCountLabel,
@@ -981,13 +984,13 @@ MainWindow #favoritesPane #favoritesPaneTitleBar #favoritesLabel,
 MainWindow #dictsPane     #dictsPaneTitleBar QLabel
 {
   /* font in panes */
-  font-size: 9.1pt;
+  font-size:  9.1pt;
 }
 MainWindow #searchPane    #translateLine
 {
   /* font in "Look up in" line */
-  font-size: 9.1pt;
-  padding:     1px;
+  font-size:  9.1pt;
+  padding-left: 2px;
 }
 MainWindow #searchPane    #translateLine,
 MainWindow #searchPane    #wordList,
