@@ -1,5 +1,5 @@
-﻿# GoldenDict Windows Full Dark Theme
-<sup>[ en | [ru](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md) ]</sup>  
+﻿<sup>[ en | [ru](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/README_RU.md) ]</sup>  
+# GoldenDict Windows Full Dark Theme
 This theme has been successfully tested on:  
 
 - GoldenDict 1.5.0-8 (commit [f303bb4](https://github.com/goldendict/goldendict/commit/f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc))  

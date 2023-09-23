@@ -1,5 +1,5 @@
-# Тёмная тема для GoldenDict на Windows
 <sup>[ [en](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main) | ru ]</sup>  
+# Тёмная тема для GoldenDict на Windows
 Тема благополучно протестирована на:  
 
 - GoldenDict 1.5.0-8 (коммит [f303bb4](https://github.com/goldendict/goldendict/commit/f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc))  
