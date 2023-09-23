@@ -718,6 +718,7 @@ MainStatusBar #icon
 #searchFrame #highlightAllButton
 {
   qproperty-icon: url('./icons/dark-marker.svg');
+  margin-right: 5px;
 }
 #searchFrame #searchPrevious,
 #searchFrame #searchNext,
@@ -749,10 +750,6 @@ MainStatusBar #icon
 {
   background:       #000000;
   border: 1px solid #000000;
-}
-#searchFrame #highlightAllButton
-{
-  margin-right: 5px;
 }
 /* "Look up in" field */
 #searchFrame #searchText
