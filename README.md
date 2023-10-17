@@ -106,7 +106,7 @@ You can change the color by find/replace its code in any text editor.
 In `article-style.css` you can also customize:  
 
 1. Main window background image or its transparency: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76).  
-2. Pattern for collapsed articles: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L348).  
+2. Pattern for collapsed articles: see [here](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L360).  
 3. Icons for sound and video files: see examples in the [`extras`](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main/GoldenDict/extras) folder.  
 
 In `qt-style.css` you can also customize:  

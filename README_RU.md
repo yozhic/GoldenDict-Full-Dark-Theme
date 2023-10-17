@@ -104,7 +104,7 @@ GoldenDict\
 В файле `article-style.css`:  
 
 1. Можно заменить фоновое изображение в основной панели или настроить его прозрачность: _см. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L76)._  
-2. Можно заменить изображение для заливки блоков свёрнутых статей: _см. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L348)._  
+2. Можно заменить изображение для заливки блоков свёрнутых статей: _см. [здесь](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/blob/main/GoldenDict/styles/Dark/article-style.css#L360)._  
 3. Можно заменить иконки файлов звука и видео: _см. примеры в папке [`extras`](https://github.com/yozhic/GoldenDict-Full-Dark-Theme/tree/main/GoldenDict/extras)._  
 
 В файле `qt-style.css`:  
