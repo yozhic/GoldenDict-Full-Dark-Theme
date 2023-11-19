@@ -2,9 +2,9 @@
 # GoldenDict Windows Full Dark Theme
 This theme has been successfully tested on:  
 
-- GoldenDict 1.5.0-8 (commit [f303bb4](https://github.com/goldendict/goldendict/commit/f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc))  
+- GoldenDict 1.5.0-10 (commit [a14374d](https://github.com/goldendict/goldendict/commit/a14374dc904489d909eb46ab931b8949c02f74a8))  
 - Qt 5.12.3  
-- Windows 10, 8.1 and 7  
+- Windows 11, 10, 8.1 and 7  
 
 > [!WARNING]  
 > Fixes may be required for use in other configurations and on other operating systems.  

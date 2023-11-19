@@ -2,9 +2,9 @@
 # Тёмная тема для GoldenDict на Windows
 Тема благополучно протестирована на:  
 
-- GoldenDict 1.5.0-8 (коммит [f303bb4](https://github.com/goldendict/goldendict/commit/f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc))  
+- GoldenDict 1.5.0-10 (коммит [a14374d](https://github.com/goldendict/goldendict/commit/a14374dc904489d909eb46ab931b8949c02f74a8))  
 - Qt 5.12.3  
-- Windows 10, 8.1 и 7  
+- Windows 11, 10, 8.1 и 7  
 
 > [!WARNING]  
 > Для использования в других конфигурациях и на других операционных системах могут понадобиться исправления.  
