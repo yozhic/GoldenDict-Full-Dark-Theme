@@ -87,6 +87,7 @@ body
   font-family: "Segoe UI Semibold", NotoSans, NotoSansExpansion, "Segoe UI Historic", "Segoe UI Symbol", "Segoe UI Emoji", "Arial Unicode MS", sans-serif;
   font-size:   10.8pt;
   margin:    5px 10px;
+  padding-bottom: 1px;
 }
 
 /* ====================================================== */
