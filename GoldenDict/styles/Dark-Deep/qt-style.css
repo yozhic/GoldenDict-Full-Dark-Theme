@@ -668,6 +668,22 @@ QScrollBar::add-line:pressed
 {
   background: #000000;
 }
+QScrollBar::up-arrow:vertical:pressed,
+QScrollBar::down-arrow:vertical:pressed
+{
+  width:  0px;
+  height: 0px;
+  border-left:   5px solid #000000;
+  border-right:  5px solid #000000;
+}
+QScrollBar::left-arrow:horizontal:pressed,
+QScrollBar::right-arrow:horizontal:pressed
+{
+  width:  0px;
+  height: 0px;
+  border-top:    5px solid #000000;
+  border-bottom: 5px solid #000000;
+}
 
 /* ================== POP-UP STATUS BAR ================= */
 MainStatusBar #text,
