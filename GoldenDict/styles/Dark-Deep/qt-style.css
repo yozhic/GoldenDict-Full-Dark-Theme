@@ -995,7 +995,9 @@ MainWindow #searchPane GroupComboBox QComboBoxListView
 MainWindow #searchPane QLabel
 {
   /* font in panes headers */
-  font-size:  9.1pt;
+  font-size:   9.1pt;
+  margin-top:    4px;
+  margin-bottom: 4px;
 }
 MainWindow #historyPane   #historyPaneTitleBar #historyLabel,
 MainWindow #historyPane   #historyPaneTitleBar #historyCountLabel,
