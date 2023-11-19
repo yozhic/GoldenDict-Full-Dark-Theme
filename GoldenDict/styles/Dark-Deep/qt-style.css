@@ -1015,9 +1015,9 @@ MainWindow #searchPane    #translateLine
 }
 MainWindow #searchPane    #translateLine,
 MainWindow #searchPane    #wordList,
+MainWindow #dictsPane     #dictsList,
 MainWindow #historyPane   #historyList,
-MainWindow #favoritesPane #favoritesTree,
-MainWindow #dictsPane     #dictsList
+MainWindow #favoritesPane #favoritesTree
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   color:            #C7CBD3;
@@ -1029,45 +1029,45 @@ MainWindow #searchPane    #translateLine:focus
   background:       #232B30;
   border: 1px solid #0080FF;
 }
-MainWindow #searchPane    #wordList:focus,
-MainWindow #historyPane   #historyList:focus,
-MainWindow #favoritesPane #favoritesTree:focus,
-MainWindow #dictsPane     #dictsList:focus
+MainWindow #searchPane         #wordList:focus,
+MainWindow #dictsPane         #dictsList:focus,
+MainWindow #historyPane     #historyList:focus,
+MainWindow #favoritesPane #favoritesTree:focus
 {
   border: 1px solid #0080FF;
 }
-MainWindow #searchPane    #wordList::item,
-MainWindow #historyPane   #historyList::item,
-MainWindow #favoritesPane #favoritesTree::item,
-MainWindow #dictsPane     #dictsList::item
+MainWindow #searchPane         #wordList::item,
+MainWindow #dictsPane         #dictsList::item,
+MainWindow #historyPane     #historyList::item,
+MainWindow #favoritesPane #favoritesTree::item
 {
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #2B3339;
 }
-MainWindow #searchPane    #wordList::item:hover,
-MainWindow #historyPane   #historyList::item:hover,
-MainWindow #favoritesPane #favoritesTree::item:hover,
-MainWindow #dictsPane     #dictsList::item:hover
+MainWindow #searchPane         #wordList::item:hover,
+MainWindow #dictsPane         #dictsList::item:hover,
+MainWindow #historyPane     #historyList::item:hover,
+MainWindow #favoritesPane #favoritesTree::item:hover
 {
   color:            #C7CBD3;
   background:       #232B30;
   border: 1px solid #232B30;
   padding-left:         1px;
 }
-MainWindow #searchPane    #wordList::item:selected,
-MainWindow #historyPane   #historyList::item:selected,
-MainWindow #favoritesPane #favoritesTree::item:selected,
-MainWindow #dictsPane     #dictsList::item:selected
+MainWindow #searchPane         #wordList::item:selected,
+MainWindow #dictsPane         #dictsList::item:selected,
+MainWindow #historyPane     #historyList::item:selected,
+MainWindow #favoritesPane #favoritesTree::item:selected
 {
   color:            #C7CBD3;
   background:       #4E5B65;
   border: 1px solid #4E5B65;
 }
-MainWindow #searchPane    #wordList::item:focus,
-MainWindow #historyPane   #historyList::item:focus,
-MainWindow #favoritesPane #favoritesTree::item:focus,
-MainWindow #dictsPane     #dictsList::item:focus
+MainWindow #searchPane         #wordList::item:focus,
+MainWindow #dictsPane         #dictsList::item:focus,
+MainWindow #historyPane     #historyList::item:focus,
+MainWindow #favoritesPane #favoritesTree::item:focus
 {
   color:            #FFFFFF;
   background:       #0062C4;
