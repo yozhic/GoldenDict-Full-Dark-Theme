@@ -1,4 +1,4 @@
-// example
+/* example */
 html::after
 {
   content: "";
@@ -9,10 +9,11 @@ html::after
   position: absolute;
   z-index: -1;
 
-  background-image: url('file:./styles/dark-av-background-gdicon.png');
-  opacity: 1;
+  background-image: url('file:./styles/gdicon.svg');
+  opacity: .1;
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-filter: grayscale(100%);
 }
