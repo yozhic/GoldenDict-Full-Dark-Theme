@@ -473,6 +473,14 @@ body
   -webkit-border-radius:     12px;
   background-clip:    content-box;
 }
+::-webkit-scrollbar-thumb:horizontal
+{
+  min-width:  40px;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+  min-height: 40px;
+}
 ::-webkit-scrollbar-thumb:vertical:hover,
 ::-webkit-scrollbar-thumb:vertical:active,
 ::-webkit-scrollbar-thumb:horizontal:hover,
