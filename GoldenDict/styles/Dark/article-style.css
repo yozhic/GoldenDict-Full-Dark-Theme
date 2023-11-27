@@ -64,7 +64,6 @@ html
 }
 html::after
 {
-  /* adjusting transparency of background image */
   content: "";
   top:      0;
   left:     0;
@@ -449,8 +448,7 @@ body
 
 ::-webkit-scrollbar
 {
-  background:       #000000;
-  border: 1px solid #000000;
+  background:              #000000;
 }
 ::-webkit-scrollbar-corner
 {
@@ -469,9 +467,9 @@ body
 ::-webkit-scrollbar-thumb:horizontal
 {
   background:             #4E5B65;
-  border:   6px solid transparent;
-  -webkit-border-radius:     12px;
   background-clip:    content-box;
+  border:   6px solid transparent;
+  border-radius: 12px;
 }
 ::-webkit-scrollbar-thumb:horizontal
 {
@@ -487,9 +485,9 @@ body
 ::-webkit-scrollbar-thumb:horizontal:active
 {
   background:             #006AD5;
-  border:   5px solid transparent;
-  -webkit-border-radius:     12px;
   background-clip:    content-box;
+  border:   5px solid transparent;
+  border-radius: 12px;
 }
 ::-webkit-scrollbar-button:vertical:decrement
 {
