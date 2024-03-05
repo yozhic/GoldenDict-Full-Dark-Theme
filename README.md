@@ -2,12 +2,12 @@
 # GoldenDict Windows Full Dark Theme
 This theme has been successfully tested on:  
 
-- GoldenDict 1.5.0-10 (commit [a14374d](https://github.com/goldendict/goldendict/commit/a14374dc904489d909eb46ab931b8949c02f74a8))  
+- GoldenDict 1.5.0-14 (commit [1e737ab](https://github.com/goldendict/goldendict/commit/1e737abaaedbc98b960d3b9d96d77b9403d635c1))  
 - Qt 5.12.3  
 - Windows 11, 10, 8.1 and 7  
 
-> [!WARNING]  
-> Fixes may be required for use in other configurations and on other operating systems.  
+> [!NOTE]  
+> In theory, this theme should work on any system, since it addresses Qt and not the system itself. In fact, some rules work differently on other systems than on Windows. But you can try using this theme on Linux and you may even enjoy the result. However, I can't promise that since I don't use Linux regularly. Mac users can try using macOS themes from [this fork](https://github.com/yozhic/goldendict/tree/mac-adapted).  
 
 
 ## Installation
