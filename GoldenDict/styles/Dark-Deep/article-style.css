@@ -343,7 +343,7 @@ a.dsl_url:hover
 {
   /* needed to be able to reorder elements, e.g. icon, dictionary name, collapse icon */
   display: -webkit-box;
-  font-size:     .85em;
+  font-size:     .86em;
   font-weight:  normal;
   float:         right;
   margin:         -6px;
@@ -368,7 +368,7 @@ a.dsl_url:hover
 .gdactivearticle .gddictname
 {
   display: -webkit-box;
-  font-size:     .85em;
+  font-size:     .86em;
   font-weight:  normal;
   float:         right;
   margin:         -6px;
