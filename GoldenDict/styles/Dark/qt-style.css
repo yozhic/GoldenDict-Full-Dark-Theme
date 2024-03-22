@@ -22,7 +22,7 @@
 /*           accent on close buttons                                          */
 /* #D3D6DC - articles background                                              */
 /* #000000 - pressed elements; some borders                                   */
-/* #353F46 - tables headers                                                   */
+/* #353F46 - tables headers; disabled menu items                              */
 /* #3D464E - accents in dictionaries buttons                                  */
 /* ========================================================================== */
 
@@ -498,6 +498,14 @@ QMenu::item:selected
 {
   color:      #FFFFFF;
   background: #0080FF;
+}
+QMenu::item:disabled
+{
+  color:      #4E5B65;
+}
+QMenu::item:disabled:selected
+{
+  background: #353F46;
 }
 
 /* tooltips */
