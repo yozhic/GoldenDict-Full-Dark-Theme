@@ -108,6 +108,11 @@ a:hover
   text-decoration: underline;
   cursor:            pointer;
 }
+img
+{
+  max-width: 100%;
+  height: auto;
+}
 
 /* ====================================================== */
 /*                          DSL                           */
