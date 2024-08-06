@@ -1386,7 +1386,7 @@ MainWindow #ftsSearchFrame #ftsSearchNext
   color:            #C7CBD3;
   background:       #2B3339;
   border: 1px solid #4E5B65;
-  height:              24px;
+  height:              20px;
   min-width:           70px;
 }
 MainWindow #ftsSearchFrame #ftsSearchPrevious:focus,
