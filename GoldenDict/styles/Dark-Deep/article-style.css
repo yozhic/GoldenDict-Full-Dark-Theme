@@ -118,8 +118,9 @@ img
 /*                          DSL                           */
 /* ====================================================== */
 
-.dsl_headwords
+.dsl_headwords p
 {
+  font-size: 1.1em;
   font-family: "Segoe UI", NotoSans, sans-serif;
   font-weight: bold;
 }

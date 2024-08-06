@@ -29,6 +29,18 @@
   font-style: italic;
 }
 @font-face {
+  font-family: NotoSansSemibold;
+  src: local('Noto Sans Semibold') url('file:./fonts/NotoSans-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSansSemibold;
+  src: local('Noto Sans Semibold Italic') url('file:./fonts/NotoSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
   font-family: NotoSerif;
   src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
   font-weight: normal;
@@ -118,6 +130,11 @@ img
 /*                          DSL                           */
 /* ====================================================== */
 
+.dsl_headwords p
+{
+  font-size: 1.1em;
+  font-family: "Segoe UI Semibold", NotoSansSemibold;
+}
 /*---format tags---*/
 .dsl_stress
 {
