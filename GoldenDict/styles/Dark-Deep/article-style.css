@@ -31,6 +31,30 @@
   font-style: italic;
 }
 @font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Medium') url('file:./fonts/NotoSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Medium Italic') url('file:./fonts/NotoSans-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Semibold') url('file:./fonts/NotoSans-Semibold.ttf') format('truetype');
+  font-weight: bold;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Semibold Italic') url('file:./fonts/NotoSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style:  italic;
+}
+@font-face {
   font-family: NotoSerif;
   src: local('Noto Serif SemiBold') url('file:./fonts/NotoSerif-SemiBold.ttf') format('truetype');
   font-weight: normal;
@@ -156,7 +180,7 @@ font[color=olivedrab]     { color: #ADFF2F !important; }
 }
 .dsl_stress
 {
-  color:      red;
+  color: red;
 }
 .dsl_stress_without_accent
 {
@@ -164,7 +188,7 @@ font[color=olivedrab]     { color: #ADFF2F !important; }
 }
 .dsl_stress_with_accent
 {
-  display:   none;
+  display: none;
 }
 /*---structure tags---*/
 .dsl_p,
@@ -367,6 +391,7 @@ a.dsl_url:hover
   user-select:         none;
   cursor:           default;
 }
+
 /* actual text with the dictionary title */
 .gddicttitle
 {
