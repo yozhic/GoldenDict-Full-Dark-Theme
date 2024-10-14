@@ -1,0 +1,1543 @@
+
+/* ======= This file is encoded UTF-8 without BOM ======= */
+/*             GD WINDOWS DARK ROUNDED THEME              */
+/*             based on Display style: Lingvo             */
+/* ====================================================== */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: NotoSans;
+  src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSans;
+  src: local('Noto Sans Italic') url('file:./fonts/NotoSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: NotoSans;
+  src: local('Noto Sans Bold') url('file:./fonts/NotoSans-Bold.ttf') format('truetype');
+  font-weight:  bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: NotoSans;
+  src: local('Noto Sans Bold Italic') url('file:./fonts/NotoSans-BoldItalic.ttf') format('truetype');
+  font-weight:  bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: NotoSansSemibold;
+  src: local('Noto Sans Semibold') url('file:./fonts/NotoSans-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSansSemibold;
+  src: local('Noto Sans Semibold Italic') url('file:./fonts/NotoSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Medium') url('file:./fonts/NotoSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Medium Italic') url('file:./fonts/NotoSans-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Semibold') url('file:./fonts/NotoSans-Semibold.ttf') format('truetype');
+  font-weight: bold;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSansMedium;
+  src: local('Noto Sans Semibold Italic') url('file:./fonts/NotoSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style:  italic;
+}
+@font-face {
+  font-family: NotoSerif;
+  src: local('Noto Serif Medium') url('file:./fonts/NotoSerif-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: NotoSerif;
+  src: local('Noto Serif Medium Italic') url('file:./fonts/NotoSerif-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: SlavonicUnicode;
+  src: local('Monomakh Unicode') url('file:./fonts/MonomakhUnicode.otf') format('opentype');
+}
+/* connecting additional Unicode ranges */
+@font-face {
+  font-family: NotoSansExpansion;
+  src: url('file:./fonts/NotoSansPhoenician-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: NotoSansExpansion;
+  src: url('file:./fonts/ShafarikGlagolitic.ttf') format('truetype');
+}
+
+/* ====================================================== */
+/*                     ARTICLE WINDOW                     */
+/* ====================================================== */
+
+html
+{
+  width:         100%;
+  height:        100%;
+  background: #2B3339;
+}
+html::after
+{
+  content: "";
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+  position: absolute;
+  z-index: -1;
+
+  /* here we change background image and adjust its opacity
+     example: url('file:./styles/dark-av-background-openbook.svg'); */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%234E5B65" d="M20.5 19a.5.5 0 0 0-.422.234h-.002L17.098 24H15c-2.757 0-5 2.243-5 5v44c0 2.757 2.243 5 5 5h29.38c.632 1.067 2.303 3 6.12 3s5.488-1.933 6.12-3H86c2.757 0 5-2.243 5-5V29c0-2.757-2.243-5-5-5h-2.098l-2.963-4.74a.5.5 0 0 0-.015-.026A.5.5 0 0 0 80.5 19c-11.045 0-18.598 1.507-23.4 3.023-4.366 1.38-6.248 2.655-6.6 2.9-.352-.245-2.234-1.52-6.6-2.9C39.098 20.507 31.545 19 20.5 19zm.5 1.018c10.66.048 17.98 1.5 22.6 2.959 4.067 1.284 5.944 2.478 6.4 2.79V59.5a.5.5 0 1 0 1 0V25.768c.456-.313 2.333-1.507 6.4-2.791 4.62-1.46 11.94-2.911 22.6-2.96v46c-10.753.049-18.171 1.515-22.895 3.006a.5.5 0 1 0 .303.954c4.662-1.473 12.036-2.951 22.86-2.973L84.432 72H50.65c-.36-.251-2.395-1.601-6.75-2.977-4.724-1.491-12.147-2.957-22.9-3.005v-46zm-1 1.226v45.074l-4 4.8V27.642l4-6.399zm61 0 4 6.399v43.474l-4-4.799V21.244zM26.477 25a.5.5 0 0 0-.004 1c3.83.208 7.122.635 9.935 1.162a.5.5 0 1 0 .184-.982c-2.855-.535-6.191-.97-10.065-1.18a.5.5 0 0 0-.05 0zm47.996 0c-9.141.498-15.32 2.231-19.145 3.629a.5.5 0 1 0 .344.94c3.75-1.37 9.816-3.077 18.855-3.569a.5.5 0 0 0-.054-1zM15 26h.848l-.772 1.234A.5.5 0 0 0 15 27.5v45a.5.5 0 0 0 .5.5h29.684c.143.313.397.788.962 1.354.83.828 2.229 1.646 4.354 1.646s3.525-.818 4.354-1.646c.565-.566.819-1.04.962-1.354H85.5a.5.5 0 0 0 .5-.5v-45a.5.5 0 0 0-.076-.266L85.152 26H86c1.654 0 3 1.346 3 3v44c0 1.654-1.346 3-3 3H56c-.421 0-.8.276-.943.672-.035.095-.891 2.328-4.557 2.328-3.666 0-4.522-2.233-4.553-2.316A.997.997 0 0 0 45 76H15c-1.654 0-3-1.346-3-3V29c0-1.654 1.346-3 3-3zm24.467.807a.5.5 0 0 0-.082.988c1.08.258 2.07.524 2.972.793a.5.5 0 1 0 .286-.96c-.921-.273-1.93-.544-3.028-.806a.5.5 0 0 0-.148-.015zm4.998 1.44a.5.5 0 0 0-.127.974c.346.118.68.234.99.347a.5.5 0 1 0 .344-.94 52.59 52.59 0 0 0-1.01-.355.5.5 0 0 0-.197-.027zM26.477 32a.5.5 0 0 0-.004 1c9.039.491 15.105 2.198 18.855 3.568a.5.5 0 1 0 .344-.94C41.846 34.232 35.668 32.498 26.527 32a.5.5 0 0 0-.05 0zm47.996 0c-1.047.057-2.05.132-3.018.219a.5.5 0 1 0 .09.996A86.96 86.96 0 0 1 74.527 33a.5.5 0 0 0-.054-1zm-5.98.541a.5.5 0 0 0-.022.002.5.5 0 0 0-.035.004 71.856 71.856 0 0 0-3.02.451.5.5 0 1 0 .168.984 71.11 71.11 0 0 1 2.98-.443.5.5 0 0 0-.072-.998zm-6.975 1.266a.5.5 0 0 0-.133.015 54.157 54.157 0 0 0-6.057 1.807.5.5 0 1 0 .344.94 53.089 53.089 0 0 1 5.943-1.774.5.5 0 0 0-.097-.988zM26.477 39a.5.5 0 0 0-.004 1c1.77.096 3.423.24 4.97.418a.5.5 0 0 0 .114-.994 83.976 83.976 0 0 0-5.03-.424.5.5 0 0 0-.05 0zm47.996 0c-9.141.498-15.32 2.231-19.145 3.629a.5.5 0 1 0 .344.94c3.75-1.37 9.816-3.077 18.855-3.569a.5.5 0 0 0-.054-1zm-38.989.988a.5.5 0 0 0-.068.994c4.317.742 7.567 1.73 9.912 2.586a.5.5 0 1 0 .344-.94c-2.393-.873-5.707-1.877-10.088-2.63a.5.5 0 0 0-.1-.01zM26.477 46a.5.5 0 0 0-.004 1c9.039.491 15.105 2.198 18.855 3.568a.5.5 0 1 0 .344-.94C41.846 48.232 35.668 46.498 26.527 46a.5.5 0 0 0-.05 0zm47.996 0c-4.825.262-8.817.87-12.08 1.59a.5.5 0 1 0 .214.976c3.213-.708 7.15-1.306 11.92-1.566a.5.5 0 0 0-.054-1zM58.49 48.607a.5.5 0 0 0-.133.022 51.723 51.723 0 0 0-3.029 1 .5.5 0 1 0 .344.94 50.732 50.732 0 0 1 2.97-.981.5.5 0 0 0-.152-.98zM26.477 53a.5.5 0 0 0-.004 1c4.77.26 8.707.858 11.92 1.566a.5.5 0 1 0 .214-.976c-3.263-.72-7.255-1.328-12.08-1.59a.5.5 0 0 0-.05 0zm47.996 0c-9.141.498-15.32 2.231-19.145 3.629a.5.5 0 1 0 .344.94c3.75-1.37 9.816-3.077 18.855-3.569a.5.5 0 0 0-.054-1zm-31.979 2.607a.5.5 0 0 0-.137.98c1.117.333 2.108.667 2.971.981a.5.5 0 1 0 .344-.94 52.503 52.503 0 0 0-3.03-1 .5.5 0 0 0-.148-.02zM26.477 60a.5.5 0 0 0-.004 1c9.039.491 15.105 2.198 18.855 3.568a.5.5 0 1 0 .344-.94C41.846 62.232 35.668 60.498 26.527 60a.5.5 0 0 0-.05 0zm47.996 0c-9.141.498-15.32 2.231-19.145 3.629a.5.5 0 1 0 .344.94c3.75-1.37 9.816-3.077 18.855-3.569a.5.5 0 0 0-.054-1zm-23.98 1.992A.5.5 0 0 0 50 62.5v2a.5.5 0 1 0 1 0v-2a.5.5 0 0 0-.508-.508zm0 5A.5.5 0 0 0 50 67.5v1a.5.5 0 1 0 1 0v-1a.5.5 0 0 0-.508-.508zm-29.76.012c10.822.022 18.204 1.5 22.867 2.973 2.358.744 4.008 1.477 5.07 2.023h-3.092a.5.5 0 0 0-.1-.006.5.5 0 0 0-.058.006H16.568l4.164-4.996zM46.33 73h8.34a4.05 4.05 0 0 1-.524.646C53.476 74.318 52.375 75 50.5 75s-2.975-.682-3.646-1.354A4.05 4.05 0 0 1 46.33 73z"/></svg>');
+  opacity:                 .08;
+  background-size:         60%;
+  background-position:  center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body
+{
+  font-family: Aptos, "Segoe UI", NotoSans, NotoSansExpansion, "Segoe UI Historic", "Segoe UI Symbol", "Segoe UI Emoji", "Arial Unicode MS", sans-serif;
+  font-size:   10.8pt;
+  margin:    5px 10px;
+  padding-bottom: 1px;
+}
+
+/* ====================================================== */
+/*                    ARTICLE GENERALS                    */
+/* ====================================================== */
+
+::selection
+{
+  color:      #330000;
+  background: #FFC184;
+}
+a
+{
+  text-decoration: none;
+  color:        #00008B;
+}
+a:hover
+{
+  text-decoration: underline;
+  cursor:            pointer;
+}
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====================================================== */
+/*                          DSL                           */
+/* ====================================================== */
+
+.dsl_headwords p
+{
+  font-size: 1.1em;
+  font-family: "Segoe UI Semibold", NotoSansSemibold;
+}
+/*---format tags---*/
+.dsl_stress
+{
+  color: red;
+}
+.dsl_stress_without_accent
+{
+  display: inline;
+}
+.dsl_stress_with_accent
+{
+  display: none;
+}
+/*---structure tags---*/
+.dsl_p,
+.dsl_p :not(a),
+.dsl_article font[color=c_default_color]
+{
+  color: #3399FF !important;
+  cursor: help;
+}
+.dsl_opt,
+.dsl_opt .dsl_ex,
+.dsl_opt .dsl_ex :not(a),
+.dsl_opt .dsl_ex font[color],
+.dsl_opt .dsl_trn
+{
+  color: #778899 /*lightslategray*/;
+}
+.dsl_t
+{
+  font-family: "Aptos Serif", NotoSerif, Cambria, serif;
+}
+/* icon for "Expand optional parts"
+   required GD ≥ 1.5.0-8 commit f303bb4accea2de7afdeeab2c31aa7ccc1ff2ebc */
+.hidden_expand_opt[src$="expand_opt.png"]
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 5v1h13V5H1zm0 2v1h13V7H1zm0 2v1h13V9H1zm4 3 2.5 2.5L10 12H5z"/></svg>') no-repeat;
+  width:        16px;
+  height:       16px;
+  padding-left: 16px;
+}
+.hidden_expand_opt[src$="expand_opt.png"]:hover
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%230080FF" viewBox="0 0 16 16"><path d="M1 5v1h13V5H1zm0 2v1h13V7H1zm0 2v1h13V9H1zm4 3 2.5 2.5L10 12H5z"/></svg>') no-repeat;
+  width:        16px;
+  height:       16px;
+  padding-left: 16px;
+}
+.hidden_expand_opt[src$="collapse_opt.png"]
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 10V9h13v1H1zm0-2V7h13v1H1zm0-2V5h13v1H1zm4-3L7.5.5 10 3H5z"/></svg>') no-repeat;
+  width:        16px;
+  height:       16px;
+  padding-left: 16px;
+}
+.hidden_expand_opt[src$="collapse_opt.png"]:hover
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%230080FF" viewBox="0 0 16 16"><path d="M1 10V9h13v1H1zm0-2V7h13v1H1zm0-2V5h13v1H1zm4-3L7.5.5 10 3H5z"/></svg>') no-repeat;
+  width:        16px;
+  height:       16px;
+  padding-left: 16px;
+}
+/*---search tags---*/
+.dsl_com
+{
+  color: inherit;
+}
+.dsl_ex,
+.dsl_ex .dsl_opt,
+.dsl_ex .dsl_opt :not(a),
+.dsl_ex .dsl_trn
+{
+  color: #778899 /*lightslategray*/;
+}
+.dsl_ex .dsl_lang,
+.dsl_ex .dsl_lang .dsl_u,
+.dsl_ex .dsl_lang .dsl_trs
+{
+  /* color index_lang in examples */
+  color: #696969 /*dimgray*/ !important;
+}
+/*---link tags---*/
+a.dsl_url:hover
+{
+  cursor: alias;
+}
+/*---media tags---*/
+.dsl_s_wav img,
+.lsa_play img,
+.voiceengines_play img
+{
+  display: none;
+}
+.dsl_s_wav a,
+.lsa_play script + td a,
+.voiceengines_play script + td a
+{
+  display: inline-block;
+  width:       16px;
+  height:      16px;
+  margin-left:  4px;
+  margin-right: 2px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M8.5 1c-.1 0-.2 0-.3.1L3.3 5H1c-.5 0-1 .5-1 1v3c0 .5.5 1 1 1h2.3l4.9 3.9c.2.2.5.1.7-.1.1-.1.1-.2.1-.3v-12c0-.3-.2-.5-.5-.5zM3 9H1V6h2v3zm5 3.5L4 9.3V5.7l4-3.2v10zm2-3.7V6.2c0-.1.1-.2.2-.2h.6c.1 0 .2.1.2.2v2.6c0 .1-.1.2-.2.2h-.6c-.1 0-.2-.1-.2-.2zm2.8 1.2h-.6c-.1 0-.2-.1-.2-.2V5.2c0-.1.1-.2.2-.2h.6c.1 0 .2.1.2.2v4.6c0 .1-.1.2-.2.2z"/></svg>') no-repeat center;
+}
+.dsl_s_wav a
+{
+  vertical-align: text-bottom;
+}
+.lsa_play script + td + td,
+.voiceengines_play script + td + td
+{
+  padding-bottom: 5px;
+}
+.dsl_s_wav a:hover,
+.lsa_play script + td a:hover,
+.voiceengines_play script + td a:hover
+{
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="%230080FF" d="M8.5 1c-.1 0-.2 0-.3.1L3.3 5H1c-.5 0-1 .5-1 1v3c0 .5.5 1 1 1h2.3l4.9 3.9c.2.2.5.1.7-.1.1-.1.1-.2.1-.3v-12c0-.3-.2-.5-.5-.5zM3 9H1V6h2v3zm5 3.5L4 9.3V5.7l4-3.2v10zm2-3.7V6.2c0-.1.1-.2.2-.2h.6c.1 0 .2.1.2.2v2.6c0 .1-.1.2-.2.2h-.6c-.1 0-.2-.1-.2-.2zm2.8 1.2h-.6c-.1 0-.2-.1-.2-.2V5.2c0-.1.1-.2.2-.2h.6c.1 0 .2.1.2.2v4.6c0 .1-.1.2-.2.2z"/></svg>') no-repeat center;
+}
+.dsl_s_wav a:active,
+.lsa_play script + td a:active,
+.voiceengines_play script + td a:active
+{
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="%230080FF" d="M8.5 1c-.1 0-.2 0-.3.1L3.3 5H1c-.5 0-1 .5-1 1v3c0 .5.5 1 1 1h2.3l4.9 3.9c.2.2.5.1.7-.1.1-.1.1-.2.1-.3v-12c0-.3-.2-.5-.5-.5zM3 9H1V6h2v3zm5 3.5L4 9.3V5.7l4-3.2v10zm3.5-5c0 .8-.7 1.5-1.5 1.5V6c.8 0 1.5.7 1.5 1.5zm4 0c0 3-2.5 5.5-5.5 5.5v-1c2.5 0 4.5-2 4.5-4.5S12.5 3 10 3V2c3 0 5.5 2.5 5.5 5.5zm-2 0c0 1.9-1.6 3.5-3.5 3.5v-1c1.4 0 2.5-1.1 2.5-2.5S11.4 5 10 5V4c1.9 0 3.5 1.6 3.5 3.5z"/></svg>') no-repeat center;
+}
+.dsl_video img
+{
+  display: none;
+}
+.dsl_video .img
+{
+  display:       inline-block;
+  vertical-align: text-bottom;
+  width:       16px;
+  height:      16px;
+  margin-left:  4px;
+  margin-right: 2px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M1.5 1C.7 1 0 1.7 0 2.5v8c0 .8.7 1.5 1.5 1.5H7v1H4v1h7v-1H8v-1h5.5c.8 0 1.5-.7 1.5-1.5v-8c0-.8-.7-1.5-1.5-1.5h-12zm0 1h12c.3 0 .5.2.5.5v8c0 .3-.2.5-.5.5h-12c-.3 0-.5-.2-.5-.5v-8c0-.3.2-.5.5-.5zM3 4H2V3h1v1zm0 2H2V5h1v1zm0 2H2V7h1v1zm0 2H2V9h1v1zm10-6h-1V3h1v1zm0 2h-1V5h1v1zm0 2h-1V7h1v1zm0 2h-1V9h1v1z"/></svg>') no-repeat center;
+}
+.dsl_video .img:hover
+{
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="%230080FF" d="M1.5 1C.7 1 0 1.7 0 2.5v8c0 .8.7 1.5 1.5 1.5H7v1H4v1h7v-1H8v-1h5.5c.8 0 1.5-.7 1.5-1.5v-8c0-.8-.7-1.5-1.5-1.5h-12zm0 1h12c.3 0 .5.2.5.5v8c0 .3-.2.5-.5.5h-12c-.3 0-.5-.2-.5-.5v-8c0-.3.2-.5.5-.5zM3 4H2V3h1v1zm0 2H2V5h1v1zm0 2H2V7h1v1zm0 2H2V9h1v1zm10-6h-1V3h1v1zm0 2h-1V5h1v1zm0 2h-1V7h1v1zm0 2h-1V9h1v1z"/></svg>') no-repeat center;
+}
+.dsl_video .img:active
+{
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="%230080FF" d="M13.5 1h-12C.7 1 0 1.7 0 2.5v8c0 .8.7 1.5 1.5 1.5H7v1H4v1h7v-1H8v-1h5.5c.8 0 1.5-.7 1.5-1.5v-8c0-.8-.7-1.5-1.5-1.5zm.5 9.5c0 .3-.2.5-.5.5h-12c-.3 0-.5-.2-.5-.5v-8c0-.3.2-.5.5-.5h12c.3 0 .5.2.5.5v8zM3 4H2V3h1v1zm0 2H2V5h1v1zm0 2H2V7h1v1zm0 2H2V9h1v1zm10-6h-1V3h1v1zm0 2h-1V5h1v1zm0 2h-1V7h1v1zm0 2h-1V9h1v1zm-8 0V3l6 3.5L5 10z"/></svg>') no-repeat center;
+}
+/*---local---*/
+font[color] > .dsl_com > .dsl_trs
+{
+  font-family: "Aptos Serif", NotoSerif, Cambria, serif;
+}
+.dsl_lang[lang="cu"]
+{
+  font-family: SlavonicUnicode !important;
+  font-size:   1.2em;
+}
+
+/* ====================================================== */
+/*                     ZIM WIKTIONARY                     */
+/* ====================================================== */
+
+.zimdict
+{
+  background: transparent !important;
+  font-family: inherit !important;
+  font-size: 100% !important;
+}
+.zimdict #mw-mf-page-center
+{
+  background: transparent !important;
+}
+.zimdict #bodyContent
+{
+  max-width: none !important;
+  margin: 0 7px !important;
+}
+.zimdict #content
+{
+  background: transparent !important;
+  padding-bottom: 0px !important;
+}
+.zimdict p
+{
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+.zimdict hr
+{
+  border-style: hidden;
+}
+/*---text: abbreviations---*/
+.zimdict a span[style*='color:#002000'],
+.zimdict a span[style*='color:#000000'],
+.zimdict a span[style*='color:black']
+{
+  color: #3399FF !important;
+  font-style: italic !important;
+}
+.zimdict table td a span[style*='color:#002000'],
+.zimdict table td a span[style*='color:#000000'],
+.zimdict table td a span[style*='color:black']
+{
+  color: initial !important;
+  font-style: initial !important;
+}
+/*---text: doubts---*/
+.zimdict span[style='border:2px dashed pink;']
+{
+  border: 1px dashed #FB4D46 !important;
+  border-radius: 4px !important;
+  padding: 0px 4px !important;
+}
+
+/*---headwords----*/
+.zimdict .content h1,
+.zimdict .content h2,
+.zimdict .content h3,
+.zimdict .content h4,
+.zimdict .content h5,
+.zimdict .content h6
+{
+  font-family: NotoSansMedium, "Segoe UI Semibold", sans-serif !important;
+}
+.zimdict h1.section-heading
+{
+  font-size: 1.3em !important;
+  border-bottom: none !important;
+  margin-bottom: 6px !important;
+}
+.zimdict details[data-level='2'] > summary.section-heading
+{
+  margin-top: 8px !important;
+  margin-bottom: 6px !important;
+}
+.zimdict details[data-level='3'] > summary.section-heading,
+.zimdict details[data-level='4'] > summary.section-heading
+{
+  margin-top: 10px !important;
+  margin-bottom: 6px !important;
+}
+.zimdict h2.zimdict_headword
+{
+  display: none;
+}
+
+/*---details/summary---*/
+.zimdict summary.section-heading
+{
+  margin-top: 16px !important;
+  border-image-slice: 1 !important;
+  border-width: 1px !important;
+  border-image-source: linear-gradient(to right, rgba(0,128,255,1) 0%, rgba(0,128,255,0) 60%);
+  padding-bottom: 3px !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+.zimdict details[data-level][open] > summary.section-heading
+{
+  border-image-source: linear-gradient(to right, rgba(47,79,79,1) 0%, rgba(47,79,79,0) 60%);
+}
+.zimdict details[data-level] summary.section-heading::-webkit-details-marker
+{
+  display: none;
+}
+.zimdict details[data-level] > summary.section-heading > h2,
+.zimdict details[data-level] > summary.section-heading > h3,
+.zimdict details[data-level] > summary.section-heading > h4,
+.zimdict details[data-level] > summary.section-heading > h5,
+.zimdict details[data-level] > summary.section-heading > h6
+{
+  color: #0080FF;
+}
+.zimdict details[data-level][open] > summary.section-heading > h2,
+.zimdict details[data-level][open] > summary.section-heading > h3,
+.zimdict details[data-level][open] > summary.section-heading > h4,
+.zimdict details[data-level][open] > summary.section-heading > h5,
+.zimdict details[data-level][open] > summary.section-heading > h6
+{
+  color: black;
+}
+.zimdict summary.section-heading h2 div,
+.zimdict summary.section-heading h3 div,
+.zimdict summary.section-heading h4 div,
+.zimdict summary.section-heading h5 div,
+.zimdict summary.section-heading h6 div
+{
+  display: inline !important;
+}
+.zimdict summary.section-heading:after
+{
+  display: inline-block;
+  width:  16px;
+  height: 16px;
+  margin-left: 8px;
+  content: "";
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="#0080FF" d="m5.5 11.6.7.7L10.5 8 6.2 3.7l-.7.7L9.1 8z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.zimdict details[data-level][open] > summary.section-heading:after
+{
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23555" d="m3.9 6-.7.7L7.5 11l4.3-4.3-.7-.7-3.6 3.6z"/></svg>');
+}
+.zimdict details[data-level='4']
+{
+  margin-left: 18px;
+}
+
+/*---lists---*/
+.zimdict .content ol li
+{
+  margin-bottom: 6px !important;
+}
+.zimdict .content ul
+{
+  list-style: circle inside !important;
+}
+.zimdict .content ul li
+{
+  margin-bottom: 0px !important;
+  margin-left: 18px !important;
+}
+.zimdict .content ol li ul li
+{
+  margin-left: 0px !important;
+}
+/* Σύνθετα */
+.zimdict details[data-level='4'] div.boite div[style*='width:60%'][style*='column-count: 4']
+{
+  width: auto !important;
+}
+.zimdict details[data-level='4'] div.boite ul
+{
+  white-space: nowrap !important;
+}
+
+/*---tables---*/
+.zimdict table[style*='background:'],
+.zimdict details[data-level='2'] > center > table:not([style*='background:']):not([style*='background-color:']):not([border='0']),
+.zimdict details[data-level='2'] > table:not([style*='background:']):not([style*='background-color:']):not([border='0']),
+.zimdict details[data-level='3'] > table:not([style*='background:']):not([style*='background-color:']):not([border='0'])
+{
+  background: #f0f0f0 !important;
+}
+.zimdict table[style*='float:right']
+{
+  display: table !important;
+}
+/* Κλίση */
+.zimdict details[data-level="3"] .NavFrame
+{
+  background: transparent !important;
+  margin-top: 10px !important;
+}
+/*...не могу найти где в греч. это было...см. совпадение в «слово» (украинский)...*/
+.zimdict details[data-level="3"] .NavHead
+{
+  background: #C7CBD3 !important;
+  border: 1px solid darkgray !important;
+  border-bottom: 0 !important;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.zimdict details[data-level="3"] .NavContent
+{
+  background: transparent !important;
+  border: 1px solid darkgray !important;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+/* Μεταφράσεις */
+.zimdict details[data-level="4"] .NavHead
+{
+  background: transparent !important;
+}
+.zimdict details[data-level="4"] .NavContent table.translations
+{
+  background: transparent !important;
+}
+.zimdict .NavContent table tr td div ul
+{
+  list-style-type: circle !important;
+}
+.zimdict table
+{
+  max-width: 100%; 
+}
+.zimdict table td
+{
+  word-break: break-all;
+}
+.zimdict table.translations
+{
+  margin-top: 0 !important; 
+  margin-bottom: 0 !important; 
+}
+.zimdict table.translations td
+{
+  background: transparent !important;
+}
+.zimdict table.inflections > tbody > tr > td
+{
+  background: transparent !important;
+}
+
+/*---links---*/
+.zimdict a span,
+.zimdict span[style*='background'],
+.zimdict span[style*='background'][style*='border']
+{
+  background: transparent !important;
+  border-color: transparent !important;
+}
+.zimdict a.extiw,
+.zimdict a.external
+{
+  color: purple !important;
+}
+
+/*---remove boring watermark---*/
+.zimdict div > div[style*="clear:both;"][style*="background-image:linear-gradient(180deg, #E8E8E8, white);"][style*="border-top: dashed 2px #AAAAAA;"][style*="padding: 0.5em 0.5em 0.5em 0.5em;"]
+{
+  display: none;
+}
+
+/* -------------------------------------------- */
+/* --       GREEK WIKTIONARY SPECIFICS       -- */
+/* -------------------------------------------- */
+
+.zimdict div.boite div[style*='background:']
+{
+  background: transparent !important;
+}
+/*---tables---*/
+/* ουσιαστικά, επίθετα: νέα ελληνικά */
+/** →ex.: πολυτελής **/
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea']
+{
+  border-color: #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] th[style*='background:#a1bdea']
+{
+  border: 1px solid #B3B3B3 !important;
+  background: linear-gradient(to bottom, #90ACF4 0%, #809EEA 20%, #809EEA 80%, #7793DA 100%) !important;
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] th[style*='background:#a1bdea'] a span
+{
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] td[style*='border-right']
+{
+  border-right-color: #B3B3B3 !important;
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] td[style*='border-bottom'],
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] td:empty,
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] td:empty + td
+{
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] td[style*='background:#c1d3f1']
+{
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#a1bdea'] td[style*='background:#d5e2f6']
+{
+  border-right: 1px solid #B3B3B3 !important;
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+/** ←ex.: πολυτελής **/
+/** →ex.: εγώ **/
+.zimdict table.wikitable
+{
+  background: #F0F0F0;
+  border-color: #B3B3B3 !important;
+}
+.zimdict table.wikitable th
+{
+  background: linear-gradient(to bottom, #A3BCDC 0%, #93AED2 20%, #93AED2 80%, #85A2C8 100%) !important;
+  color: #F0F0F0 !important;
+}
+.zimdict table.wikitable th a span,
+.zimdict table.wikitable th span[style*='color:#002000']
+{
+  color: #F0F0F0 !important;
+}
+.zimdict table.wikitable td
+{
+  border-color: #B3B3B3 !important;
+}
+.zimdict table.wikitable td a
+{
+  color: #000000 !important;
+}
+/** ←ex.: εγώ **/
+
+/* ουσιαστικά, επίθετα: αρχαία ελληνικά */
+/** →ex.: βοήθεια, βοηθός **/
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8']
+{
+  border-color: #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] th[style*='background:#93aed2'],
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] th[style*='background:#a5bcd9'],
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='background:#93aed2'],
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='background:#a5bcd9']
+{
+  border: 1px solid #B3B3B3 !important;
+  background: linear-gradient(to bottom, #A3BCDC 0%, #93AED2 20%, #93AED2 80%, #85A2C8 100%) !important;
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] th[style*='background:#93aed2'] a span,
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] th[style*='background:#a5bcd9'] a span,
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='background:#93aed2'] a span,
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='background:#a5bcd9'] a span
+{
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='border-right']
+{
+  border-right-color: #B3B3B3 !important;
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='border-bottom'],
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td:empty,
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td:empty + td
+{
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] th[style*='background:#e3e5e8']
+{
+  border-bottom: 0 !important;
+}
+.zimdict table[style*='float:right'][style*='background:#ffffff'][style*='border:1px solid#c9d7e8'] td[style*='background:#e3e5e8']
+{
+  border-right: 1px solid #B3B3B3 !important;
+  border-bottom: 1px solid #B3B3B3 !important;
+}
+/** ←ex.: βοήθεια, βοηθός **/
+/** →ex.: ἐσθίω **/
+.zimdict table[style*='float:right'][style*='font-size:90%'][style*='border:1px solid #c9d7e8']
+{
+  border-color: #B3B3B3 !important;
+  font-size: 100% !important;
+}
+.zimdict table[style*='float:right'][style*='font-size:90%'][style*='border:1px solid #c9d7e8'] th,
+.zimdict table[style*='float:right'][style*='font-size:90%'][style*='border:1px solid #c9d7e8'] td
+{
+  padding-left:  6px;
+  padding-right: 6px;
+}
+.zimdict table[style*='float:right'][style*='font-size:90%'][style*='border:1px solid #c9d7e8'] th[style*='background:#93aed2'],
+.zimdict table[style*='float:right'][style*='font-size:90%'][style*='border:1px solid #c9d7e8'] th[style*='background:#a5bcd9']
+{
+  border: 1px solid #B3B3B3 !important;
+  background: linear-gradient(to bottom, #A3BCDC 0%, #93AED2 20%, #93AED2 80%, #85A2C8 100%) !important;
+  color: #F0F0F0 !important;
+  font-size: 90% !important;
+  padding-bottom: 6px;
+}
+/** ←ex.: ἐσθίω **/
+
+/* ρήματα: νέα ελληνικά */
+/** →ex.: παρακωλύω **/
+.zimdict .NavContent table th
+{
+  font-style: italic !important;
+}
+.zimdict .NavContent table th[style*='background:#e2e4c0']
+{
+  background: linear-gradient(to bottom, #DFCCC1 0%, #D5BDB0 20%, #D5BDB0 80%, #CBB4A8 100%) !important;
+}
+.zimdict .NavContent table td[style*='background:#c0c0c0']
+{
+  background: #D4D2D2 !important;
+  font-style: italic !important;
+}
+/** ←ex.: παρακωλύω **/
+
+/* ρήματα: αρχαία ελληνικά */
+/** →ex.: τυγχάνω **/
+.zimdict details[data-level='4'] div.NavFrame[style*='background:#edf2f7']
+{
+  background: transparent !important;
+}
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] table th
+{
+  font-family: NotoSansMedium, "Segoe UI Semibold", sans-serif !important;
+  font-size: 0.8em !important;
+}
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] table th,
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] table td
+{
+  word-break: initial !important;
+  width: auto !important;
+}
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] table[style*='background:#F5F5DC']
+{
+  background: #F0F0F0 !important;
+}
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] table[style*='background:#F5F5DC'] th[style*='background:#8FBC8F']
+{
+  background: #D5BDB0 !important;
+}
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] table[style*='background:#F5F5DC'] th[style*='background:#c0e4c0']
+{
+  background: #D4D2D2 !important;
+}
+/** ←ex.: τυγχάνω **/
+/** →ex.: επιθυμώ **/
+.zimdict details[data-level='4'] div.NavContent table.inflections[border='0'] td > center
+{
+  float: left !important;
+}
+/** ←ex.: επιθυμώ **/
+
+/* table colors various */
+/** →ex.: Άγγλος **/
+.zimdict table[style*='border:1px solid #AAAACC']
+{
+  border-color: #B3B3B3 !important;
+}
+.zimdict table[style*='border:1px solid #AAAACC'] th,
+.zimdict table[style*='border:1px solid #AAAACC'] td
+{
+  padding-left:  6px;
+  padding-right: 6px;
+}
+.zimdict table[style*='border:1px solid #AAAACC'] th[bgcolor='#A1BDEA']
+{
+  background: linear-gradient(to bottom, #90ACF4 0%, #809EEA 20%, #809EEA 80%, #7793DA 100%) !important;
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='border:1px solid #AAAACC'] th[bgcolor='#A1BDEA'] a,
+.zimdict table[style*='border:1px solid #AAAACC'] th[bgcolor='#A1BDEA'] span
+{
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='border:1px solid #AAAACC'] td[bgcolor='#BED9ED']
+{
+  background-color: #D6DFEC !important;
+  font-size: 90% !important;
+}
+.zimdict table[style*='border:1px solid #AAAACC'] td[bgcolor='#BED9ED'] a
+{
+  color: black !important;
+}
+/** ←ex.: Άγγλος **/
+/** →ex.: βιβρώσκω **/
+.zimdict table[style*='background:#F5F5DC'][border='3']
+{
+  border: 1px solid #B3B3B3 !important;
+  background: #F0F0F0;
+}
+.zimdict table[style*='background:#F5F5DC'][border='3'] th,
+.zimdict table[style*='background:#F5F5DC'][border='3'] td
+{
+  padding-left:  4px;
+  padding-right: 4px;
+}
+.zimdict table[style*='background:#F5F5DC'][border='3'] th[style*='background:#8FBC8F']
+{
+  border: 1px solid #B3B3B3 !important;
+  background: linear-gradient(to bottom, #A3BCDC 0%, #93AED2 20%, #93AED2 80%, #85A2C8 100%) !important;
+  color: #F0F0F0 !important;
+}
+.zimdict table[style*='background:#F5F5DC'][border='3'] th[style*='background:#c0e4c0']
+{
+  background-color: #E3E5E8 !important;
+  font-style: italic;
+  font-size: 90% !important;
+}
+.zimdict table[style*='background:#F5F5DC'][border='3'] td b
+{
+  font-weight: normal !important;
+}
+/** ←ex.: βιβρώσκω **/
+
+/* editor notices */
+/** →ex.: βοηθόος **/
+.zimdict div#mf-section-0 table[align='center'],
+.zimdict div#mf-section-0 table[style*='background:#f7f8ff']
+{
+  border-collapse: separate !important; 
+  border-radius: 8px;
+  border-color: #FF8C00 !important;
+  background: linear-gradient(to bottom, #FFE9CF 0%, #F0DEC8 20%, #F0DEC8 80%, #FFE9CF 100%) !important;
+  font-size: 80%;
+  width: 100% !important;
+}
+.zimdict div#mf-section-0 table[align='center'] td,
+.zimdict div#mf-section-0 table[style*='background:#f7f8ff'] td
+{
+  word-break: initial;
+}
+.zimdict div#mf-section-0 table td img[src*='Gthumb.svg.png.webp']
+{
+  display: block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path fill="%23dcd5f2" d="M4 28.5c-.668 0-1.296-.26-1.768-.732C1.76 27.295 1.5 26.667 1.5 26s.26-1.295.732-1.768L17.346 9.119l-.174-.327c-.753-1.419-1.242-3.52.708-5.47a6.173 6.173 0 0 1 4.397-1.821 6.24 6.24 0 0 1 2.294.437l-4.278 4.279 3.491 3.491 4.279-4.279a6.18 6.18 0 0 1-1.386 6.692c-.913.913-1.938 1.376-3.044 1.376-.774 0-1.591-.225-2.427-.668l-.326-.174L5.768 27.768c-.472.472-1.1.732-1.768.732z"/><path fill="%238b75a1" d="M22.277 2.001c.459 0 .917.056 1.361.164l-3.344 3.344-.707.707.707.707 2.784 2.784.707.707.707-.707 3.348-3.348a5.687 5.687 0 0 1-1.515 5.408c-.816.816-1.721 1.23-2.69 1.23-.692 0-1.43-.205-2.192-.61l-.653-.347-.523.523L5.414 27.414C5.036 27.792 4.534 28 4 28a2.001 2.001 0 0 1-1.414-3.414L17.437 9.734l.523-.523-.347-.653c-.981-1.847-.773-3.49.62-4.882a5.681 5.681 0 0 1 4.044-1.675m0-1c-1.72 0-3.439.656-4.751 1.968-1.861 1.861-1.877 4.022-.796 6.058L1.879 23.879a3 3 0 1 0 4.242 4.242L20.973 13.27c.875.465 1.773.727 2.661.727 1.177 0 2.336-.461 3.397-1.523a6.724 6.724 0 0 0 1.184-7.905L23.784 9 21 6.216l4.431-4.431a6.716 6.716 0 0 0-3.154-.784z"/><path fill="%23ffeea3" d="M9.448 26.135c-.524 0-.86-.168-1.386-.693l-5.091-5.091c-.95-.95-1.474-2.22-1.474-3.576s.523-2.626 1.474-3.577l4.2-4.2a5.064 5.064 0 0 1 3.6-1.498c1.426 0 2.804.606 3.78 1.664l1.326 1.422-1.186 1.179 5.684 5.684c.39.389.636 1.026.627 1.622-.007.447-.155.83-.418 1.077-.307.288-.7.434-1.17.434-.449 0-.805-.136-.809-.137l-.636-.247-.046.68c-.001.008-.083 1.046-.777 1.526-.329.228-.725.343-1.174.343-.398 0-.692-.094-.695-.095l-.605-.196-.05.634c0 .008-.092 1.016-.8 1.549-.271.204-.604.307-.992.307-.549 0-1.012-.207-1.017-.209l-.434-.197-.22.424c-.003.005-.27.519-.717.86a1.64 1.64 0 0 1-.994.311z"/><path fill="%23ba9b48" d="M10.77 8c1.288 0 2.532.548 3.417 1.506l.994 1.066-.487.484-.711.707.709.709 5.329 5.329c.294.294.487.801.48 1.262-.003.18-.04.512-.261.719-.213.201-.484.298-.827.298-.343 0-.62-.101-.621-.101l-1.258-.492-.109 1.349c-.018.226-.155.874-.563 1.156-.244.169-.543.254-.89.254-.305 0-.533-.068-.533-.068h-.001l-1.197-.391-.117 1.256c-.021.222-.169.869-.604 1.196-.184.139-.41.206-.691.206-.431 0-.804-.162-.804-.162l-.876-.406-.436.862c-.002.004-.227.422-.574.687a1.143 1.143 0 0 1-.691.208c-.343 0-.562-.076-1.033-.547l-5.09-5.09a4.563 4.563 0 0 1 0-6.446l4.2-4.2A4.565 4.565 0 0 1 10.77 8m0-1a5.562 5.562 0 0 0-3.952 1.644l-4.2 4.2c-2.16 2.16-2.16 5.7 0 7.86l5.09 5.09c.557.557 1.02.84 1.74.84.48 0 .938-.139 1.297-.412.551-.42.86-1.03.86-1.03s.549.254 1.224.254c.416 0 .879-.096 1.293-.408.907-.683.999-1.911.999-1.911s.357.12.851.12c.431 0 .966-.091 1.458-.432.911-.629.992-1.907.992-1.907s.431.172.991.172c.472 0 1.036-.122 1.512-.57.905-.852.669-2.549-.198-3.416l-5.329-5.329 1.173-1.167-1.654-1.774A5.63 5.63 0 0 0 10.77 7z"/></svg>') no-repeat;
+  width:        30px;
+  height:       30px;
+  padding-left: 34px;
+  margin-left:  4px;
+}
+/** ←ex.: βοηθόος **/
+
+/* block Συγγενικά */
+.zimdict details[data-level="4"] div[style*='float:right'] + table td
+{
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+/* block Σύνθετα */
+.zimdict details[data-level="4"] table td[bgcolor="#fbfbff"][style*="border:1px solid #e6e6ff"]
+{
+  background: transparent !important;
+  border-color: transparent !important;
+  white-space: nowrap !important;
+}
+/*---remove ugly icons---*/
+.zimdict img[src*="Nuvola_apps_edu_languages.png.webp"]
+{
+  display: none !important;
+}
+/* new etymology icon = search property */
+.zimdict details[data-level="3"] > summary.section-heading > h3 img[src*="System-search.svg.png.webp"]
+{
+  display: inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23fff" d="M.5 14.5v-13h15V10h-2.7l-4 4.5z"/><path fill="%23788b9c" d="M15 2v7.5h-2.4l-.3.3L8.6 14H1V2h14m1-1H0v14h9l4-4.5h3V1z"/><path fill="%23788b9c" d="M0 1h16v2H0z"/><path fill="%238bb7f0" d="M5 5h8v1H5zM3 5h1v1H3zm2 2h8v1H5zM3 7h1v1H3zm2 2h8v1H5zM3 9h1v1H3zm2 2h8v1H5zm-2 0h1v1H3z"/><path fill="%23788b9c" d="m11 10.9-3.7 3.6c-.4.4-.4.9 0 1.3s.9.4 1.3 0l3.6-3.8-1.2-1.1z"/><path fill="%23c8d1db" d="M5 15h2c0-.2.1-.4.2-.5l.5-.5H5.2c-.1.3-.2.7-.2 1zm10-9.4V8c.5.5.8 1.2.9 1.9l.1.5V6.3c-.3-.3-.6-.5-1-.7z"/><path fill="%23c2e8ff" d="m13 7.1-.5-.1c.2 0 .3 0 .5.1zM9.1 10c.1-.4.2-.7.3-1H7.2c-.1.3-.1.7-.2 1h2.1zm1-2c.6-.6 1.5-1 2.4-1H8.3c-.3.3-.5.6-.7 1h2.5zm-2.9 4h2.1c-.1-.3-.2-.6-.3-1H7c.1.3.1.7.2 1z"/><path fill="%23d1edff" d="M12.5 7.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6Z"/><path fill="%23788b9c" d="M12.5 8c1.4 0 2.5 1.1 2.5 2.5S13.9 13 12.5 13 10 11.9 10 10.5 11.1 8 12.5 8m0-1C10.6 7 9 8.6 9 10.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5S14.4 7 12.5 7z"/></svg>') no-repeat !important;
+  position: relative;
+  top:      -4px;
+  width:        16px;
+  height:       16px;
+  padding-left: 20px !important;
+}
+/* new pronunciation icon = voice recognition */
+.zimdict details[data-level="3"] > summary.section-heading > h3 img[src*="Wikinews_commentary.svg.png.webp"]
+{
+  display: inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%234e7ab5" d="m12.7 10.9-.9-.4c.4-.9.6-1.8.6-2.7 0-.8-.1-1.5-.4-2.3l.9-.3c.3.9.5 1.7.5 2.6-.1 1.1-.3 2.1-.7 3.1zm2.2 1.3-.9-.4c.7-1.2 1-2.6 1-4 0-1.2-.3-2.5-.8-3.6l.9-.4c.6 1.3.9 2.6.9 4 0 1.6-.3 3.1-1.1 4.4z"/><path fill="%23c2e8ff" d="M.5 15.5c.4-3.4 4.5-4 4.5-4h3.9c.1 0 4.1.7 4.5 4H.5z"/><path fill="%237496c4" d="M8.9 12c.5.1 3.3.7 3.9 3H1.1c.6-2.3 3.5-2.9 3.9-3h3.9m.1-1H5s-5 .7-5 5h14c0-4.3-5-5-5-5z"/><path fill="%23e8d47b" d="M7 12.5c-.6 0-1.2-.4-1.5-.6V8.5h3v3.4c-.3.2-.9.6-1.5.6z"/><path fill="%23ba9b48" d="M8 9v2.6c-.3.2-.6.4-1 .4s-.7-.2-1-.4V9h2m1-1H5v4.1s.9.9 2 .9 2-.9 2-.9V8z"/><path fill="%23ffeea3" d="M7 10.5c-.2 0-.4-.1-.5-.2l-.1-.1h-.1c-.9-.3-1.6-1-1.7-1.9l-.1-.5h-.4c-.2 0-.5-.4-.6-.8V5.1l.6-2.6h5.6l.8 2.6V7c-.1.4-.4.8-.6.8h-.4v.4c-.2.9-.8 1.7-1.7 1.9h-.1l-.1.1c-.2.2-.4.3-.6.3z"/><path fill="%23ba9b48" d="m9.4 3 .6 2.1v1.6c0 .3-.2.5-.2.6l-.7.1-.1.7c-.2.7-.7 1.3-1.4 1.5l-.3.1-.2.2c0 .1-.1.1-.1.1s-.1 0-.1-.1l-.2-.2-.3-.1c-.7-.2-1.2-.8-1.4-1.5l-.1-.7-.7-.1c0-.1-.2-.3-.2-.5V5.1L4.5 3h4.9m.7-1H3.7L3 5v2c.1.6.5 1.2 1 1.3.2 1.1 1 2 2.1 2.3.3.2.6.4.9.4s.6-.2.9-.4C9 10.3 9.8 9.4 10 8.3c.5-.1.9-.7 1-1.3V5l-.9-3z"/><path fill="%23ffc49c" d="M10.5 5.8c0-1.5-1.8-2.5-2-2.6l-.4-.1-.2.2S6.8 4.5 5.2 4.5c-1.2 0-1.7.9-1.7 1.7V3.5c0-1.4.9-3 3.5-3 1.1 0 1.6.7 1.6.8l.1.2H9c.7 0 1.5.6 1.5 1.7v3.3-.7z"/><path fill="%23a16a4a" d="M7 1c.8 0 1.1.5 1.2.5l.2.5H9c.5 0 1 .4 1 1.2v.6c-.6-.6-1.2-.9-1.3-1L8 2.5l-.5.5s-.9 1-2.3 1c-.5 0-.9.1-1.2.3v-.8C4 2.9 4.2 1 7 1m0-1C4.2 0 3 1.8 3 3.5V7h1v-.8C4 5.7 4.2 5 5.2 5c1.9 0 3-1.3 3-1.3s1.8.9 1.8 2.1V7h1V3.2C11 1.9 10 1 9 1c0 0-.6-1-2-1z"/></svg>') no-repeat !important;
+  position: relative;
+  top:      -6px;
+  width:        16px;
+  height:       16px;
+  padding-left: 20px !important;
+  margin-left:   1px !important;
+}
+/* new part of speech icon = puzzle */
+.zimdict details[data-level="3"] > summary.section-heading > h3 img[src*="OOjs_UI-like_arrow_empty-ltr_progressive.svg.png.webp"],
+.zimdict details[data-level="2"] > summary.section-heading > h2 img[src*="Open_book_01.svg.png.webp"],
+.zimdict details[data-level="3"] > summary.section-heading > h3 img[src*="Open_book_01.svg.png.webp"]
+{
+  display: inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23bae0bd" d="M3.5 15.5v-4.161l-.599.121A2.002 2.002 0 0 1 .5 9.5a2.002 2.002 0 0 1 2.401-1.959l.599.12V3.5h4.164l-.123-.601A2.002 2.002 0 0 1 9.5.5a2.002 2.002 0 0 1 1.959 2.399l-.123.601H15.5v3c-1.654 0-3 1.346-3 3s1.346 3 3 3v3h-12z"/><path fill="%235e9c76" d="M9.5 1a1.502 1.502 0 0 1 1.47 1.801L10.726 4H15v2.036c-1.694.243-3 1.704-3 3.464s1.306 3.221 3 3.464V15H4v-4.274l-1.199.244A1.502 1.502 0 0 1 1 9.5a1.502 1.502 0 0 1 1.801-1.47L4 8.274V4h4.274L8.03 2.801A1.502 1.502 0 0 1 9.5 1m0-1a2.5 2.5 0 0 0-2.45 3H3v4.05a2.5 2.5 0 1 0 0 4.9V16h13v-4.05a2.5 2.5 0 1 1 0-4.9V3h-4.05A2.5 2.5 0 0 0 9.5 0z"/></svg>') no-repeat !important;
+  position: relative;
+  top:      -6px;
+  width:        16px;
+  height:       16px;
+  padding-left: 20px !important;
+}
+/* new translations icon = translation */
+.zimdict details[data-level="4"] > summary.section-heading > h4 img[src*="Gnome-globe.svg.png.webp"]
+{
+  display: inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23fff" d="M.5.5h10v10H.5z"/><path fill="%23788b9c" d="M10 1v9H1V1h9m1-1H0v11h11V0z"/><path fill="%238bb7f0" d="M5.5 15.5v-5.3l4.7-4.7h5.3v10z"/><path fill="%234e7ab5" d="M15 6v9H6v-4.6L10.4 6H15m1-1h-6l-5 5v6h11V5z"/><path fill="%23fff" d="M9.3 11h2.5v1H9.3z"/><path fill="%23fff" d="M11.2 8H9.8L8 13h1.2l1.3-4 1.3 4H13z"/><path fill="%23788b9c" d="M2 3h7v1H2z"/><path fill="%23788b9c" d="M5 2h1v1.7H5zM2 8V7c3.9 0 5-3.6 5-3.6l1 .3S6.6 8 2 8z"/><path fill="%23788b9c" d="M8 7C5.2 7 3.2 4.9 3.1 4.8l.7-.7C3.9 4.2 5.6 6 8 6v1z"/></svg>') no-repeat !important;
+  position: relative;
+  top:      -6px;
+  width:        16px;
+  height:       16px;
+  padding-left: 20px !important;
+}
+/* new sources & links icon = bookmark */
+.zimdict details[data-level="3"] > summary.section-heading > h3 img[src*="Open_book_icon.png.webp"],
+.zimdict details[data-level="4"] > summary.section-heading > h4 img[src*="Open_book_icon.png.webp"]
+{
+  display: inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%238bb7f0" d="M8 14.5a1.485 1.485 0 0 1-1.291-.751l-.144-.249H1a.5.5 0 0 1-.5-.5v-1.5h15V13a.5.5 0 0 1-.5.5H9.435l-.145.249c-.273.47-.756.751-1.29.751z"/><path fill="%234e7ab5" d="M15 12v1H9.148l-.289.497C8.675 13.812 8.354 14 8 14s-.675-.188-.858-.503L6.852 13H1v-1h14m1-1H0v2a1 1 0 0 0 1 1h5.277c.347.595.985 1 1.723 1s1.376-.405 1.723-1H15a1 1 0 0 0 1-1v-2z"/><path fill="%23fff" d="M.5 12.5v-11H6c.827 0 1.5.673 1.5 1.5h1c0-.827.673-1.5 1.5-1.5h5.5v11H.5z"/><path fill="%23788b9c" d="M15 2v10H1V2h5c.551 0 1 .449 1 1h2c0-.551.449-1 1-1h5m1-1h-6a2 2 0 0 0-2 2 2 2 0 0 0-2-2H0v12h16V1z"/><path fill="%23e1ebf2" d="M8 12h7V2h-5a1 1 0 0 0-1 1H8v9z"/><path fill="%23f78f8f" d="m12 8.441-1.5.75V1.5h3v7.691z"/><path fill="%23c74343" d="M13 2v6.382l-.553-.276L12 7.882l-.447.224-.553.276V2h2m1-1h-4v9l2-1 2 1V1z"/></svg>') no-repeat !important;
+  position: relative;
+  top:      -4px;
+  width:        16px;
+  height:       16px;
+  padding-left: 20px !important;
+}
+/* new see also icon = advance */
+.zimdict details[data-level="4"] > summary.section-heading > h4 img[src*="Blue_Glass_Arrow.svg.png.webp"]
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%234e7ab5" d="M3 6H2v4h1V6zm2 0H4v4h1V6zM1 6H0v4h1V6z"/><path fill="%238bb7f0" d="M11.5 5.041 15.2 8l-3.7 2.959z"/><path fill="%234e7ab5" d="M12 6.081 14.399 8 12 9.919V6.081M11 4v8l5-4-5-4z"/><path fill="%238bb7f0" d="M6 6h6v4H6z"/><path fill="%234e7ab5" d="M7 7h5V6H6v4h6V9H7z"/></svg>') no-repeat !important;
+  position: relative;
+  top:      -6px;
+  width:        16px;
+  height:       16px;
+  padding-left: 20px !important;
+  margin-left:   2px !important;
+}
+/*---resize flags---*/
+.zimdict details[data-level="2"] > summary.section-heading > h2 img[src*='Flag_of_'],
+.zimdict details[data-level="2"] > summary.section-heading > h2 img[src*='-Flag'],
+.zimdict details[data-level="2"] > summary.section-heading > h2 > span.languageheader img
+{
+  height: 0.75em !important; /*16px*/
+  width: auto !important;
+  position: relative;
+  bottom: 5px;
+}
+
+/* -------------------------------------------- */
+/* --      RUSSIAN WIKTIONARY SPECIFICS      -- */
+/* -------------------------------------------- */
+
+/*---заметки редакторов: блоки---*/
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer
+{
+  border-collapse: separate !important; 
+  border-radius: 8px;
+  border-color: #FF8C00 !important;
+  /*#EEDAC1*/
+  background: linear-gradient(to bottom, #FFE9CF 0%, #F0DEC8 20%, #F0DEC8 80%, #FFE9CF 100%) !important;
+  width: 100% !important;
+}
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-image
+{
+  min-width: 2.5em;
+}
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-image img[src*='Interrobang.svg.png.webp']
+{
+  height: 34px;
+  width: auto;
+}
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-image div.thumb.tright
+{
+  margin-left: 0 !important;
+}
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-text > td,
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-text p,
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-text ul li
+{
+  font-size: 80% !important;
+  word-break: initial !important;
+}
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-text p
+{
+  margin: 0 !important;
+}
+.zimdict table.fmbox.fmbox-editnotice.stub-main-footer td.mbox-text ul li
+{
+  margin-left: 0 !important;
+}
+/*---заметки редакторов: текст---*/
+.zimdict span.example-absent
+{
+  font-style: italic !important;
+}
+.zimdict span.example-absent,
+.zimdict span.example-recommendations
+{
+  color: #BBC0C8 !important;
+}
+/*---блок Паронимы---*/
+/** →ex.: подавать, эффективный **/
+.zimdict table#not_to_be_confused
+{
+  background: #E1E0F9 !important;
+  border-collapse: separate !important; 
+  border: 1px solid #9E7AF9 !important;
+  border-radius: 6px;
+  padding: 6px;
+}
+.zimdict table#not_to_be_confused img[src*="Attention_Sign.svg.png.webp"]
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path fill="%23ffeea3" d="M2.628 25.5c-.407 0-.771-.21-.975-.562a1.11 1.11 0 0 1 0-1.125l12.372-21.43c.204-.352.568-.563.975-.563s.771.21.975.562l12.372 21.429a1.11 1.11 0 0 1 0 1.125 1.114 1.114 0 0 1-.975.562H2.628z"/><path fill="%23ba9b48" d="M15 2.32c.109 0 .379.03.542.313l12.372 21.429a.614.614 0 0 1 0 .625.615.615 0 0 1-.542.313H2.628a.616.616 0 0 1-.542-.313.614.614 0 0 1 0-.625L14.458 2.633A.613.613 0 0 1 15 2.32m0-1c-.547 0-1.095.271-1.408.813L1.22 23.562A1.626 1.626 0 0 0 2.628 26h24.745a1.626 1.626 0 0 0 1.408-2.438L16.408 2.133A1.611 1.611 0 0 0 15 1.32z"/><path fill="%2336404d" d="M15 19.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 1 0 0-2.5zM14 9h2v9h-2z"/></svg>') no-repeat !important;
+  width:        30px;
+  height:       30px;
+  padding-left: 30px !important;
+}
+/** ←ex.: подавать, эффективный **/
+
+/*---блок См. также---*/
+/** →ex.: бежать, челобитная **/
+.zimdict table#cf-top-header
+{
+  background: #EFF2F8 !important;
+  border-collapse: separate !important; 
+  border: 1px solid silver !important;
+  border-radius: 6px;
+  padding: 6px;
+}
+.zimdict table#cf-top-header img[src*="Disambig.svg.png.webp"]
+{
+  display:  inline-block;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path fill="%23a3b7cc" d="M24 18H12.5C8.4 18 5 14.6 5 10.5V7h1v3.5c0 3.6 2.9 6.5 6.5 6.5H24v1z"/><path fill="%23a3b7cc" d="M5 5.5h1v17.6H5z"/><path fill="%238bb7f0" d="M5.5 2.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6Z"/><path fill="%234e7ab5" d="M5.5 3C6.9 3 8 4.1 8 5.5S6.9 8 5.5 8 3 6.9 3 5.5 4.1 3 5.5 3m0-1C3.6 2 2 3.6 2 5.5S3.6 9 5.5 9 9 7.4 9 5.5 7.4 2 5.5 2z"/><path fill="%238bb7f0" d="M5.5 21.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6Z"/><path fill="%234e7ab5" d="M5.5 22C6.9 22 8 23.1 8 24.5S6.9 27 5.5 27 3 25.9 3 24.5 4.1 22 5.5 22m0-1C3.6 21 2 22.6 2 24.5S3.6 28 5.5 28 9 26.4 9 24.5 7.4 21 5.5 21z"/><path fill="%238bb7f0" d="M24.5 14.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6Z"/><path fill="%234e7ab5" d="M24.5 15c1.4 0 2.5 1.1 2.5 2.5S25.9 20 24.5 20 22 18.9 22 17.5s1.1-2.5 2.5-2.5m0-1c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5z"/></svg>') no-repeat !important;
+  width:        30px;
+  height:       30px;
+  padding-left: 30px !important;
+}
+/** ←ex.: бежать, челобитная **/
+
+/*---таблицы морфологии---*/
+/** →ex.: эффектный **/
+.zimdict table.morfotable.ru
+{
+  display: table !important;
+  border-color: #B3B3B3 !important;
+}
+.zimdict table.morfotable.ru th,
+.zimdict table.morfotable.ru td
+{
+  padding: 0 6px !important;
+}
+.zimdict table.morfotable.ru th[bgcolor='#eef9ff']
+{
+  background: linear-gradient(to bottom, #D0D6DD 0%, #C7CDD3 20%, #C7CDD3 80%, #BDC3C9 100%) !important;
+  font-style: italic !important;
+}
+.zimdict table.morfotable.ru td[bgcolor='#eef9ff']
+{
+  background-color: #D0D6DD !important;
+  font-style: italic !important;
+}
+.zimdict table.morfotable.ru tr[bgcolor='#eef9ff']
+{
+  background-color: #D8DFE6 !important;
+  font-style: italic !important;
+}
+.zimdict table.morfotable.ru td[bgcolor='#ffffff']
+{
+  background-color: #F0F0F0 !important;
+}
+/** ←ex.: эффектный **/
+
+/*---след. блок полностью повторяет предыдущий, но поскольку у него нет особого класса, выношу его отдельно---*/
+/** →ex.: слово (сербский) **/
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC']
+{
+  display: table !important;
+  border-color: #B3B3B3 !important;
+}
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] th,
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] td
+{
+  padding: 0 6px !important;
+}
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] th[bgcolor='#EEF9FF']
+{
+  background: linear-gradient(to bottom, #D0D6DD 0%, #C7CDD3 20%, #C7CDD3 80%, #BDC3C9 100%) !important;
+  font-style: italic !important;
+}
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] td[bgcolor='#EEF9FF']
+{
+  background-color: #D0D6DD !important;
+  font-style: italic !important;
+}
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] tr[bgcolor='#EEF9FF']
+{
+  background-color: #D8DFE6 !important;
+  font-style: italic !important;
+}
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] td[bgcolor='#ffffff'],
+.zimdict details[data-level='3'] table[style*='float:right'][style*='border: 1px solid #6699CC'] td[bgcolor='#f0f0f0']
+{
+  background-color: #F0F0F0 !important;
+}
+/** ←ex.: слово (сербский) **/
+
+/*---блоки Родственные слова, Переводы и т.п.---*/
+.zimdict table.wikitable.mw-collapsible.mw-collapsed
+{
+  border-color: #B3B3B3 !important;
+}
+.zimdict table.wikitable.mw-collapsible.mw-collapsed ul
+{
+  word-break: initial !important;
+}
+.zimdict table.wikitable.mw-collapsible.mw-collapsed td.block-head,
+.zimdict table.wikitable.mw-collapsible.mw-collapsed th
+{
+  background: linear-gradient(to bottom, #D0D6DD 0%, #C7CDD3 20%, #C7CDD3 80%, #BDC3C9 100%) !important;
+  font-family: NotoSansMedium, "Segoe UI Semibold", sans-serif !important;
+  font-size: 0.9em !important;
+}
+/** →ex.: подача, бежать **/
+.zimdict table.wikitable.mw-collapsible.mw-collapsed td.block-body table
+{
+  border-color: #B3B3B3 !important;
+  position: relative !important;
+  left: 18px !important;
+}
+.zimdict table.wikitable.mw-collapsible.mw-collapsed td.block-body table th,
+.zimdict table.wikitable.mw-collapsible.mw-collapsed td.block-body table td
+{
+  padding: 0 8px 0 6px !important;
+}
+.zimdict table.wikitable.mw-collapsible.mw-collapsed td.block-body table td[bgcolor='#ffffff']
+{
+  background: #FCFCFC !important;
+  border: 0 !important;
+  border-right: 1px solid #B3B3B3 !important;
+}
+/** ←ex.: подача, бежать **/
+
+/*прицельно Переводы*/
+.zimdict table.wikitable.mw-collapsible.mw-collapsed td[bgcolor='#eeffff']
+{
+  background: #F0F0F0 !important;
+}
+/*---текст: примеры---*/
+.zimdict span.example-fullblock,
+.zimdict span.example-block
+{
+  color: slategray !important;
+}
+/*---текст: зелёный---*/
+.zimdict span[style*='color:darkgreen']:not([class]),
+.zimdict span[style*='color:darkgreen'][style*='font-size:80%']
+{
+  color: #00A666 !important;
+}
+/*---текст: библиография---*/
+.zimdict span.citation span[style*='color:darkred'] + span + span[style*='color:darkgreen']
+{
+  color: darkslategray !important;
+}
+/*---таблицы без рамок = списки, убираем фон; пример: «приветствие»---*/
+.zimdict table[border='0'],
+.zimdict table[border='0'] td[bgcolor='#EEFFFF']
+{
+  background: transparent !important;
+}
+/*---Русские суффиксы, приставки (см. -к, -ишк, про-, etc.)---*/
+.zimdict table[width='100%']:not([style]):not([class])
+{
+  background: transparent !important;
+  border: 1px solid #C8C8C8;
+}
+.zimdict table[width='100%']:not([style]) th[style*='background: #6699cc'][style*='color: #ffffff']
+{
+  background: linear-gradient(to bottom, #6BA0D6 0%, #6699CC 20%, #6699CC 80%, #5A87B4 100%) !important;
+}
+.zimdict table[width='100%']:not([style]) td[style*='background:#eef9ff']
+{
+  background: #E8E8EC !important;
+}
+
+/* ====================================================== */
+/*                      ARTICLE BOXES                     */
+/* ====================================================== */
+
+.gdarticle
+{
+  margin-top:    10px;
+  margin-bottom: 10px;
+  padding:        5px;
+
+  /*D3D6DC D1D7E0 D1D7E2 D4D9E3 D8DDE6*/
+  background:       #D8DDE6;
+  border: 1px solid #D8DDE6;
+  border-radius: 6px;
+}
+.gdactivearticle
+{
+  border: 1px solid #0080FF;
+}
+.gdarticleseparator + script + .gdactivearticle .gddictname
+{
+  border-top: 1px solid #0080FF;
+}
+.gdarticleseparator
+{
+  display: none;
+}
+/* hide the 'From ' string which preceeds dictionary name in the heading */
+.gdfromprefix
+{
+  display: none;
+}
+.gddictname
+{
+  /* needed to be able to reorder elements, e.g. icon, dictionary name, collapse icon */
+  display: -webkit-box;
+  font-size:     .86em;
+  font-weight:  normal;
+  float:         right;
+  margin:         -6px;
+  margin-bottom:   5px;
+  margin-left:     2px;
+  padding: .3em .3em .2em .6em;
+
+  color:      #000000;
+  background: #C7CBD3;
+  border-top:    none;
+  border-right:  none;
+  border-left:   1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 4px;
+
+  -webkit-user-select: none;
+  user-select:         none;
+  cursor:           default;
+}
+
+/* actual text with the dictionary title */
+.gddicttitle
+{
+  display: block;
+  -webkit-box-ordinal-group: 1;
+}
+.gdactivearticle .gddictname
+{
+  display: -webkit-box;
+  font-size:     .86em;
+  font-weight:  normal;
+  float:         right;
+  margin:         -6px;
+  margin-bottom:   5px;
+  margin-left:     2px;
+  padding: .3em .3em .2em .6em;
+
+  color:      #FFFFFF;
+  background: #208EFB;
+  border-top:    none;
+  border-right:  none;
+  border-left:   1px solid #0080FF;
+  border-bottom: 1px solid #0080FF;
+}
+.gdcollapsedarticle .gddictname
+{
+  opacity: 0.7;
+}
+/* article collapsed */
+.gdcollapsedarticle
+{
+  background:       #2B3339;
+  border: 1px solid #4E5B65;
+  /* here we change pattern for the collapsed article blocks
+     example: url('file:./styles/Dark/dark-av-collapse-pattern.png'); */
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAACgAgMAAADm7QMnAAAADFBMVEWIiIixsbGxsbGxsbF0SLUbAAAABHRSTlP/bytS3QghxwAAAEVJREFUeAFjYA3FAA4Mq17tWrcalVhBtOBK7IL/McFf4rUPZYtGLRq1aNSiUYtGLSJcoYzWR4PBolGLRi0atWjUotH6CAA67a9q5+gpSAAAAABJRU5ErkJggg==');
+}
+/* move collapse/expand buttons to the last, 3rd position */
+.collapse_expand_area
+{
+  display: block;
+  -webkit-box-ordinal-group: 3;
+}
+.gddicticon
+{
+  display:               block;
+  vertical-align:  text-bottom;
+  padding-right:          -1em;
+  padding-left:          0.3em;
+  -webkit-box-ordinal-group: 2;
+}
+.gdexpandicon,
+.gdexpandicon:hover,
+.gdcollapseicon,
+.gdcollapseicon:hover
+{
+  width:                     15px;
+  background-position: center 35%;
+  background-repeat:    no-repeat;
+  vertical-align:     text-bottom;
+  padding-left:              -5px;
+  margin-left:                0px;
+}
+.gdexpandicon
+{
+  background-image: url('qrc:///icons/expand_article.png');
+}
+.gdexpandicon:hover
+{
+  background-image: url('qrc:///icons/expand_article_hovered.png');
+}
+.gdcollapseicon
+{
+  background-image: url('qrc:///icons/collapse_article.png');
+}
+.gdcollapseicon:hover
+{
+  background-image: url('qrc:///icons/collapse_article_hovered.png');
+}
+/* first headword in a multi-headword DSL article */
+.gdarticlebody > span:first-child .dsl_headwords,
+.gdarticlebody > h3:first-child
+{
+  margin-top:      -3px;
+  display: inline-block;
+}
+.gdspellsuggestion
+{
+  margin-top: 1.5em;
+}
+
+/* ====================================================== */
+/*                      WELCOME PAGE                      */
+/* ====================================================== */
+
+.gdnotfound,
+.gdstemmedsuggestion_head,
+.gdstemmedsuggestion_body
+{
+  color: #C7CBD3;
+}
+.gdstemmedsuggestion_body > a
+{
+  color: #0080FF;
+}
+
+/* remove ads */
+body > h3,
+body > p
+{
+  visibility:      hidden;
+  background: transparent;
+}
+body
+{
+  background: transparent;
+}
+
+/* ====================================================== */
+/*                    SCROLL BARS                         */
+/* ====================================================== */
+
+::-webkit-scrollbar
+{
+  background:              #000000;
+}
+::-webkit-scrollbar-corner
+{
+  background:              #2B3339;
+  border-bottom: 1px solid #000000;
+  border-right:  1px solid #000000;
+}
+/* verticals */
+::-webkit-scrollbar-track:vertical
+{
+  background:             #2B3339;
+  border-left:  1px solid #000000;
+  border-right: 1px solid #000000;
+}
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal
+{
+  background:             #4E5B65;
+  background-clip:    content-box;
+  border:   6px solid transparent;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+  min-width:  40px;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+  min-height: 40px;
+}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:vertical:active,
+::-webkit-scrollbar-thumb:horizontal:hover,
+::-webkit-scrollbar-thumb:horizontal:active
+{
+  background:             #006AD5;
+  background-clip:    content-box;
+  border:   5px solid transparent;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-button:vertical:decrement
+{
+  border: 1px solid #000000;
+  border-bottom: none;
+  background: 
+    linear-gradient(120deg, #2B3339 41%, rgba(43,51,57,0) 42%),
+    linear-gradient(240deg, #2B3339 37%, rgba(43,51,57,0) 38%),
+    linear-gradient(0deg,   #2B3339 36%, rgba(43,51,57,0) 37%);
+  background-color: #4E5B65;
+}
+::-webkit-scrollbar-button:vertical:increment
+{
+  border: 1px solid #000000;
+  border-top: none;
+  background:
+    linear-gradient(300deg, #2B3339 37%, rgba(43,51,57,0) 38%),
+    linear-gradient(60deg,  #2B3339 41%, rgba(43,51,57,0) 42%),
+    linear-gradient(180deg, #2B3339 36%, rgba(43,51,57,0) 37%);
+  background-color: #4E5B65;
+}
+::-webkit-scrollbar-button:vertical:decrement:hover,
+::-webkit-scrollbar-button:vertical:increment:hover
+{
+  background-color: #0080FF;
+}
+::-webkit-scrollbar-button:vertical:decrement:active
+{
+  background: 
+    linear-gradient(120deg, #000000 41%, rgba(0, 0, 0, 0) 42%),
+    linear-gradient(240deg, #000000 37%, rgba(0, 0, 0, 0) 38%),
+    linear-gradient(0deg,   #000000 36%, rgba(0, 0, 0, 0) 37%);
+  background-color: #0080FF;
+}
+::-webkit-scrollbar-button:vertical:increment:active
+{
+  background:
+    linear-gradient(300deg, #000000 37%, rgba(0, 0, 0, 0) 38%),
+    linear-gradient(60deg,  #000000 41%, rgba(0, 0, 0, 0) 42%),
+    linear-gradient(180deg, #000000 36%, rgba(0, 0, 0, 0) 37%);
+  background-color: #0080FF;
+}
+/* horizontals */
+::-webkit-scrollbar-track:horizontal
+{
+  background:              #2B3339;
+  border-top:    1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+::-webkit-scrollbar-button:horizontal:decrement
+{
+  border: 1px solid #000000;
+  border-right: none;
+  background:
+    linear-gradient(30deg,  #2B3339 37%, rgba(43,51,57,0) 38%),
+    linear-gradient(150deg, #2B3339 41%, rgba(43,51,57,0) 42%),
+    linear-gradient(270deg, #2B3339 36%, rgba(43,51,57,0) 37%);
+  background-color: #4E5B65;
+}
+::-webkit-scrollbar-button:horizontal:increment
+{
+  border: 1px solid #000000;
+  border-left: none;
+  background:
+    linear-gradient(210deg, #2B3339 41%, rgba(43,51,57,0) 42%),
+    linear-gradient(330deg, #2B3339 37%, rgba(43,51,57,0) 38%),
+    linear-gradient(90deg,  #2B3339 36%, rgba(43,51,57,0) 37%);
+  background-color: #4E5B65;
+}
+::-webkit-scrollbar-button:horizontal:decrement:hover,
+::-webkit-scrollbar-button:horizontal:increment:hover
+{
+  background-color: #0080FF;
+}
+::-webkit-scrollbar-button:horizontal:decrement:active
+{
+  background:
+    linear-gradient(30deg,  #000000 37%, rgba(0, 0, 0, 0) 38%),
+    linear-gradient(150deg, #000000 41%, rgba(0, 0, 0, 0) 42%),
+    linear-gradient(270deg, #000000 36%, rgba(0, 0, 0, 0) 37%);
+  background-color: #0080FF;
+}
+::-webkit-scrollbar-button:horizontal:increment:active
+{
+  background:
+    linear-gradient(210deg, #000000 41%, rgba(0, 0, 0, 0) 42%),
+    linear-gradient(330deg, #000000 37%, rgba(0, 0, 0, 0) 38%),
+    linear-gradient(90deg,  #000000 36%, rgba(0, 0, 0, 0) 37%);
+  background-color: #0080FF;
+}
