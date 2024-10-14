@@ -4,6 +4,8 @@
 /*             based on Display style: Lingvo             */
 /* ====================================================== */
 
+@charset "UTF-8";
+
 @font-face {
   font-family: NotoSans;
   src: local('Noto Sans') url('file:./fonts/NotoSans-Regular.ttf') format('truetype');
@@ -218,11 +220,11 @@ img
 {
   color: #778899 /*lightslategray*/;
 }
-/* color index_lang in examples */
 .dsl_ex .dsl_lang,
 .dsl_ex .dsl_lang .dsl_u,
 .dsl_ex .dsl_lang .dsl_trs
 {
+  /* color index_lang in examples */
   color: #696969 /*dimgray*/ !important;
 }
 /*---link tags---*/
