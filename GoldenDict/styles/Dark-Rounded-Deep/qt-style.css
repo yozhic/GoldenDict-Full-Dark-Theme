@@ -1537,7 +1537,7 @@ MainWindow #centralWidget QToolButton::menu-indicator
 }
 MainWindow #centralWidget #ArticleView QMenu::item
 {
-  padding-right: 0px;
+  padding-right: .5em;
 }
 MainWindow #centralWidget #ArticleView QMenu::icon
 {
@@ -1926,7 +1926,7 @@ ScanPopup QToolButton#pronounceButton
 }
 ScanPopup #ArticleView QMenu::item
 {
-  padding-right: 0px;
+  padding-right: .5em;
 }
 ScanPopup #ArticleView QMenu::icon
 {
