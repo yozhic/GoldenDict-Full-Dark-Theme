@@ -1,6 +1,6 @@
 
 /* ================= This file is encoded UTF-8 without BOM ================= */
-/*                       GD WINDOWS DARK ROUNDED THEME                        */
+/*                     GD WINDOWS DARK DEEP ROUNDED THEME                     */
 /* ========================================================================== */
 
 /* ========================================================================== */
@@ -542,12 +542,8 @@ QMenu::item
   border-radius:  2px;
   padding-top:    3px;
   padding-bottom: 3px;
-  padding-left: 1.5em;
+  padding-left: 1.8em;
   padding-right:  1em;
-  /*
-  margin-left:    4px;
-  margin-right:   4px;
-  */
 }
 QMenu::item:selected
 {
@@ -562,15 +558,22 @@ QMenu::item:disabled
 QMenu::item:disabled:selected
 {
   background: #353F46;
+  border: 1px solid #353F46;
+}
+QMenu::separator
+{
+  height: 1px;
+  background: #4E5B65;
+  margin: 5px 4px;
 }
 QMenu::icon
 {
   /*hack: no icons in menus*/
-  right: 30px;
+  right: 40px;
 }
 QMenu::indicator:non-exclusive
 {
-  left: 2px;
+  left: 4px;
 }
 QMenu::indicator:non-exclusive:checked
 {
@@ -960,6 +963,7 @@ MainWindow #dictionaryBar QMenu::indicator:non-exclusive:checked
 MainWindow #dictionaryBar QMenu::item
 {
   padding-left: 30px;
+  padding-right: 0px;
 }
 MainWindow #dictionaryBar QMenu::icon
 {
@@ -1225,6 +1229,13 @@ MainWindow #favoritesPane,
 MainWindow #dictsPane
 {
   background: #1F272C;
+}
+MainWindow #historyPane   QMenu::item,
+MainWindow #favoritesPane QMenu::item,
+MainWindow #dictsPane     QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
 }
 
 /* ===================== Panes Tabs ===================== */
@@ -1524,9 +1535,27 @@ MainWindow #centralWidget QToolButton::menu-indicator
 {
   background: transparent;
 }
+MainWindow #centralWidget #ArticleView QMenu::item
+{
+  padding-right: 0px;
+}
 MainWindow #centralWidget #ArticleView QMenu::icon
 {
   right: initial;
+}
+MainWindow #centralWidget #tabWidget MRUQMenu
+{
+  padding: 4px;
+}
+MainWindow #centralWidget #tabWidget MRUQMenu::item
+{
+  padding-right: 0px;
+  padding-left:2.5em;
+}
+MainWindow #centralWidget #tabWidget MRUQMenu::icon
+{
+  right: initial;
+  padding-left: 12px;
 }
 
 /* =============== Pop-up Navigation Panel ============== */
@@ -1687,6 +1716,11 @@ ScanPopup #translateLine[noResults="true"]:hover
 {
   border: 1px solid #4E5B65;
 }
+ScanPopup #translateLine QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
+}
 /* "Look up in" field's drop-down list */
 ScanPopup CompletionList
 {
@@ -1753,6 +1787,7 @@ ScanPopup #dictionaryBar QMenu::indicator:non-exclusive:checked
 ScanPopup #dictionaryBar QMenu::item
 {
   padding-left: 26px;
+  padding-right: 0px;
 }
 ScanPopup #dictionaryBar QMenu::icon:checked
 {
@@ -1889,6 +1924,10 @@ ScanPopup QToolButton#pronounceButton
 {
   qproperty-icon: url('./icons/dark-scanpopup-pron.svg');
 }
+ScanPopup #ArticleView QMenu::item
+{
+  padding-right: 0px;
+}
 ScanPopup #ArticleView QMenu::icon
 {
   right: initial;
@@ -1898,6 +1937,11 @@ ScanPopup #ArticleView QMenu::icon
 DictInfo
 {
   background: #2B3339;
+}
+DictInfo QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
 }
 DictInfo QPushButton
 {
@@ -1919,6 +1963,11 @@ DictInfo #dictionaryFileList:focus
 DictHeadwords
 {
   background: #2B3339;
+}
+DictHeadwords QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
 }
 DictHeadwords #filterLine,
 DictHeadwords #headersListView
@@ -1961,6 +2010,11 @@ DictHeadwords QPushButton
 #FullTextSearchDialog
 {
   background: #2B3339;
+}
+#FullTextSearchDialog QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
 }
 #FullTextSearchDialog #searchLine,
 #FullTextSearchDialog #headwordsView
@@ -2022,6 +2076,11 @@ About
 {
   background: #2B3339;
 }
+About QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
+}
 About QPushButton
 {
   min-width: 90px;
@@ -2037,6 +2096,11 @@ About #credits
 Preferences
 {
   background: #2B3339;
+}
+Preferences QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
 }
 Preferences QLineEdit
 {
@@ -2064,6 +2128,11 @@ Preferences QPushButton
 EditDictionaries
 {
   background: #2B3339;
+}
+EditDictionaries QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
 }
 EditDictionaries QTreeView::item
 {
@@ -2234,6 +2303,11 @@ EditDictionaries #Groups #searchLine IconButton
 }
 
 /* ================ PRINT PREVIEW WINDOW ================ */
+QPrintPreviewDialog QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
+}
 QPrintPreviewDialog QToolBar
 {
   background:        #2B3339;
@@ -2305,6 +2379,11 @@ QPrintPreviewDialog QGraphicsView
 /*  other  windows it was called from. Also, it has no objectName (ID) in the */
 /*  current version of GD, so I refer to window title.                        */
 
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QMenu::item
+{
+  padding-right: .8em;
+  padding-left:  .8em;
+}
 QDialog[windowTitle*="GoldenDict"] QTextBrowser
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
