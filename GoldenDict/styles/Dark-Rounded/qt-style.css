@@ -616,81 +616,118 @@ QPlainTextEdit:!active
 }
 
 /*---scroll bars---*/
+/* угол пересечения перемоток */
+QAbstractScrollArea::corner
+{
+  background: transparent;
+}
+/* слой под плашками перемотки */
+#qt_scrollarea_hcontainer,
+#qt_scrollarea_vcontainer
+{
+  background: transparent;
+}
+/* плашки под бегунками, без кнопок перемотки */
 QScrollBar:horizontal,
 QScrollBar:vertical
 {
-  background: #2B3339;
-  border-radius: 2px;
+  background: transparent;
 }
 QScrollBar:horizontal
 {
-  border-top:    1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-top:    1px solid #4E5B65;
+  border-bottom: none;
+  border-left:   none;
+  border-right:  none;
   height:   14px;
-  margin: 0 17px;
+  margin: 0 16px;
 }
 QScrollBar:vertical
 {
-  border-right: 1px solid #000000;
-  border-left:  1px solid #000000;
+  border-top:    none;
+  border-bottom: none;
+  border-left: 1px solid #4E5B65;
+  border-right:  none;
   width:    14px;
-  margin: 17px 0;
+  margin: 16px 0;
 }
+/* бегунок */
 QScrollBar::handle:horizontal,
 QScrollBar::handle:vertical
 {
   background: #4E5B65;
-  border: 3px solid #2B3339;
-  border-radius: 2px;
+  /* border -- пока единств. найд. способ сделать бегунок тоньше */
+  /* не работают: margin, padding, width, max-width */
+  border: 3px solid #232B30;
 }
 QScrollBar::handle:horizontal
 {
   min-width:  40px;
+  border-left:  none;
+  border-right: none;
 }
 QScrollBar::handle:vertical
 {
   min-height: 40px;
+  border-top:    none;
+  border-bottom: none;
 }
 QScrollBar::handle:vertical:hover,
 QScrollBar::handle:horizontal:hover
 {
   background: #006AD5;
 }
+/* левая(h) или верхняя(v) кнопка перемотки */
 QScrollBar::sub-line:horizontal,
 QScrollBar::sub-line:vertical
 {
-  border: 1px solid #000000;
-  background:       #2B3339;
+  background: transparent;
   subcontrol-origin: margin;
 }
 QScrollBar::sub-line:horizontal
 {
-  border-right:        none;
+  border-top: 1px solid #4E5B65;
+  border-bottom: none;
+  border-bottom-left-radius: 4px;
+  border-left:   none;
+  border-right:  none;
   width:               16px;
   subcontrol-position: left;
 }
 QScrollBar::sub-line:vertical
 {
-  border-bottom:      none;
+  border-top:    none;
+  border-top-right-radius: 4px;
+  border-bottom: none;
+  border-left: 1px solid #4E5B65;
+  border-right:  none;
   height:             16px;
   subcontrol-position: top;
 }
+/* правая(h) или нижняя(v) кнопка перемотки */
 QScrollBar::add-line:horizontal,
 QScrollBar::add-line:vertical
 {
-  border: 1px solid #000000;
-  background:       #2B3339;
+  background:       transparent;
   subcontrol-origin: margin;
 }
 QScrollBar::add-line:horizontal
 {
-  border-left:          none;
+  border-top: 1px solid #4E5B65;
+  border-bottom: none;
+  border-bottom-right-radius: 4px;
+  border-left:   none;
+  border-right:  none;
   width:                16px;
   subcontrol-position: right;
 }
 QScrollBar::add-line:vertical
 {
-  border-top:            none;
+  border-top:    none;
+  border-bottom: none;
+  border-bottom-right-radius: 4px;
+  border-left: 1px solid #4E5B65;
+  border-right:  none;
   height:                16px;
   subcontrol-position: bottom;
 }
@@ -699,8 +736,8 @@ QScrollBar::down-arrow:vertical
 {
   width:  0px;
   height: 0px;
-  border-left:   4px solid #2B3339;
-  border-right:  4px solid #2B3339;
+  border-left:   4px solid #232B30;
+  border-right:  4px solid #232B30;
 }
 QScrollBar::up-arrow:vertical
 {
@@ -730,8 +767,8 @@ QScrollBar::right-arrow:horizontal
 {
   width:  0px;
   height: 0px;
-  border-top:    4px solid #2B3339;
-  border-bottom: 4px solid #2B3339;
+  border-top:    4px solid #232B30;
+  border-bottom: 4px solid #232B30;
 }
 QScrollBar::left-arrow:horizontal
 {
@@ -754,7 +791,7 @@ QScrollBar::sub-page:vertical,
 QScrollBar::add-page:horizontal,
 QScrollBar::sub-page:horizontal
 {
-  background: none;
+  background: transparent;
 }
 QScrollBar::sub-line:pressed,
 QScrollBar::add-line:pressed
@@ -1216,6 +1253,65 @@ MainWindow #favoritesPane #favoritesTree::item:focus
   border-radius: 0;
   border-left:   0;
   border-right:  0;
+}
+MainWindow #searchPane         #wordList QScrollBar::handle:horizontal,
+MainWindow #dictsPane         #dictsList QScrollBar::handle:horizontal,
+MainWindow #historyPane     #historyList QScrollBar::handle:horizontal,
+MainWindow #favoritesPane #favoritesTree QScrollBar::handle:horizontal,
+MainWindow #searchPane         #wordList QScrollBar::handle:vertical,
+MainWindow #dictsPane         #dictsList QScrollBar::handle:vertical,
+MainWindow #historyPane     #historyList QScrollBar::handle:vertical,
+MainWindow #favoritesPane #favoritesTree QScrollBar::handle:vertical
+{
+  border-color: #2B3339;
+}
+MainWindow #searchPane         #wordList QScrollBar::up-arrow:vertical,
+MainWindow #dictsPane         #dictsList QScrollBar::up-arrow:vertical,
+MainWindow #historyPane     #historyList QScrollBar::up-arrow:vertical,
+MainWindow #favoritesPane #favoritesTree QScrollBar::up-arrow:vertical,
+MainWindow #searchPane         #wordList QScrollBar::down-arrow:vertical,
+MainWindow #dictsPane         #dictsList QScrollBar::down-arrow:vertical,
+MainWindow #historyPane     #historyList QScrollBar::down-arrow:vertical,
+MainWindow #favoritesPane #favoritesTree QScrollBar::down-arrow:vertical
+{
+  border-left-color:  #2B3339;
+  border-right-color: #2B3339;
+}
+MainWindow #searchPane         #wordList QScrollBar::left-arrow:horizontal,
+MainWindow #dictsPane         #dictsList QScrollBar::left-arrow:horizontal,
+MainWindow #historyPane     #historyList QScrollBar::left-arrow:horizontal,
+MainWindow #favoritesPane #favoritesTree QScrollBar::left-arrow:horizontal,
+MainWindow #searchPane         #wordList QScrollBar::right-arrow:horizontal,
+MainWindow #dictsPane         #dictsList QScrollBar::right-arrow:horizontal,
+MainWindow #historyPane     #historyList QScrollBar::right-arrow:horizontal,
+MainWindow #favoritesPane #favoritesTree QScrollBar::right-arrow:horizontal
+{
+  border-top-color:    #2B3339;
+  border-bottom-color: #2B3339;
+}
+MainWindow #searchPane         #wordList QScrollBar::up-arrow:vertical:pressed,
+MainWindow #dictsPane         #dictsList QScrollBar::up-arrow:vertical:pressed,
+MainWindow #historyPane     #historyList QScrollBar::up-arrow:vertical:pressed,
+MainWindow #favoritesPane #favoritesTree QScrollBar::up-arrow:vertical:pressed,
+MainWindow #searchPane         #wordList QScrollBar::down-arrow:vertical:pressed,
+MainWindow #dictsPane         #dictsList QScrollBar::down-arrow:vertical:pressed,
+MainWindow #historyPane     #historyList QScrollBar::down-arrow:vertical:pressed,
+MainWindow #favoritesPane #favoritesTree QScrollBar::down-arrow:vertical:pressed
+{
+  border-left-color:  #000000;
+  border-right-color: #000000;
+}
+MainWindow #searchPane         #wordList QScrollBar::left-arrow:horizontal:pressed,
+MainWindow #dictsPane         #dictsList QScrollBar::left-arrow:horizontal:pressed,
+MainWindow #historyPane     #historyList QScrollBar::left-arrow:horizontal:pressed,
+MainWindow #favoritesPane #favoritesTree QScrollBar::left-arrow:horizontal:pressed,
+MainWindow #searchPane         #wordList QScrollBar::right-arrow:horizontal:pressed,
+MainWindow #dictsPane         #dictsList QScrollBar::right-arrow:horizontal:pressed,
+MainWindow #historyPane     #historyList QScrollBar::right-arrow:horizontal:pressed,
+MainWindow #favoritesPane #favoritesTree QScrollBar::right-arrow:horizontal:pressed
+{
+  border-top-color:    #000000;
+  border-bottom-color: #000000;
 }
 MainWindow #searchPane #translateLine[noResults="true"]
 {
@@ -2403,6 +2499,24 @@ QHelpIndexWidget
   margin:               6px;
   padding:              6px;
 }
+QHelpContentWidget QScrollBar:horizontal,
+QHelpContentWidget QScrollBar::sub-line:horizontal,
+QHelpContentWidget QScrollBar::add-line:horizontal,
+QHelpIndexWidget QScrollBar:horizontal,
+QHelpIndexWidget QScrollBar::sub-line:horizontal,
+QHelpIndexWidget QScrollBar::add-line:horizontal
+{
+  border-top: none;
+}
+QHelpContentWidget QScrollBar:vertical,
+QHelpContentWidget QScrollBar::sub-line:vertical,
+QHelpContentWidget QScrollBar::add-line:vertical,
+QHelpIndexWidget QScrollBar:vertical,
+QHelpIndexWidget QScrollBar::sub-line:vertical,
+QHelpIndexWidget QScrollBar::add-line:vertical
+{
+  border-left: none;
+}
 QDialog[windowTitle*="GoldenDict"] QToolButton
 {
   padding: 4px;
@@ -2442,16 +2556,23 @@ QDialog[windowTitle*="GoldenDict"] QTreeView::branch:!has-children:!has-siblings
 }
 
 /* ====== REVERT TO WIDE SCROLLBARS IN 2 LAST DIALOGS ====== */
+QDialog[windowTitle*="GoldenDict"] QAbstractScrollArea::corner,
+QPrintPreviewDialog QAbstractScrollArea::corner
+{
+  background: #2B3339;
+}
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar:horizontal,
 QPrintPreviewDialog QGraphicsView QScrollBar:horizontal
 {
-  height:   18px;
+  background: #2B3339;
+  height:   12px;
   margin: 0 21px;
 }
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar:vertical,
 QPrintPreviewDialog QGraphicsView QScrollBar:vertical
 {
-  width:    18px;
+  background: #2B3339;
+  width:    12px;
   margin: 21px 0;
 }
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::handle:horizontal,
@@ -2460,6 +2581,7 @@ QPrintPreviewDialog QGraphicsView QScrollBar::handle:horizontal,
 QPrintPreviewDialog QGraphicsView QScrollBar::handle:vertical
 {
   border-width: 0px;
+  border-radius: 3px;
 }
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::handle:vertical:hover,
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::handle:horizontal:hover,
@@ -2473,14 +2595,47 @@ QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::add-line:horizontal,
 QPrintPreviewDialog QGraphicsView QScrollBar::sub-line:horizontal,
 QPrintPreviewDialog QGraphicsView QScrollBar::add-line:horizontal
 {
+  background: #2B3339;
   width:  20px;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::sub-line:horizontal
+{
+  border-left: 1px solid #4E5B65;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: none;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::add-line:horizontal
+{
+  border-bottom-right-radius: none;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::sub-line:horizontal,
+QPrintPreviewDialog QGraphicsView QScrollBar::sub-line:horizontal
+{
+  border-right: 1px solid #2B3339;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::add-line:horizontal,
+QPrintPreviewDialog QGraphicsView QScrollBar::add-line:horizontal
+{
+  border-left: 1px solid #2B3339;
 }
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::sub-line:vertical,
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::add-line:vertical,
 QPrintPreviewDialog QGraphicsView QScrollBar::sub-line:vertical,
 QPrintPreviewDialog QGraphicsView QScrollBar::add-line:vertical
 {
+  background: #2B3339;
   height: 20px;
+  border-radius: none;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::sub-line:vertical,
+QPrintPreviewDialog QGraphicsView QScrollBar::sub-line:vertical
+{
+  border-bottom: 1px solid #2B3339;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::add-line:vertical,
+QPrintPreviewDialog QGraphicsView QScrollBar::add-line:vertical
+{
+  border-top: 1px solid #2B3339;
 }
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::up-arrow:vertical,
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::down-arrow:vertical,
@@ -2537,6 +2692,13 @@ QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::right-arrow:horizont
 QPrintPreviewDialog QGraphicsView QScrollBar::right-arrow:horizontal:hover
 {
   border-left:   5px solid #0080FF;
+}
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::sub-line:pressed,
+QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::add-line:pressed,
+QPrintPreviewDialog QGraphicsView QScrollBar::sub-line:pressed,
+QPrintPreviewDialog QGraphicsView QScrollBar::add-line:pressed
+{
+  background: #000000;
 }
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::up-arrow:vertical:pressed,
 QDialog[windowTitle*="GoldenDict"] QTextBrowser QScrollBar::down-arrow:vertical:pressed,
