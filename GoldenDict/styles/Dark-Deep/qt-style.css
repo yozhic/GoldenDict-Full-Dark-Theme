@@ -1105,6 +1105,9 @@ MainWindow > QTabBar::tab
   padding: 4px 16px;
   margin-bottom: 2px;
   margin-top: -1px;
+  font-size: 8.6pt;
+  min-width:  90px;
+  min-height: 14px;
 }
 MainWindow > QTabBar::tab:selected
 {
@@ -1343,6 +1346,7 @@ MainWindow #centralWidget #qt_tabwidget_tabbar::tab
 {
   padding-left: 18px;
   padding-right: 8px;
+  font-size: 8.6pt;
 }
 /* "Close Tab" icon
    remove 3 following rules to return original icons */
