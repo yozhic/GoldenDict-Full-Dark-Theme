@@ -1418,9 +1418,8 @@ font[color] > .dsl_com > .dsl_trs
 
 .gdarticle
 {
-  margin-top:    10px;
-  margin-bottom: 10px;
-  padding:        5px;
+  margin: 10px 0px !important;
+  padding:     5px !important;
 
   background:       #232B30;
   color:            #CBD0D8;

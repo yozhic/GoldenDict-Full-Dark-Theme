@@ -1269,9 +1269,8 @@ font[color] > .dsl_com > .dsl_trs
 
 .gdarticle
 {
-  margin-top:    10px;
-  margin-bottom: 10px;
-  padding:        5px;
+  margin: 10px 0px !important;
+  padding:     5px !important;
 
   /*D3D6DC D1D7E0 D1D7E2 D4D9E3 D8DDE6*/
   background:       #D8DDE6;
