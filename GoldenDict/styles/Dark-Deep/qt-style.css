@@ -968,12 +968,12 @@ MainWindow #searchPane GroupComboBox
   /* font in Groups list & line */
   font-family: Consolas, "Noto Sans Mono", monospace;
   font-size:   9.1pt;
-  padding-left:  5px;
+  padding-left: 6px;
 }
 MainWindow #searchPane GroupComboBox:on
 {
   padding-top:   2px;
-  padding-left:  7px;
+  padding-left:  8px;
 }
 MainWindow #searchPane GroupComboBox::down-arrow
 {
