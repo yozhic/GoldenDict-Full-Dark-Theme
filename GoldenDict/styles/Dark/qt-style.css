@@ -93,7 +93,103 @@ QLineEdit
 {
   padding: 1px;
 }
-/* spinboxes */
+/*---buttons---*/
+QPushButton:hover
+{
+  color:            #FFFFFF;
+  background:       #0080FF;
+  border: 1px solid #0080FF;
+}
+QPushButton:pressed
+{
+  background:       #000000;
+  border: 1px solid #000000;
+}
+QPushButton:disabled
+{
+  background:       #4E5B65;
+  border: 1px solid #4E5B65;
+}
+
+/*---dialogs---*/
+QMessageBox QPushButton
+{
+  min-width: 90px;
+  height:    24px;
+}
+QInputDialog > QLabel
+{
+  margin-top: 10px;
+}
+QInputDialog > QLineEdit
+{
+  background: #232B30;
+  min-width:    300px;
+  margin-bottom: 20px;
+}
+QInputDialog > QPushButton
+{
+  height: 20px;
+}
+
+/*---switches---*/
+QCheckBox::indicator:unchecked,
+QGroupBox::indicator:unchecked,
+QRadioButton::indicator:unchecked
+{
+  background:       #232B30;
+  border: 1px solid #4E5B65;
+}
+QCheckBox::indicator:unchecked:hover,
+QGroupBox::indicator:unchecked:hover,
+QRadioButton::indicator:unchecked:hover
+{
+  background:       #232B30;
+  border: 1px solid #0080FF;
+}
+QCheckBox::indicator:checked,
+QCheckBox::indicator:checked:hover,
+QGroupBox::indicator:checked,
+QGroupBox::indicator:checked:hover,
+QRadioButton::indicator:checked,
+QRadioButton::indicator:checked:hover
+{
+  image: url('./icons/dark-checkmark.svg');
+  background:       #232B30;
+  border: 1px solid #0080FF;
+  /*margin: 2px;*/
+}
+QCheckBox::indicator:checked:pressed,
+QCheckBox::indicator:unchecked:pressed,
+QGroupBox::indicator:checked:pressed,
+QGroupBox::indicator:unchecked:pressed,
+QRadioButton::indicator:checked:pressed,
+QRadioButton::indicator:unchecked:pressed
+{
+  background:       #000000;
+  border: 1px solid #000000;
+  /*margin: 0px;*/
+}
+QCheckBox::indicator:checked:disabled,
+QCheckBox::indicator:checked:disabled:hover,
+QRadioButton::indicator:checked:disabled,
+QRadioButton::indicator:checked:disabled:hover
+{
+  image: url('./icons/dark-checkmark-disabled.svg');
+  background:       #2B3339;
+  border: 1px solid #4E5B65;
+  /*margin:     0px;*/
+}
+QCheckBox::indicator:unchecked:disabled,
+QRadioButton::indicator:unchecked:disabled,
+QCheckBox::indicator:unchecked:disabled:hover,
+QRadioButton::indicator:unchecked:disabled:hover
+{
+  background:       #2B3339;
+  border: 1px solid #4E5B65;
+}
+
+/*---spinboxes---*/
 QSpinBox
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
@@ -161,103 +257,7 @@ QSpinBox::down-button:pressed
   background:       #000000;
 }
 
-/* buttons */
-QPushButton:hover
-{
-  color:            #FFFFFF;
-  background:       #0080FF;
-  border: 1px solid #0080FF;
-}
-QPushButton:pressed
-{
-  background:       #000000;
-  border: 1px solid #000000;
-}
-QPushButton:disabled
-{
-  background:       #4E5B65;
-  border: 1px solid #4E5B65;
-}
-
-/* dialogs */
-QMessageBox QPushButton
-{
-  min-width: 90px;
-  height:    24px;
-}
-QInputDialog > QLabel
-{
-  margin-top: 10px;
-}
-QInputDialog > QLineEdit
-{
-  background: #232B30;
-  min-width:    300px;
-  margin-bottom: 20px;
-}
-QInputDialog > QPushButton
-{
-  height: 20px;
-}
-
-/* switches */
-QCheckBox::indicator:unchecked,
-QGroupBox::indicator:unchecked,
-QRadioButton::indicator:unchecked
-{
-  background:       #232B30;
-  border: 1px solid #4E5B65;
-}
-QCheckBox::indicator:unchecked:hover,
-QGroupBox::indicator:unchecked:hover,
-QRadioButton::indicator:unchecked:hover
-{
-  background:       #232B30;
-  border: 1px solid #0080FF;
-}
-QCheckBox::indicator:checked,
-QCheckBox::indicator:checked:hover,
-QGroupBox::indicator:checked,
-QGroupBox::indicator:checked:hover,
-QRadioButton::indicator:checked,
-QRadioButton::indicator:checked:hover
-{
-  image: url('./icons/dark-checkmark.svg');
-  background:       #232B30;
-  border: 1px solid #0080FF;
-  /*margin: 2px;*/
-}
-QCheckBox::indicator:checked:pressed,
-QCheckBox::indicator:unchecked:pressed,
-QGroupBox::indicator:checked:pressed,
-QGroupBox::indicator:unchecked:pressed,
-QRadioButton::indicator:checked:pressed,
-QRadioButton::indicator:unchecked:pressed
-{
-  background:       #000000;
-  border: 1px solid #000000;
-  /*margin: 0px;*/
-}
-QCheckBox::indicator:checked:disabled,
-QCheckBox::indicator:checked:disabled:hover,
-QRadioButton::indicator:checked:disabled,
-QRadioButton::indicator:checked:disabled:hover
-{
-  image: url('./icons/dark-checkmark-disabled.svg');
-  background:       #2B3339;
-  border: 1px solid #4E5B65;
-  /*margin:     0px;*/
-}
-QCheckBox::indicator:unchecked:disabled,
-QRadioButton::indicator:unchecked:disabled,
-QCheckBox::indicator:unchecked:disabled:hover,
-QRadioButton::indicator:unchecked:disabled:hover
-{
-  background:       #2B3339;
-  border: 1px solid #4E5B65;
-}
-
-/* list views */
+/*---list views---*/
 QListView
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
@@ -294,7 +294,7 @@ QListView::item:selected:!active:hover
   padding-left: 1px;
 }
 
-/* treeview lists */
+/*---treeview lists---*/
 QTreeView
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
@@ -351,7 +351,7 @@ QTreeView::branch:open:has-children:has-siblings:hover
   image: url(:/icons/collapse_article_hovered.png);
 }
 
-/* drop-down lists */
+/*---drop-down lists---*/
 QComboBox
 {
   padding-left:   4px;
@@ -412,7 +412,7 @@ QComboBox QComboBoxListView:focus
   border:     1px solid #4E5B65;
 }
 
-/* tab bars */
+/*---tab bars---*/
 QTabWidget::pane
 {
   border: 1px solid #4E5B65;
@@ -470,7 +470,7 @@ QTabBar::tab:only-one
   border-top-right-radius: 2px;
 }
 
-/* groupings */
+/*---groupings---*/
 QGroupBox
 {
   margin-top:     6px;
@@ -485,7 +485,7 @@ QGroupBox::title
   padding-left:             2px;
 }
 
-/* menu lists */
+/*---menu lists---*/
 QMenu
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
@@ -508,7 +508,7 @@ QMenu::item:disabled:selected
   background: #353F46;
 }
 
-/* tooltips */
+/*---tooltips---*/
 QToolTip
 {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
@@ -518,7 +518,7 @@ QToolTip
   padding:               3px;
 }
 
-/* edit fields */
+/*---edit fields---*/
 QLineEdit:active,
 QPlainTextEdit:active
 {
@@ -532,7 +532,7 @@ QPlainTextEdit:!active
   selection-background-color: #4E5B65;
 }
 
-/* scroll bars */
+/*---scroll bars---*/
 QScrollBar:horizontal,
 QScrollBar:vertical
 {

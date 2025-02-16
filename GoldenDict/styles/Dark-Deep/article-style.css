@@ -6,6 +6,10 @@
 
 @charset "UTF-8";
 
+/* ====================================================== */
+/*                         FONTS                          */
+/* ====================================================== */
+
 @font-face {
   font-family: NotoSans;
   src: local('Noto Sans Medium') url('file:./fonts/NotoSans-Medium.ttf') format('truetype');
@@ -79,7 +83,7 @@
 */
 
 /* ====================================================== */
-/*                     ARTICLE WINDOW                     */
+/*                      ARTICLE VIEW                      */
 /* ====================================================== */
 
 html
@@ -107,6 +111,11 @@ html::after
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+/* ====================================================== */
+/*                    ARTICLE GLOBALS                     */
+/* ====================================================== */
+
 body
 {
   font-family: "Segoe UI Semibold", NotoSans, NotoSansExpansion, "Segoe UI Historic", "Segoe UI Symbol", "Segoe UI Emoji", "Arial Unicode MS", sans-serif;
@@ -114,11 +123,11 @@ body
   margin:    5px 10px;
   padding-bottom: 1px;
 }
-
-/* ====================================================== */
-/*                    ARTICLE GENERALS                    */
-/* ====================================================== */
-
+.gdarticlebody > h3:first-child
+{
+  margin-top:      -3px;
+  display: inline-block;
+}
 ::selection
 {
   color:      #F0FFFF;
@@ -141,9 +150,15 @@ img
 }
 
 /* ====================================================== */
-/*                          DSL                           */
+/*                    DSL DICTIONARIES                    */
 /* ====================================================== */
 
+/* first headword in a multi-headword DSL article */
+.gdarticlebody > span:first-child .dsl_headwords
+{
+  margin-top:      -3px;
+  display: inline-block;
+}
 .dsl_headwords p
 {
   font-size: 1.1em;
@@ -1107,7 +1122,26 @@ a.dsl_url:hover
 }
 
 /* ====================================================== */
-/*                      ARTICLE BOXES                     */
+/*                NON-DICTIONARY SERVICES                 */
+/* ====================================================== */
+
+.gdspellsuggestion
+{
+  margin-top: 1.5em;
+}
+.gdnotfound,
+.gdstemmedsuggestion_head,
+.gdstemmedsuggestion_body
+{
+  color: #CBD0D8;
+}
+.gdstemmedsuggestion_body > a
+{
+  color: #0080FF;
+}
+
+/* ====================================================== */
+/*                     ARTICLE FRAMES                     */
 /* ====================================================== */
 
 .gdarticle
@@ -1238,42 +1272,20 @@ a.dsl_url:hover
 {
   background-image: url('qrc:///icons/collapse_article_hovered.png');
 }
-/* first headword in a multi-headword DSL article */
-.gdarticlebody > span:first-child .dsl_headwords,
-.gdarticlebody > h3:first-child
-{
-  margin-top:      -3px;
-  display: inline-block;
-}
-.gdspellsuggestion
-{
-  margin-top: 1.5em;
-}
 
 /* ====================================================== */
 /*                      WELCOME PAGE                      */
 /* ====================================================== */
 
-.gdnotfound,
-.gdstemmedsuggestion_head,
-.gdstemmedsuggestion_body
-{
-  color: #CBD0D8;
-}
-.gdstemmedsuggestion_body > a
-{
-  color: #0080FF;
-}
-
 /* remove ads */
+body
+{
+  background: transparent;
+}
 body > h3,
 body > p
 {
   visibility:      hidden;
-  background: transparent;
-}
-body
-{
   background: transparent;
 }
 
