@@ -75,6 +75,10 @@ GoldenDict\
     └─ ...
 ```
 
+### Linux
+- `qt-style.css` и `article-style.css` из папки styles в `~/.config/goldendict/`
+- для иконок нужно открыть `qt-style.css` и заменить `.icons/` на `.config/goldendict/icons/`
+- перезапустить `goldendict`
 
 ## Цветовая палитра темы
 
